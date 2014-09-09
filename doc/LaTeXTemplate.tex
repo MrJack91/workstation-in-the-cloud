@@ -21,7 +21,7 @@
 %%% --- Koma Script Version ---
    version=last, %
 %%% --- Global Package Options ---
-   english, % language (passed to babel and other packages)
+   ngerman, % language (passed to babel and other packages)
             % (ngerman, english, french, ...)
 ]{scrbook} % Classes: scrartcl, scrreprt, scrbook
 
@@ -157,11 +157,11 @@
 
 % -- abstract --
 % (only in phd thesis)
-\include{content/0-Abstract} 
-\cleardoublepage
+% \include{content/0-Abstract} 
+% \cleardoublepage
 % -- declaration --
 % (only in bachelor/master thesis)
-\input{content/Z-Declaration.tex}
+% \input{content/Z-Declaration.tex}
 
 \frontmatter
 \IfPackageLoaded{scrpage2}{\pagestyle{scrheadings}}
@@ -191,7 +191,7 @@
 %
 \include{content/0-Introduction}
 \include{content/1-Theory}
-\include{content/2-Experiments}
+% \include{content/2-Experiments}
 \include{content/3-Results}
 \include{content/4-Summery}
 
@@ -215,19 +215,19 @@
 
 %% -- List of Listings --
 % _Remove_ if no listing with caption is defined
-\IfDefined{lstlistoflistings}{\cleardoublepage\lstlistoflistings}
+% \IfDefined{lstlistoflistings}{\cleardoublepage\lstlistoflistings}
 
 % --- Appendix --- --- --- --- --- --- ---
-\cleardoublepage
-\appendix
+% \cleardoublepage
+% \appendix
 % Add `Appendix` to TOC
-\addcontentsline{toc}{part}{\appendixname}
+% \addcontentsline{toc}{part}{\appendixname}
 % must be _input_, otherwise the TOC entry is at the wrong place
-\input{content/Z-Appendix.tex}
+% \input{content/Z-Appendix.tex}
 
 % -- only in phd thesis --->
-\input{content/Z-Publications.tex}
-\input{content/Z-CV.tex}
+% \input{content/Z-Publications.tex}
+% \input{content/Z-CV.tex}
 % <------------------------
 
 %% -- Index --
@@ -238,7 +238,7 @@
   \printindex%
 }% end of index
 
-\input{content/Z-Thanks.tex}
+% \input{content/Z-Thanks.tex}
 
 % add todo list (remove for final document!)
 % \input{content/Z-Todo.tex}
