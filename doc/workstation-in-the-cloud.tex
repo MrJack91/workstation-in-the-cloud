@@ -121,7 +121,7 @@
 \IfPackageLoaded{biblatex}{
   % add all .bib files:
   \addbibresource{bib/BibtexDatabase.bib}
-  \addbibresource{bib/publications.bib}
+  % \addbibresource{bib/publications.bib}
   % \addbibresource{bib/BibtexData-anytopic.bib}
 }% end: biblatex
 
@@ -155,9 +155,11 @@
 \include{content/0-title}
 \cleardoublepage
 
+
+\input{content/Z-Thanks.tex}
 % -- abstract --
 % (only in phd thesis)
-% \include{content/0-Abstract} 
+\include{content/0-Abstract} 
 % \cleardoublepage
 % -- declaration --
 % (only in bachelor/master thesis)
@@ -197,6 +199,12 @@
 
 %%% -- end of main content
 
+% show all biblatex entries
+\nocite{*}
+
+% set title
+\renewcommand\bibname{Quellenverzeichnis}
+
 % -- bibliography --
 % (must be placed _before_ appendix)
 \IfPackageLoaded{biblatex}{
@@ -204,7 +212,7 @@
   \IfDefined{phantomsection}{\phantomsection}\label{sec:bibliography}
   \printbibliography[%
     heading=bibintoc, % (bibintoc, bibnumbered)
-  ]	
+  ]
 }% end of bibliography
 
 %% -- list of figures and tables --
@@ -237,8 +245,6 @@
   \cleardoublepage\IfDefined{phantomsection}{\phantomsection}\label{sec:index}%
   \printindex%
 }% end of index
-
-% \input{content/Z-Thanks.tex}
 
 % add todo list (remove for final document!)
 % \input{content/Z-Todo.tex}
