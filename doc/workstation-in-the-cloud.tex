@@ -1,6 +1,6 @@
 % !TeX encoding=utf8
 % !TeX program = pdflatex
-% !TeX spellcheck = de-CH
+% !TeX spellcheck = de_CH_frami
 % !BIB = biber
 
 %% Bug fixes and other packages to be loaded before the class
@@ -152,7 +152,7 @@
 \pagestyle{empty}
 
 % -- title page --
-\include{content/0-title}
+\include{content/0-Title}
 \cleardoublepage
 
 
@@ -174,6 +174,12 @@
 \IfPackageLoaded{hyperref}{\pdfbookmark[1]{\contentsname}{toc}}
 \tableofcontents
 
+%% -- list of figures and tables --
+\cleardoublepage\IfDefined{phantomsection}{\phantomsection}\label{sec:lof}
+\listoffigures
+\cleardoublepage\IfDefined{phantomsection}{\phantomsection}\label{sec:lot}
+\listoftables
+
 \IfPackagesLoaded{glossaries,longtable,tabu}{%
   \clearpage
   % print out acronym list   
@@ -192,10 +198,12 @@
 % (files loaded with include must not have the prefix .tex)
 %
 \include{content/0-Introduction}
-\include{content/1-Theory}
+\include{content/1-Definition}
+\include{content/2-Contribution}
+\include{content/3-Discussion}
+\include{content/4-Summary}
+
 % \include{content/2-Experiments}
-\include{content/3-Results}
-\include{content/4-Summery}
 
 %%% -- end of main content
 
@@ -215,11 +223,6 @@
   ]
 }% end of bibliography
 
-%% -- list of figures and tables --
-\cleardoublepage\IfDefined{phantomsection}{\phantomsection}\label{sec:lof}
-\listoffigures
-\cleardoublepage\IfDefined{phantomsection}{\phantomsection}\label{sec:lot}
-\listoftables
 
 %% -- List of Listings --
 % _Remove_ if no listing with caption is defined
