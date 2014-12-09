@@ -13,9 +13,22 @@
 	% http://www.microsoft.com/en-us/windows/enterprise/products-and-technologies/virtualization/default.aspx
 	% Microsoft Azure
 	% Microsoft HyperV: http://www.microsoft.com/en-us/server-cloud/solutions/virtualization.aspx
+	
+Im Zentrum der Arbeit werden die verschiedenen Arten, wie man einen Arbeitsplatz in den Cloud Hosten kann beschrieben. Von den beiden Typen wird jeweils ein Vertreter aus der Marktwirtschaft analysiert.
 
 \section{Typen}
-% insource/outsource
+% Crosslink zu Vorteile einfügen
+Um die Arbeitsplätze einer Firma in die Cloud zu heben, muss zuerst entschieden werden, ob man diese in einem eigenen Rechenzentrum betreiben möchte, oder ob man diese Arbeit an eine externe Firma auslagert. 
+
+Beide Vorgehensweisen beinhalten Vorteile und Tücken. Allgemeine Vorteile welche beide Arten mit sich bringen sind bereits unter dem Kapitel Vorteile beschrieben. Crosslink: \ref{sec:Vorteile}
+
+Wird das Hosting ausgelagert, hat man eine monatliche oder jährliche Abrechnung. Dadurch werden die Kosten kalkulierbar. Auch fallen grosse initiale Anschaffungskosten weg.
+
+Firmen mit gesetzlichen Auflagen wie Versicherungen, Banken, etc. kann es dabei Probleme mit dem Datenschutz geben. Probleme können sich ergeben wenn die Daten im Ausland gelagert werden, oder sie nicht konsequent verschlüsselt übertragen und gespeichert werden.
+
+Bei solchen Problem bietet sich ein eigens Hosting an. Die Anschaffungskosten sind massiv höher und die Betriebskosten können volatil sein, man hat jedoch die volle Kontrolle wo die Daten gelagert werden und ob die Kommunikationskanäle ausreichend geschützt sind.
+
+Diese Arbeit beschäftigt sich näher mit Amazon WorkSpaces, als Vertreter der ausgelagerten Lösung, sowie VmWare Virtual Desktop Manager, mit der man die Arbeitsplätze auf den eigenen Servern betreiben kann.
 
 \section{Amazon WorkSpaces}
 % mh: http://aws.amazon.com/de/workspaces
@@ -153,7 +166,7 @@ Durch die Komprimierung ist eine hohe Auflösung der Bildschirminhalte möglich.
 
 
 
-\section{VmWare}
+\section{VmWare Virtual Desktop Manager}
 % sl
 % Quelle: http://www.vmware.com/pdf/vdm20_intro.pdf
 VmWare ist eine amerikanische Firma mit Sitz im Palo Alto, Californien. Gegründet wurde die Organisation 1998 und ging 2007 an die Börse.
@@ -163,7 +176,7 @@ Als Hauptproduct bietet VmWare Virtualisierungssoftware für Server Infrastruktu
 Der Initialaufwand für die Verwendung von \Gls{vdmLabel} ist relativ hoch, da zuvor die ganze Server Infrastruktur mit VmWare Produkten aufgesetzt werden muss.
 Im Gegenzug gibt es einige Vorteile daraus:
 \begin{itemize}
-	\item Controlle und Management der Desktops aus einer Applikation heraus.
+	\item Kontrolle und Management der Desktops aus einer Applikation heraus.
 	\item Die Benutzer merken nichts von der Umstellung.
 	\item Geringere Kosten als eine on-premis Lösung.
 \end{itemize}
