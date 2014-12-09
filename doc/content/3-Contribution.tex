@@ -167,7 +167,13 @@ Im Gegenzug gibt es einige Vorteile daraus:
 \end{itemize}
 
 Die folgende Illustration zeigt das Setup, welches für den Betrieb von \Gls{vdmLabel} benötigt wird.
-\includegraphics[width=\textwidth]{images/vmware-vdm-setup}
+
+\begin{figure}
+	\includegraphics[width=\textwidth]{images/vmware-vdm-setup}
+	\caption{\Gls{vdmLabel} Setup}
+	\label{fig:vdmSetup}
+\end{figure}
+
 %cite: http://www.vmware.com/pdf/vdm20_intro.pdf
 
 Zu Beginn werden die verschiedenen Terminals aufgelistet, mit welchen man sich auf den persönlichen Desktop verbinden kann. 
@@ -202,7 +208,7 @@ Im Totalen, gemäss Dokument, sind die Kosten mit \$3,648,355 beziefert.
 	\small\renewcommand{\arraystretch}{1.4}  
 	\rowcolors{1}{tablerowcolor}{tablebodycolor}
 	%
-	\captionabove[VMware VDI Preise]{VMware VDI Preise}
+	\captionabove[VMware \Gls{vdiLabel} Preise]{VMware \Gls{vdiLabel} Preise}
 	%
 	\begin{tabularx}{\textwidth}{X | r | r | r | r | r | r}
 		\hline
@@ -233,7 +239,7 @@ Das Paper beinhaltet auch die erwarteten Einsparungen.
 	\small\renewcommand{\arraystretch}{1.4}  
 	\rowcolors{1}{tablerowcolor}{tablebodycolor}
 	%
-	\captionabove[VMware VDI Einsparungen]{VMware VDI Einsparungen}
+	\captionabove[VMware \Gls{vdiLabel} Einsparungen]{VMware \Gls{vdiLabel} Einsparungen}
 	%
 	\begin{tabularx}{\textwidth}{X | r | r | r | r | r}
 		\hline
@@ -265,6 +271,61 @@ Aus der Einsparung-Tabelle kann man schlussfolgern, dass sich der Umschwung auf 
 % Seite 9: RSA Secure ID für Login. Benötigt Security Username, Passwort & Token für login. Two two-factor authentication.
 % Seite 10: HTTPS Zugang möglich zwischen Terminal und VDM Connection Server
 % Seite 10: Server können in einer DMZ gestartet werden. Verbindung über Internet möglich. Einige Server laufen in der Sicheren Zone, andere in der DMZ.
+% Seite 10/11: High-availability mit load balancing
+% Seite 10/11: VDM Security Servers müssen nicht teil vom LDAP/Active Diretory sein.
+% Seite 24: LDAP anbindung möglich
+
+% Eigene Sicherheit
+% Korrekt implementierte Firewall auf Clients & Servers
+% HTTP Access verbieten
+
+VMware integriert verschiedene Sicherheitsmassnahmen in \Gls{vdmLabel}.
+
+\begin{itemize}
+\item Zwei-Faktor-Authentifizierung
+\item \Gls{httpsLabel} Zugang
+\item \Gls{dmzLabel}
+\item Load balancing
+\item \Gls{ldapLabel}
+\end{itemize}
+
+\subsubsection{Zwei-Faktor-Authentifizierung}
+\Gls{vdmLabel} unterstützt eine Zwei-Faktor-Authentifizierung mit RSA Secure ID. Beim Login muss der User Benutzername, Passwort und ein RSA Token eingeben. Dieser Vorgang ist bekannt von E-Banking Plattformen. 
+
+Die Sicherheit besteht darin, dass wenn das Passwort in die falschen Hände gerät, sich der Angreifer nicht einloggen kann, da ihm das stetig ändernde RSA Token fehlt.
+
+\subsubsection{\Gls{httpsLabel} Zugang}
+Der Zugang von den Clients auf die \Gls{vdmLabel} Infrastruktur, sowie die Kommunikation zwischen den \Gls{vdmLabel} Servern selber kann gänzlich auf \Gls{httpsLabel} umgestellt werden.
+
+\subsubsection{\Gls{dmzLabel} \& Load balancing}
+Um den Zugriff auf die \Gls{vdiLabel} Umgebung aus dem Internet zu gewährleisten kann eine \Gls{dmzLabel} eingerichtet werden. 
+
+\begin{figure}
+	\includegraphics[width=\textwidth]{images/vmware-vdm-dmz2}
+	\caption{\Gls{vdmLabel} Setup mit einer \Gls{dmzLabel}}
+	\label{fig:vdmSetupDmz}
+\end{figure}
+
+Die \Gls{dmzLabel} ist ein Bereich, der vom Internet her zugänglich ist und dessen Server nicht gänzlich als vertrauenswürdig eingestuft werden können.
+
+\Gls{vdmLabel} ermöglicht es, verschieden Security Servers einzurichten. Dabei können welche in der \Gls{dmzLabel} stehen und andere ausserhalb.
+
+\subsubsection{Load balancing}
+Um die Ausfallwahrscheinlichkeit zu minimieren, kann vor die Security Severs ein Load balancing eingeschaltet werden. Siehe Abbildung \ref{fig:vdmSetupDmz}. Dieses verteilt unter Last die Anfragen an die Server. Fällt einer aus, so merken die User, ausser eventueller Leistungseinbrüchen, nichts. 
+
+\subsubsection{\Gls{ldapLabel}}
+Die Authentifizierung kann in das \Gls{ldapLabel} der Firma integriert werden.
+
+Dadurch wird die Benutzung vereinfacht, da die Benutzer sich mit den gewohnten Login-Daten anmelden können.
+
+Auch die Sicherheit wird erhöht, da bei Neueintritten, internen Wechseln und Austritten die Rechte der Benutzer berücksichtigt werden.
+
+\subsubsection{Fazit}
+VMware integriert viele Sicherheit-Aspekte in ihre \Gls{vdiLabel} Lösung.
+
+Korrekt Umgesetzt kann damit eine sichere Infrastruktur aufgebaut werden, welche sicher gegenüber Ausfällen und Häckerattacken ist. Ein zusätzlicher Vorteil ist, dass die Daten in der Firma gehosted sind und die Sicherheitszone niemals verlassen.
+
+Alles steht und fällt mit jedoch mit der Integration in die eigene Infrastruktur. Die Mechanismen müssen korrekt und durchgehen eingehalten werden damit sie effektiv sind. 
 
 \subsection{Geschwindigkeit}
 
