@@ -28,7 +28,7 @@ Firmen mit gesetzlichen Auflagen wie Versicherungen, Banken, etc. kann es dabei 
 
 Bei solchen Problem bietet sich ein eigens Hosting an. Die Anschaffungskosten sind massiv höher und die Betriebskosten können volatil sein, man hat jedoch die volle Kontrolle wo die Daten gelagert werden und ob die Kommunikationskanäle ausreichend geschützt sind.
 
-Diese Arbeit beschäftigt sich näher mit Amazon WorkSpaces, als Vertreter der ausgelagerten Lösung, sowie VmWare Virtual Desktop Manager, mit der man die Arbeitsplätze auf den eigenen Servern betreiben kann.
+Diese Arbeit beschäftigt sich näher mit Amazon WorkSpaces, als Vertreter der ausgelagerten Lösung, sowie VMware Virtual Desktop Manager, mit der man die Arbeitsplätze auf den eigenen Servern betreiben kann.
 
 \section{Amazon WorkSpaces}
 % mh: http://aws.amazon.com/de/workspaces
@@ -150,27 +150,11 @@ Durch die Komprimierung ist eine hohe Auflösung der Bildschirminhalte möglich.
 	\item Gerade für temporäre Arbeitnehmer können sehr einfach Maschinen für die Dauer gemietet werden und anschliessend kann der Zugriff wieder entfernt werden.
 \end{itemize}
 
-
-
-\section{Microsoft Hyper-V}
-% sl
-\subsection{Aufwand}
-
-\subsection{Kosten}
-
-\subsection{Sicherheit}
-
-\subsection{Geschwindigkeit}
-
-\subsection{Produkt Lösungen}
-
-
-
-\section{VmWare Virtual Desktop Manager}
+\section{VMware Virtual Desktop Manager}
 % sl
 % Quelle: http://www.vmware.com/pdf/vdm20_intro.pdf
 VmWare ist eine amerikanische Firma mit Sitz im Palo Alto, Californien. Gegründet wurde die Organisation 1998 und ging 2007 an die Börse.
-Als Hauptproduct bietet VmWare Virtualisierungssoftware für Server Infrastrukturen an. Ein Teil davon, welchem sich dieses Kapitel gewidmet, ist die on-premis VDI Lösung \Gls{vdmLabel}, welche auf dem Kern von VmWare, der VMware Infrastructure 3 aufbaut.
+Als Hauptproduct bietet VmWare Virtualisierungssoftware für Server Infrastrukturen an. Ein Teil davon, welchem sich dieses Kapitel gewidmet ist, ist die on-premis VDI Lösung \Gls{vdmLabel}, welche auf dem Kern von VmWare, der VMware Infrastructure 3 aufbaut.
 
 \subsection{Aufwand}
 Der Initialaufwand für die Verwendung von \Gls{vdmLabel} ist relativ hoch, da zuvor die ganze Server Infrastruktur mit VmWare Produkten aufgesetzt werden muss.
@@ -178,11 +162,105 @@ Im Gegenzug gibt es einige Vorteile daraus:
 \begin{itemize}
 	\item Kontrolle und Management der Desktops aus einer Applikation heraus.
 	\item Die Benutzer merken nichts von der Umstellung.
+	\item Nahtlose Integration in die VMware Infrastructure Umgebung.
 	\item Geringere Kosten als eine on-premis Lösung.
 \end{itemize}
 
+Die folgende Illustration zeigt das Setup, welches für den Betrieb von \Gls{vdmLabel} benötigt wird.
+\includegraphics[width=\textwidth]{images/vmware-vdm-setup}
+%cite: http://www.vmware.com/pdf/vdm20_intro.pdf
+
+Zu Beginn werden die verschiedenen Terminals aufgelistet, mit welchen man sich auf den persönlichen Desktop verbinden kann. 
+
+Unter der Netzwerk Wolke ist die Server Infrastruktur aufgezeigt.
+Näher interessant für diese Arbeit sind die "ESX Server hosts" in der unteren Mitte. Dabei handelt es sich um virtualisierte Server welche jeder Zeit rauf- oder runter-skalliert werden können. 
+
+Auf den ESX Hosts werden je mehrere virtuelle Desktops ausgeführt. 
+Auf den Desktops kann grundsätzlich jedes Betriebsystem ausgeführt werden, für welches WMware ein VDM Agent zur Verfügung stellt.
+
+%    Windows XP Professional with SP2 (English, Japanese, German)
+%    Windows XP Professional with SP3 (English only)
+%    Windows Vista Business Edition (English, Japanese, German)
+%    Windows Business Ultimate Edition (English, Japanese, German)
+
 
 \subsection{Kosten}
+Die Berechnung der Kosten gestaltet sich schwierig, da es diverse Einflussfaktoren gibt.
+VMware veröffentlichte in 2008 ein 26 seitiges Dokument mit dem Titel "Total Economic Impact Of VMware Virtual Desktop Infrastructure – Financial Services Industry" % How to link to:  https://www.vmware.com/files/pdf/analysts/Forrester_Report_Total_Economic_Impact_of_VMware_Virtual_Desktop_Infrastructure_in_Financial_Services.pdf
+veröffentlicht. Darin ist ein vier Jahres Plan aufgestellt mit einer möglichen Berechnung der Kosten.
+
+Im Dokument werden zuerst Kennzahlen, wie die Löhne und die Anzahl an Servern spezifiziert.
+
+Als zweites werden die Initialen kosten Analysiert. Darin enthalten sind Lizenzkosten, Anzahl Arbeitsstunden sowie die Hardware welche angeschafft werden muss.
+
+Zuletzt sind die Laufzeitkosten aufgeführt.
+
+Im Totalen, gemäss Dokument, sind die Kosten mit \$3,648,355 beziefert. 
+
+\begin{table}[H]
+	\centering
+	\small\renewcommand{\arraystretch}{1.4}  
+	\rowcolors{1}{tablerowcolor}{tablebodycolor}
+	%
+	\captionabove[VMware VDI Preise]{VMware VDI Preise}
+	%
+	\begin{tabularx}{\textwidth}{X | r | r | r | r | r | r}
+		\hline
+		\rowcolor{tableheadcolor}
+		\textbf{Position} & \textbf{Initial} & \textbf{Jahr 1} & \textbf{Jahr 2} & \textbf{Jahr 3} & \textbf{Jahr 4} & \textbf{Total} \\
+		\hline
+		Initiale Implementierungskosten & \$37,438 & \$27,038 &  &  &  & \textbf{\$64,476} \\
+		Software Lizenzen und \linebreak
+		Maintanance & \$9,000 & \$52,425 & \$57,188 & \$55,2425 & \$65,550 & \textbf{\$239,588} \\
+		Hardware Kosten & \$365,000 & \$1,095,000 & \$680,00 & \$315,000 & \$315,000 & \textbf{\$2,770,000} \\
+		Laufende Ktextbfosten für \linebreak
+		Implementation und Support &  & \$137,271 & \$141,389 & \$145,631 & \$150,000 & \textbf{\$574,292} \\
+		\hline
+		\rowcolor{tableheadcolor}
+		Total & \$411,438 & \$1,311,735 & \$878,577 & \$516,056 & \$530,550 & \textbf{\$3,648,355} \\
+	\end{tabularx}
+\end{table}
+%Horizontale Linien sind zu lang... WIESOOO???!!!???
+
+Mit ~76\% machen die Hardware Kosten den grössten Anteil an den totalen Kosten aus.
+Das Szenario beinhaltet zu Beginn 60 Virtuelle Desktops, und wächst über die vier Jahre auf 1'000 an. Dies entspricht einer grossen Firma für welche dreieinhalb Millionen eine tragbare Investition darstellt. Für kleinere Firmen muss entsprechend runterskalliert werden.
+
+\subsubsection{Einsparungen}
+Das Paper beinhaltet auch die erwarteten Einsparungen.
+
+\begin{table}[H]
+	\centering
+	\small\renewcommand{\arraystretch}{1.4}  
+	\rowcolors{1}{tablerowcolor}{tablebodycolor}
+	%
+	\captionabove[VMware VDI Einsparungen]{VMware VDI Einsparungen}
+	%
+	\begin{tabularx}{\textwidth}{X | r | r | r | r | r}
+		\hline
+		\rowcolor{tableheadcolor}
+		\textbf{Position} & \textbf{Jahr 1} & \textbf{Jahr 2} & \textbf{Jahr 3} & \textbf{Jahr 4} & \textbf{Total} \\
+		\hline
+		Outsourcing Einsparungen & \$908,160 & \$3,027,200 & \$4,540,800 & \$4,540,800 & \textbf{\$13,016,960} \\
+		Help desk Einsparungen &  &  & \$239,037 & \$253,600 & \textbf{\$492,637} \\
+		US contractor Einsparungen &  & \$378,400 & \$756,800 & \$1,135,200 & \textbf{\$2,270,400} \\
+		Vermiedene IT Einstellungen &  &  &  & \$100,000 & \textbf{\$100,000} \\
+		Vermiedene PC Anschaffungen &  & \$28,750 & \$28,700 & \$57,500 & \textbf{\$115,000} \\
+		Bürofläche Einsparungen &  &  &  & \$24,000 & \textbf{\$24,000} \\
+		\hline
+		\rowcolor{tableheadcolor}
+		Total & \$908,160 & \$3,434,350 & \$5,565,387 & \$6,111,100 & \textbf{\$16,018,997} \\
+	\end{tabularx}
+\end{table}
+
+Die mit Abstand grösste Einsparung liegt mit ~82\% beim Outsourcing.
+
+\subsubsection{Fazit}
+Die genannten Zahlen sind mit einer Priese Salz zu geniessen. Als erstes wurden sie für den US Amerikanischen Markt erhoben. Zweitens sind sie sicherlich sehr optimistisch berechnet, da sie aus dem Haus von VMware selbst stammen.
+
+Dennoch stellen die Zahlen gut dar, dass es eine grosse Investition bedeutet für die es einen guten Grund geben muss.
+
+Aus der Einsparung-Tabelle kann man schlussfolgern, dass sich der Umschwung auf \Gls{vdiLabel} erst richtig Lohnt, wenn man auch plant Outsourcing zu betreiben. Denn ~82\% der Einsparungen beruhen auf diesem Punkt. Natürlich sind damit noch weitere Kosten verbunden die hier nicht aufgeführt sind.
+
 
 \subsection{Sicherheit}
 
