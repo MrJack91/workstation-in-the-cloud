@@ -152,7 +152,9 @@ Durch die Komprimierung ist eine hohe Auflösung der Bildschirminhalte möglich.
 
 \section{VMware Virtual Desktop Manager}
 % sl
-% Quelle: http://www.vmware.com/pdf/vdm20_intro.pdf
+% Quellen: 
+% - http://www.vmware.com/pdf/vdm20_intro.pdf
+% - https://www.vmware.com/files/pdf/analysts/Forrester_Report_Total_Economic_Impact_of_VMware_Virtual_Desktop_Infrastructure_in_Financial_Services.pdf
 VmWare ist eine amerikanische Firma mit Sitz im Palo Alto, Californien. Gegründet wurde die Organisation 1998 und ging 2007 an die Börse.
 Als Hauptproduct bietet VmWare Virtualisierungssoftware für Server Infrastrukturen an. Ein Teil davon, welchem sich dieses Kapitel gewidmet ist, ist die on-premis VDI Lösung \Gls{vdmLabel}, welche auf dem Kern von VmWare, der VMware Infrastructure 3 aufbaut.
 
@@ -268,17 +270,6 @@ Dennoch stellen die Zahlen gut dar, dass es eine grosse Investition bedeutet fü
 Aus der Einsparung-Tabelle kann man schlussfolgern, dass sich der Umschwung auf \Gls{vdiLabel} erst richtig Lohnt, wenn man auch plant Outsourcing zu betreiben. Denn ~82\% der Einsparungen beruhen auf diesem Punkt. Natürlich sind damit noch weitere Kosten verbunden die hier nicht aufgeführt sind.
 
 \subsection{Sicherheit}
-% Seite 9: RSA Secure ID für Login. Benötigt Security Username, Passwort & Token für login. Two two-factor authentication.
-% Seite 10: HTTPS Zugang möglich zwischen Terminal und VDM Connection Server
-% Seite 10: Server können in einer DMZ gestartet werden. Verbindung über Internet möglich. Einige Server laufen in der Sicheren Zone, andere in der DMZ.
-% Seite 10/11: High-availability mit load balancing
-% Seite 10/11: VDM Security Servers müssen nicht teil vom LDAP/Active Diretory sein.
-% Seite 24: LDAP anbindung möglich
-
-% Eigene Sicherheit
-% Korrekt implementierte Firewall auf Clients & Servers
-% HTTP Access verbieten
-
 VMware integriert verschiedene Sicherheitsmassnahmen in \Gls{vdmLabel}.
 
 \begin{itemize}
@@ -323,11 +314,59 @@ Auch die Sicherheit wird erhöht, da bei Neueintritten, internen Wechseln und Au
 \subsubsection{Fazit}
 VMware integriert viele Sicherheit-Aspekte in ihre \Gls{vdiLabel} Lösung.
 
-Korrekt Umgesetzt kann damit eine sichere Infrastruktur aufgebaut werden, welche sicher gegenüber Ausfällen und Häckerattacken ist. Ein zusätzlicher Vorteil ist, dass die Daten in der Firma gehosted sind und die Sicherheitszone niemals verlassen.
+Korrekt Umgesetzt kann damit eine sichere Infrastruktur aufgebaut werden, welche robust gegenüber Ausfällen und Häckerattacken ist. Ein zusätzlicher Vorteil ist, dass die Daten in der Firma gehosted sind und die Sicherheitszone niemals verlassen.
 
 Alles steht und fällt mit jedoch mit der Integration in die eigene Infrastruktur. Die Mechanismen müssen korrekt und durchgehen eingehalten werden damit sie effektiv sind. 
 
+Der Zugriff über HTTP sollte durchgängig deaktiviert werden, wenn er nicht ausdrücklich benötigt wird. Sowie sollte eine sichere Firewall nach aussen hin eingerichtet sein.
+
 \subsection{Geschwindigkeit}
+% Quelle
+Gemessen werden kann die Geschwindigkeit an der Latenz zwischen der Eingabe am \Gls{vdiLabel} Client bis zum Zeitpunkt wenn die Antwort auf dem Bildschirm erscheint. Als Richtwert für eine genügende Geschwindigkeit wird für eine normale Benutzung eine Sekunde vorausgesetzt, und für Ein-/Ausgabe lastige Prozesse sechs Sekunden.
+
+\subsubsection{Testsetup}
+Das Testsetup beinhaltet zwei Rechner. Der erste Rechner ist ein HP ProLiant BL460 mit einem 8-core Xeon E5540 (2.53 GHz) Prozessor und 96GB Ram. Als zweiter Rechner wurde ein Dell PowerEdge R720xd mit einem 16-core Intel Xeon E5-2690 (2.9 GHz) mit 256GB Ram verwendet.
+Beide verfügen über eine \Gls{ssdLabel} mit 200GB und sechs 300GB 15k RPM SAS Festplatten.
+
+Auf den Rechnern können beliebig viele Nodes hochgefahren werden, welche sich die Last die durch die Clients auftritt teilen.
+
+Die Benutzer welche die Clients bedienen sind automatisiert und produzieren eine hohe Last, welche \Gls{cpuLabel} und Ein-/Ausgabe lastig ist.
+
+Die Tests werden jeweils mit 3, 5, 8 und 16 Nodes durchgeführt. Dadurch soll ersichtlich werden, ob das System mit zunehmender Nodes- und Benutzeranzahl gut skaliert.
+
+\subsubsection{Resultate}
+Der erste Tests skalierte die Anzahl an Nodes von den definierten 3 bis zu 16 hoch und analysierte, wie viele Benutzer gleichzeitig, unter den definierten Bedinungen arbeiten konnten.
+
+\begin{figure}
+	\includegraphics[width=\textwidth]{images/vmware-vdm-scale}
+	\caption{Skalierung von 3 Nodes bis zu 16 Nodes}
+	\label{fig:vdmPerformanceScale}
+\end{figure}
+
+Die Grafik zeigt, dass 305 Clients flüssig auf 3 Nodes arbeiten konnten. Bei 16 Nodes waren es 1615 Benutzer. Zusätzlich ist ein linearer Anstieg ersichtlich. Das heisst das System skaliert mit den Anzahl an Nodes mit.
+
+Die zweite Grafik zeigt die Latenz für eine normale Benutzung mit der Anzahl an Benutzer aus der Abbildung \ref{fig:vdmPerformanceScale}.
+
+\begin{figure}
+	\includegraphics[width=\textwidth]{images/vmware-vdm-performance-normal}
+	\caption{Antwortzeiten für normale Benutzung}
+	\label{fig:vdmPerformanceNormal}
+\end{figure}
+
+Auf der letzten Grafik wird die Antwortzeit für Ein-/Ausgabe lastige Bedienung illustriert.
+
+\begin{figure}
+	\includegraphics[width=\textwidth]{images/vmware-vdm-performance-io}
+	\caption{Antwortzeiten für normale Benutzung}
+	\label{fig:vdmPerformanceIo}
+\end{figure}
+
+Aus den Abbildungen \ref{fig:vdmPerformanceNormal} und \ref{fig:vdmPerformanceIo} bestätigt sich, dass sich das System gleich verhaltet, wenn die Anzahl an Nodes und damit die Clients erhöht wird.
+
+\subsubsection{Fazit}
+Mit genug starker Hardware kann jede gewünschte Antwortzeit erreicht werden. Bei VMwares \Gls{vdmLabel} Lösung sind das durchschnittlich 101 Benutzer  pro Node.
+
+Das spanneste ist jedoch die lineare Entwicklung mit zunehmender Nodeanzahl. Damit ist das System für kleinere Firmen gleich gut geeignet wie für grosse.
 
 \subsection{Produkt Lösungen}
 
