@@ -13,26 +13,36 @@
 	% http://www.microsoft.com/en-us/windows/enterprise/products-and-technologies/virtualization/default.aspx
 	% Microsoft Azure
 	% Microsoft HyperV: http://www.microsoft.com/en-us/server-cloud/solutions/virtualization.aspx
-	
-Im Zentrum der Arbeit werden die verschiedenen Arten, wie man einen Arbeitsplatz in den Cloud hosten kann beschrieben. Von den beiden Typen wird jeweils ein Vertreter aus der Marktwirtschaft analysiert.
+
+Folgend werden verschiedene Möglichkeiten von IT Infrastrukturen vorgestellt.
+Besonders auf zwei cloudbasierte Lösungen wird genauer eingegangen. Dazu wird je ein Vertreter aus der Marktwirtschaft analysiert.
 
 \section{Typen}
-% Crosslink zu Vorteile einfügen
-Um die Arbeitsplätze einer Firma in die Cloud zu heben, muss zuerst entschieden werden, ob man diese in einem eigenen Rechenzentrum betreiben möchte, oder ob man diese Arbeit an eine externe Firma auslagert. 
+Grundsätzlich kann ein Arbeitsplatz via virtuellen Computern in der Cloud oder klassisch, on-premise umgesetzt werden.
+Um die Arbeitsplätze einer Firma in die Cloud zu heben, muss entschieden werden, ob man eine Lösung im eigenen Rechenzentrum oder bei einer externen Firma warten will.
 
-Beide Vorgehensweisen beinhalten Vorteile und Tücken. Allgemeine Vorteile welche beide Arten mit sich bringen sind bereits unter dem Kapitel \ref{sec:Vorteile} Vorteile beschrieben.e 
+Beide Vorgehensweisen beinhalten Vorteile und Tücken. Allgemeine Vorteile welche beide Arten mit sich bringen, sind bereits unter dem Kapitel \ref{sec:Vorteile} Vorteile beschrieben.
 
 Wird das Hosting ausgelagert, hat man eine monatliche oder jährliche Abrechnung. Dadurch werden die Kosten kalkulierbar. Auch fallen grosse initiale Anschaffungskosten weg.
 
-Firmen mit gesetzlichen Auflagen wie Versicherungen, Banken, etc. kann es dabei Probleme mit dem Datenschutz geben. Probleme können sich ergeben wenn die Daten im Ausland gelagert werden, oder sie nicht konsequent verschlüsselt übertragen und gespeichert werden.
+Bei Firmen mit gesetzlichen Auflagen wie Versicherungen, Banken, etc. kann es dabei Probleme mit dem Datenschutz geben.
+Dabei spielt die effektive Lagerung der Daten (Lokalität) und die Sicherheit (konsequente Verschlüsselung) von Übertragung, sowie Speicherung eine zentrale Rolle.
 
-Bei solchen Problem bietet sich ein eigens Hosting an. Die Anschaffungskosten sind massiv höher und die Betriebskosten können volatil sein, man hat jedoch die volle Kontrolle wo die Daten gelagert werden und ob die Kommunikationskanäle ausreichend geschützt sind.
+Deswegen bietet sich ein eigenes Hosting an. Die Anschaffungskosten sind massiv höher und die Betriebskosten können volatil sein, man hat jedoch die volle Kontrolle über Lokalität und Sicherheit.
 
-Diese Arbeit beschäftigt sich näher mit Amazon WorkSpaces, als Vertreter der ausgelagerten Lösung, sowie VMware Virtual Desktop Manager, mit der man die Arbeitsplätze auf den eigenen Servern betreiben kann.
+Folgend wird auf Amazon WorkSpaces, als Vertreter der ausgelagerten Lösung, sowie VMware Virtual Desktop Manager, für eine eigenständige Lösung eingegangen.
 
-\section{onpremise}
-%mh
+\section{Klassischer Ansatz, "`on-premise"'}
+Beim klassischen Ansatz, wird jeder Client lokal auf eigener Hardware aufgesetzt. Wird öfters eine genau gleiche Umgebung eingerichtet, so kann mit einem Image eine vollständige Einrichtung eines Computers vorgenommen werden.
 
+Eine IT Infrastruktur die auf on-premise Geräten basiert, kommt ohne Cloud aus. Es ergibt sich eine dezentrale Sammlung von Daten (jeweils auf dem Gerät des jeweiligen Benutzers). Selbstverständlich könne Daten auf Servern gesammelt und auch wieder automatisch verteilt werden, trotzdem müssen die Daten schlussendlich über die Hardware des Clients geholt und verarbeitet werden.
+
+Die Ressourcen pro Arbeitsplatz sind auf dessen Hardware beschränkt.
+
+Eine Änderung der Hardware erfolgt durch eine manuell, mechanische Anpassungen des Gerätes.
+Daraus folgt, dass umfassenden Hardware-Anpassungen an mehreren Geräten sehr aufwändig und somit auch kostenspielig wird.
+
+\newpage
 \section{Amazon WorkSpaces}
 % mh: http://aws.amazon.com/de/workspaces
 % http://en.wikipedia.org/wiki/Amazon.com
@@ -153,7 +163,7 @@ Durch die Komprimierung ist eine hohe Auflösung der Bildschirminhalte möglich.
 	\item Gerade für temporäre Arbeitnehmer können sehr einfach Maschinen für die Dauer gemietet werden und anschliessend kann der Zugriff wieder entfernt werden.
 \end{itemize}
 
-% \section{VMware \Gls{vdmLabel}}
+\newpage
 \section{VMware VDM}
 % sl
 % Quellen: 
@@ -206,7 +216,7 @@ Als zweites werden die Initialen kosten Analysiert. Darin enthalten sind Lizenzk
 
 Zuletzt sind die Laufzeitkosten aufgeführt.
 
-Im Totalen, gemäss Dokument, sind die Kosten mit \$3,648,355 beziefert. 
+Im Totalen, gemäss Dokument, sind die Kosten mit \$3,648,355 beziffert. 
 
 \begin{table}[H]
 	\centering
