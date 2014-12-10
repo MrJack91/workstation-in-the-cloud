@@ -169,7 +169,7 @@ Im Gegenzug gibt es einige Vorteile daraus:
 	\item Geringere Kosten als eine on-premis Lösung.
 \end{itemize}
 
-Die folgende Illustration zeigt das Setup, welches für den Betrieb von \Gls{vdmLabel} benötigt wird.
+Die folgende Illustration\footcite{Introduction_to_Virtual_Desktop_Manager} zeigt das Setup, welches für den Betrieb von \Gls{vdmLabel} benötigt wird.
 
 \begin{figure}[H]
 	\includegraphics[width=\textwidth]{images/vmware-vdm-setup}
@@ -195,8 +195,7 @@ Auf den Desktops kann grundsätzlich jedes Betriebsystem ausgeführt werden, fü
 
 \subsection{Kosten}
 Die Berechnung der Kosten gestaltet sich schwierig, da es diverse Einflussfaktoren gibt.
-VMware veröffentlichte in 2008 ein 26 seitiges Dokument mit dem Titel "Total Economic Impact Of VMware Virtual Desktop Infrastructure – Financial Services Industry" % How to link to:  https://www.vmware.com/files/pdf/analysts/Forrester_Report_Total_Economic_Impact_of_VMware_Virtual_Desktop_Infrastructure_in_Financial_Services.pdf
-veröffentlicht. Darin ist ein vier Jahres Plan aufgestellt mit einer möglichen Berechnung der Kosten.
+VMware veröffentlichte in 2008 ein 26 seitiges Dokument mit dem Titel "`Total Economic Impact Of VMware Virtual Desktop Infrastructure – Financial Services Industry\footcite{Forrester_Report}"' veröffentlicht. Darin ist ein vier Jahres Plan aufgestellt mit einer möglichen Berechnung der Kosten.
 
 Im Dokument werden zuerst Kennzahlen, wie die Löhne und die Anzahl an Servern spezifiziert.
 
@@ -271,7 +270,7 @@ Dennoch stellen die Zahlen gut dar, dass es eine grosse Investition bedeutet fü
 Aus der Einsparung-Tabelle kann man schlussfolgern, dass sich der Umschwung auf \Gls{vdiLabel} erst richtig Lohnt, wenn man auch plant Outsourcing zu betreiben. Denn ~82\% der Einsparungen beruhen auf diesem Punkt. Natürlich sind damit noch weitere Kosten verbunden die hier nicht aufgeführt sind.
 
 \subsection{Sicherheit}
-VMware integriert verschiedene Sicherheitsmassnahmen in \Gls{vdmLabel}.
+VMware integriert verschiedene Sicherheitsmassnahmen\footcite{Introduction_to_Virtual_Desktop_Manager} in \Gls{vdmLabel}.
 
 \begin{itemize}
 \item Zwei-Faktor-Authentifizierung
@@ -289,14 +288,16 @@ Die Sicherheit besteht darin, dass wenn das Passwort in die falschen Hände ger�
 \subsubsection{\Gls{httpsLabel} Zugang}
 Der Zugang von den Clients auf die \Gls{vdmLabel} Infrastruktur, sowie die Kommunikation zwischen den \Gls{vdmLabel} Servern selber kann gänzlich auf \Gls{httpsLabel} umgestellt werden.
 
+\begin{minipage}{\textwidth}
 \subsubsection{\Gls{dmzLabel} \& Load balancing}
-Um den Zugriff auf die \Gls{vdiLabel} Umgebung aus dem Internet zu gewährleisten kann eine \Gls{dmzLabel} eingerichtet werden. 
+Um den Zugriff auf die \Gls{vdiLabel} Umgebung aus dem Internet zu gewährleisten kann eine \Gls{dmzLabel} eingerichtet werden\footcite{Introduction_to_Virtual_Desktop_Manager}. 
 
 \begin{figure}[H]
 	\includegraphics[width=\textwidth]{images/vmware-vdm-dmz2}
 	\caption{\Gls{vdmLabel} Setup mit einer \Gls{dmzLabel}}
 	\label{fig:vdmSetupDmz}
 \end{figure}
+\end{minipage}
 
 Die \Gls{dmzLabel} ist ein Bereich, der vom Internet her zugänglich ist und dessen Server nicht gänzlich als vertrauenswürdig eingestuft werden können.
 
@@ -322,8 +323,9 @@ Alles steht und fällt mit jedoch mit der Integration in die eigene Infrastruktu
 Der Zugriff über HTTP sollte durchgängig deaktiviert werden, wenn er nicht ausdrücklich benötigt wird. Sowie sollte eine sichere Firewall nach aussen hin eingerichtet sein.
 
 \subsection{Geschwindigkeit}
-% Quelle
 Gemessen werden kann die Geschwindigkeit an der Latenz zwischen der Eingabe am \Gls{vdiLabel} Client bis zum Zeitpunkt wenn die Antwort auf dem Bildschirm erscheint. Als Richtwert für eine genügende Geschwindigkeit wird für eine normale Benutzung eine Sekunde vorausgesetzt, und für Ein-/Ausgabe lastige Prozesse sechs Sekunden.
+
+VMware führte im März 2014 ein Lasttest durch, auf dessen Resultate sich dieser Abschnitt bezieht\footcite{VDI_Performance}.
 
 \subsubsection{Testsetup}
 Das Testsetup beinhaltet zwei Rechner. Der erste Rechner ist ein HP ProLiant BL460 mit einem 8-core Xeon E5540 (2.53 GHz) Prozessor und 96GB Ram. Als zweiter Rechner wurde ein Dell PowerEdge R720xd mit einem 16-core Intel Xeon E5-2690 (2.9 GHz) mit 256GB Ram verwendet.
