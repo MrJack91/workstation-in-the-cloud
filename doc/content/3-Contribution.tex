@@ -20,7 +20,7 @@ Im Zentrum der Arbeit werden die verschiedenen Arten, wie man einen Arbeitsplatz
 % Crosslink zu Vorteile einfügen
 Um die Arbeitsplätze einer Firma in die Cloud zu heben, muss zuerst entschieden werden, ob man diese in einem eigenen Rechenzentrum betreiben möchte, oder ob man diese Arbeit an eine externe Firma auslagert. 
 
-Beide Vorgehensweisen beinhalten Vorteile und Tücken. Allgemeine Vorteile welche beide Arten mit sich bringen sind bereits unter dem Kapitel Vorteile beschrieben. Crosslink: \ref{sec:Vorteile}
+Beide Vorgehensweisen beinhalten Vorteile und Tücken. Allgemeine Vorteile welche beide Arten mit sich bringen sind bereits unter dem Kapitel \ref{sec:Vorteile} Vorteile beschrieben.e 
 
 Wird das Hosting ausgelagert, hat man eine monatliche oder jährliche Abrechnung. Dadurch werden die Kosten kalkulierbar. Auch fallen grosse initiale Anschaffungskosten weg.
 
@@ -174,7 +174,7 @@ Im Gegenzug gibt es einige Vorteile daraus:
 
 Die folgende Illustration zeigt das Setup, welches für den Betrieb von \Gls{vdmLabel} benötigt wird.
 
-\begin{figure}
+\begin{figure}[H]
 	\includegraphics[width=\textwidth]{images/vmware-vdm-setup}
 	\caption{\Gls{vdmLabel} Setup}
 	\label{fig:vdmSetup}
@@ -295,7 +295,7 @@ Der Zugang von den Clients auf die \Gls{vdmLabel} Infrastruktur, sowie die Kommu
 \subsubsection{\Gls{dmzLabel} \& Load balancing}
 Um den Zugriff auf die \Gls{vdiLabel} Umgebung aus dem Internet zu gewährleisten kann eine \Gls{dmzLabel} eingerichtet werden. 
 
-\begin{figure}
+\begin{figure}[H]
 	\includegraphics[width=\textwidth]{images/vmware-vdm-dmz2}
 	\caption{\Gls{vdmLabel} Setup mit einer \Gls{dmzLabel}}
 	\label{fig:vdmSetupDmz}
@@ -341,7 +341,7 @@ Die Tests werden jeweils mit 3, 5, 8 und 16 Nodes durchgeführt. Dadurch soll er
 \subsubsection{Resultate}
 Der erste Tests skalierte die Anzahl an Nodes von den definierten 3 bis zu 16 hoch und analysierte, wie viele Benutzer gleichzeitig, unter den definierten Bedinungen arbeiten konnten.
 
-\begin{figure}
+\begin{figure}[H]
 	\includegraphics[width=\textwidth]{images/vmware-vdm-scale}
 	\caption{Skalierung von 3 Nodes bis zu 16 Nodes}
 	\label{fig:vdmPerformanceScale}
@@ -350,16 +350,14 @@ Der erste Tests skalierte die Anzahl an Nodes von den definierten 3 bis zu 16 ho
 Die Grafik zeigt, dass 305 Clients flüssig auf 3 Nodes arbeiten konnten. Bei 16 Nodes waren es 1615 Benutzer. Zusätzlich ist ein linearer Anstieg ersichtlich. Das heisst das System skaliert mit den Anzahl an Nodes mit.
 
 Die zweite Grafik zeigt die Latenz für eine normale Benutzung mit der Anzahl an Benutzer aus der Abbildung \ref{fig:vdmPerformanceScale}.
-
-\begin{figure}
+\begin{figure}[H]
 	\includegraphics[width=\textwidth]{images/vmware-vdm-performance-normal}
 	\caption{Antwortzeiten für normale Benutzung}
 	\label{fig:vdmPerformanceNormal}
 \end{figure}
 
 Auf der letzten Grafik wird die Antwortzeit für Ein-/Ausgabe lastige Bedienung illustriert.
-
-\begin{figure}
+\begin{figure}[H]
 	\includegraphics[width=\textwidth]{images/vmware-vdm-performance-io}
 	\caption{Antwortzeiten für Ein-/Ausgabe intensive Operationen}
 	\label{fig:vdmPerformanceIo}
@@ -371,8 +369,6 @@ Aus den Abbildungen \ref{fig:vdmPerformanceNormal} und \ref{fig:vdmPerformanceIo
 Mit genug starker Hardware kann jede gewünschte Antwortzeit erreicht werden. Bei VMwares \Gls{vdmLabel} Lösung sind das durchschnittlich 101 Benutzer pro Node mit einer Toleranz von einer beziehungsweise sechs Sekunden.
 
 Das spannendste ist jedoch die lineare Entwicklung mit zunehmender Nodeanzahl. Damit ist das System für kleinere Firmen gleich gut geeignet wie für grosse.
-
-\subsection{Produkt Lösungen}
 
 
 
