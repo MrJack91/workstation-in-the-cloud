@@ -74,30 +74,40 @@ In diesem Abschnitt werden die Vor- und Nachteile diskutiert. Unterteilt wird in
 		% Downtime cost calculator: http://www.visionsolutions.com/Solutions/Disaster-Recovery-toolkit-downtime-calc.aspx
 		% Accross USA & EU, each year  $26.5 Billion USD is lost because of IT downtime
 
-Im Kapitel \ref{fig:anlyse} wurde aufgezeigt, dass es kostspielig sein kann, auf eine Cloud-Lösung umzustellen. Es müssen deshalb konkrete Bedürfnisse vorhanden sein, damit sich eine Umstellung rechtfertigt.
+Im Kapitel \ref{fig:analyse} wurde aufgezeigt, dass es kostspielig sein kann, auf eine Cloud-Lösung umzustellen. Es müssen deshalb konkrete Bedürfnisse vorhanden sein, damit sich eine Umstellung rechtfertigt.
 
 Bei der Berechnung der Kosten wird oft der Fehler gemacht, dass nur die Hard- und Software Kosten bei on-premis berücksichtigt werden, und die monatlichen Kosten bei der Cloud-Lösung.
 Dass ist jedoch das selbe, wie wenn ein Buch nur nach dessen Deckblatt bewertet wird.
 Es gibt diverse andere Kosten die es zu beachten gilt.
 
 \subsubsection{Elektrizität}
-Kosten welche oft nicht berücksichtig werden sind jene für die Elektrizität. Diese können unterteilt werden in die für den Stromverbrauch der Geräten, sowie in die Stromkosten welche durch die Kühlung anfallen. Unter den gesamten Ausgaben für die Elektrizität sind die Kosten für die Server oft schwer raus zu lesen, wenn keine Messwerkzeuge installiert sind. Der Vorteil von einem externen Anbieter besteht darin, dass diese Umtriebe bereits in den monatlichen Umtrieben enthalten sind. 
+Kosten welche oft nicht berücksichtig werden sind jene für die Elektrizität. Diese können unterteilt werden in die für den Stromverbrauch der Geräten, sowie in die Stromkosten welche durch die Kühlung anfallen. 
+
+Unter den gesamten Ausgaben für die Elektrizität sind die Kosten für die Server oft schwer raus zu lesen, wenn keine Messwerkzeuge installiert sind. Der Vorteil von einem externen Anbieter besteht darin, dass diese Umtriebe bereits in den monatlichen Umtrieben enthalten sind. 
 
 Je grösser die Firma wird, desto grösser wird dementsprechend auch der Stormverbrauch. Dies wird noch verstärkt oder abgeschwächt nach dem Arbeitsgebiet auf dem das Geschäft operiert. Bei einem service-orientiertem Angebot ist der Konsum deutlich höher. 
 
-Um die effektivität des Stromverbrauches eines Datacenters zu messen gibt es dasn \Gls{pueLabel} Verhältnis. Dazu wird der gesamte Verbrauch einer Firma geteilt durch Stromkosten der IT gerechnet.
+Um die effektivität des Stromverbrauches eines Datacenters zu messen gibt es das \Gls{pueLabel} Verhältnis. Dazu wird der gesamte Verbrauch einer Firma geteilt durch Stromkosten der IT gerechnet.
 \[PUE = \frac{Total\: Stromkosten}{Stromkosten\: der\: IT}\]
 Je näher der Wert bei 1 liegt, desto besser ist er. Microsoft gibt an, einen \Gls{pueLabel} Wert zwischen 1.13 bis 1.2 zu besitzen und Google arbeitet mit 1.14.
 
-Den \Gls{pueLabel} Wert auf ein erträgliches Mass zu reduzieren kann zum schwierig sein. Eine Cloud-Lösung stellt sich dazu als ein geeignetes Mittel bereit.
-
-
+Den \Gls{pueLabel} Wert auf ein erträgliches Mass zu reduzieren kann zum Teil schwierig oder kostspielig sein, wenn man seine ganze Infrastruktur umstellen muss. Eine Cloud-Lösung stellt ein geeignetes Mittel dazu dar.
 
 \subsubsection{Datenraten}
-Ein weiterer Kostenpunkt sind die Datenraten und Netzwerkkosten. Bei einer Cloud-Lösung können beträchtliche Datenraten anfallen. Wenn jedoch nur der Bildschirm übertragen werden muss, so halten sich die Ausgaben in Grenzen. 
+Ein weiterer Kostenpunkt sind die Datenraten und Netzwerkkosten. Bei einer Cloud-Lösung können beträchtliche Datenraten anfallen, wenn Datein, Programme und weiteres ausser Haus gespeichert werden. Wenn jedoch nur der Bildschirm übertragen werden halten sich die Kosten in Grenzen. 
+
 Für das Betreiben der Server in-house fallen zwar keine Internet kosten an, jedoch wird das eigene Netzwerk stark belastet. 
 
+Für eine neue Firma ist es günstiger in der Cloud zu arbeiten da keine grossen Netzwerkosten anfallen.
+Hat man hingegen bereits ein bestehendes, gut ausgebautes Netzwerk kann dies eine Hürde darstellen beim Umstieg in die Cloud.
 
+Zur Berechnung der benötigten Datenraten gibt es Berechnungssoftware oder auch online Services zu finden. Ein Beispiel ist die Seite \url{<http://bandwidthpool.com/>}.
+
+Ein versteckter Kostenpunkt bei gewiesen Clouddiensten sind die auswärts Datenraten. Man kann gratis und so viele Daten man möchte auf einen Server laden, diese anschliessend ab zugreifen kostet.
+Auch diese Kosten sind für DaaS Lösungen nicht sehr hoch, müssen jedoch trotzdem eingerechnet werden.
+
+\subsection{5-Jahre-Regel}
+Im Durchschnitt müssen Hardware-Komponenten alle fünf Jahre ausgetauscht werden.
 
 \subsection{Ressourcen (Hardware), Thin Client}
 
