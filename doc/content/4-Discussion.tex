@@ -1,6 +1,6 @@
 
 \chapter{Diskussion}
-Im vorher gegangen Kapitel wurden die on-premis Lösung beschrieben, sowie das auslagern der Workstations in die Cloud auf fremden und eigenen Servern. In diesem Passus werden die verschiedenen Vorgehen gegeneinander verglichen.
+Im vorher gegangen Kapitel wurden die on-premis Lösung beschrieben, sowie das auslagern der Workstations in die Cloud auf fremden und eigenen Servern. In diesem Passus werden die verschiedenen Vorgehen gegeneinander verglichen. Das Kapitel soll helfen, sich für eine Lösung zu entscheiden.
 
 % http://www.stratacore.com/blog/choosing-between-vdi-and-daas
 % DaaS vs VDI
@@ -50,8 +50,54 @@ Im vorher gegangen Kapitel wurden die on-premis Lösung beschrieben, sowie das a
 % einfacher
 % günstiger
 
-In diesem Abschnitt werden die Vorteile diskutiert. Unterteilt wird in die Bereiche Kosten, Aufwand, Unterhalt und Sicherheit
-Im Kapitel \ref{fig:vmwareCosts} wurde aufgezeigt, dass es kostspielig sein kann, auf eine Cloud-Lösung umzustellen. Es müssen deshalb konkrete Bedürfnisse vorhanden sein, damit sich eine Umstellung rechtfertigt.
+Als erster Schritt muss man eine On-Premis zu einer In-The-Cloud Lösung vergleichen.
+In diesem Abschnitt werden die Vor- und Nachteile diskutiert. Unterteilt wird in die Bereiche Kosten, Aufwand, Unterhalt und Sicherheit.
+
+\subsection{Kosten}
+%http://betanews.com/2013/11/04/comparing-cloud-vs-on-premise-six-hidden-costs-people-always-forget-about/
+% costs can heavily depend!
+% to calculate costs of on premis soly on new hard-/software is like judging a book by its cover
+% Same for cloud. They only calculate montly costs
+% What needs to be regarded in the calculation:
+	% - Electricity costs. Powering and cooling. Costs hard to meassure. Ask google/facebook. They need to watch PUE (Power Usage Effectivness)
+		% More important the bigger you get.
+	% - Bandwidth: Server inhouse: only limitation is the network infastructure. Ask a trusted consultant on what bandwidth you need for the cloud.
+		% Check http://bandwidthpool.com/ for what you need. Login required.
+	% - Cloudserver outbound bandwidth: You pay as you requst data
+		% You can load as many data on the server, but pulling them out costs bandwidth
+		% Understandable, you save money by not hosting them by yourself
+		% not a big problem for virtual desktops
+	% - Five year rule: On average, you need to replace 24/7 servers every 5 years
+		% Cost diagram: http://www.softwareadvice.com/tco/ for SaaS, but maps to DaaS.
+		% DaaS, higher recuring costs. but no 5 year hit-backs
+	% - Downtime costs: The more they costs, the more it worth going into the cloud
+		% Downtime cost calculator: http://www.visionsolutions.com/Solutions/Disaster-Recovery-toolkit-downtime-calc.aspx
+		% Accross USA & EU, each year  $26.5 Billion USD is lost because of IT downtime
+
+Im Kapitel \ref{fig:anlyse} wurde aufgezeigt, dass es kostspielig sein kann, auf eine Cloud-Lösung umzustellen. Es müssen deshalb konkrete Bedürfnisse vorhanden sein, damit sich eine Umstellung rechtfertigt.
+
+Bei der Berechnung der Kosten wird oft der Fehler gemacht, dass nur die Hard- und Software Kosten bei on-premis berücksichtigt werden, und die monatlichen Kosten bei der Cloud-Lösung.
+Dass ist jedoch das selbe, wie wenn ein Buch nur nach dessen Deckblatt bewertet wird.
+Es gibt diverse andere Kosten die es zu beachten gilt.
+
+\subsubsection{Elektrizität}
+Kosten welche oft nicht berücksichtig werden sind jene für die Elektrizität. Diese können unterteilt werden in die für den Stromverbrauch der Geräten, sowie in die Stromkosten welche durch die Kühlung anfallen. Unter den gesamten Ausgaben für die Elektrizität sind die Kosten für die Server oft schwer raus zu lesen, wenn keine Messwerkzeuge installiert sind. Der Vorteil von einem externen Anbieter besteht darin, dass diese Umtriebe bereits in den monatlichen Umtrieben enthalten sind. 
+
+Je grösser die Firma wird, desto grösser wird dementsprechend auch der Stormverbrauch. Dies wird noch verstärkt oder abgeschwächt nach dem Arbeitsgebiet auf dem das Geschäft operiert. Bei einem service-orientiertem Angebot ist der Konsum deutlich höher. 
+
+Um die effektivität des Stromverbrauches eines Datacenters zu messen gibt es dasn \Gls{pueLabel} Verhältnis. Dazu wird der gesamte Verbrauch einer Firma geteilt durch Stromkosten der IT gerechnet.
+\[PUE = \frac{Total\: Stromkosten}{Stromkosten\: der\: IT}\]
+Je näher der Wert bei 1 liegt, desto besser ist er. Microsoft gibt an, einen \Gls{pueLabel} Wert zwischen 1.13 bis 1.2 zu besitzen und Google arbeitet mit 1.14.
+
+Den \Gls{pueLabel} Wert auf ein erträgliches Mass zu reduzieren kann zum schwierig sein. Eine Cloud-Lösung stellt sich dazu als ein geeignetes Mittel bereit.
+
+
+
+\subsubsection{Datenraten}
+Ein weiterer Kostenpunkt sind die Datenraten und Netzwerkkosten. Bei einer Cloud-Lösung können beträchtliche Datenraten anfallen. Wenn jedoch nur der Bildschirm übertragen werden muss, so halten sich die Ausgaben in Grenzen. 
+Für das Betreiben der Server in-house fallen zwar keine Internet kosten an, jedoch wird das eigene Netzwerk stark belastet. 
+
+
 
 \subsection{Ressourcen (Hardware), Thin Client}
 
@@ -62,7 +108,7 @@ Im Kapitel \ref{fig:vmwareCosts} wurde aufgezeigt, dass es kostspielig sein kann
 \subsection{Kein Offline-Access}
 \subsection{Zusammenspiel Soft-/Hardware}
 
-\section{VDI - DaaS}
+\section{VDI vs DaaS}
 % technisches knowhow nötig
 % knowhow teuer
 % http://www.forbes.com/sites/benkepes/2013/11/06/death-to-vdi-or-daas-or-whatever-its-called-this-week/
@@ -71,7 +117,19 @@ Im Kapitel \ref{fig:vmwareCosts} wurde aufgezeigt, dass es kostspielig sein kann
 % http://www.virtualqube.com/blog/cloud-based-vdi-vs-daas-is-there-a-difference/
 % Lizenzprobleme mit Windows
 
-
+%http://www.brianmadden.com/blogs/ brianmadden/archive/2014/01/27/building-vdi-for-100-000-users-why-huge-daas-providers-don-t-use-dell-and-hp-and-why-they-can-do-vdi-cheaper-than-you.aspx
+% DaaS is cheaper than VDI
+% They do it at scale. 100'000 Users. 20'000 CPU's. 400'000 GB RAM.
+% What do you do. buy 2'000 Rack Servers from HP/Dell? They use alot of space. Stacked they are 300 feet high.
+% When you open a server, what do you see? Each one has its own power supply. You dont need that.
+% Buy a coustom motherboard. 
+	% No VGA Port, no Display Controller
+	% No need for SSD Boxes. Take chip out and solder them directly on the motherboard. Save money for the chips and the casing.
+% You need a metal casing for each one.
+% No GPU Cards. Order chips and build them in.
+% Consumes less power. less heat. less space
+% Google & Facebook do it like that
+% DaaS Provider pay less for hardware und real-estate and electirizity to power and cool
 
 
 \section{Bereitstellung: Arbeitsplatzes in der Cloud}
