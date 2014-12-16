@@ -1,6 +1,6 @@
 
 \chapter{Diskussion}
-Im vorher gegangen Kapitel wurden die on-premis Lösung beschrieben, sowie das auslagern der Workstations in die Cloud auf fremden und eigenen Servern. In diesem Passus werden die verschiedenen Vorgehen gegeneinander verglichen. Das Kapitel soll helfen, sich für eine Lösung zu entscheiden.
+Im vorher gegangen Kapitel wurden die on-premis Lösung beschrieben, sowie das auslagern der Workstations in die Cloud auf fremden (DaaS) und eigenen Servern (VDI). In diesem Passus werden die verschiedenen Vorgehen gegeneinander verglichen. Das Kapitel soll helfen, sich für eine Lösung zu entscheiden.
 
 % http://www.stratacore.com/blog/choosing-between-vdi-and-daas
 % DaaS vs VDI
@@ -15,7 +15,7 @@ Im vorher gegangen Kapitel wurden die on-premis Lösung beschrieben, sowie das a
 	% slightly faster, because local datacenter, no firewall
 	% recommended when data security is top priority
 
-\section{On-Premis vs In-The-Cloud}
+\section{Vor- und Nachteile}
 %sl
 % sources:
 % http://searchvirtualdesktop.techtarget.com/feature/DaaS-vs-VDI-comparison-highlights-benefits-of-cloud-desktops
@@ -27,22 +27,6 @@ Im vorher gegangen Kapitel wurden die on-premis Lösung beschrieben, sowie das a
 % kosten abschätzbar
 % thin clients günstiger
 
-% pilots einfach
-% incremental scaling
-% Ein image für alle benutzer
-% Updates einfacher. Eine Zentrale stelle für updates
-	% Evt muss für updates neue hardware angeschaft werden. Mehr ram etc.
-% Updates/Deployments sind lighning fast
-% Fehler auffinden einfacher, da nur in einem system gesucht werden muss
-% Backup an einer zentraler stelle
-
-% Go green. Thin clients brauchen weniger strom
-% Platform unabhängig. Egal ob windows, mac, linux
-% Work from abroad
-% Performance besser genutzt / Reductions in computing hardware needs. 
-% Improved workplace/user flexibility,
-
-
 % Greater control how you secure your desktop
 % e.g prevent users from copy files to local machine
 
@@ -50,8 +34,8 @@ Im vorher gegangen Kapitel wurden die on-premis Lösung beschrieben, sowie das a
 % einfacher
 % günstiger
 
-Als erster Schritt muss man eine On-Premis zu einer In-The-Cloud Lösung vergleichen.
-In diesem Abschnitt werden die Vor- und Nachteile diskutiert. Unterteilt wird in die Bereiche Kosten, Aufwand, Unterhalt und Sicherheit.
+Um on-premis, DaaS und VDI zu vergleichen müssen die Vor- und Nachteile Analysiert werden.
+Unterteilt wird die Diskussion in die Bereiche Kosten, Aufwand, Unterhalt und Sicherheit.
 
 \subsection{Kosten}
 %http://betanews.com/2013/11/04/comparing-cloud-vs-on-premise-six-hidden-costs-people-always-forget-about/
@@ -74,44 +58,110 @@ In diesem Abschnitt werden die Vor- und Nachteile diskutiert. Unterteilt wird in
 		% Downtime cost calculator: http://www.visionsolutions.com/Solutions/Disaster-Recovery-toolkit-downtime-calc.aspx
 		% Accross USA & EU, each year  $26.5 Billion USD is lost because of IT downtime
 
-Im Kapitel \ref{fig:analyse} wurde aufgezeigt, dass es kostspielig sein kann, auf eine Cloud-Lösung umzustellen. Es müssen deshalb konkrete Bedürfnisse vorhanden sein, damit sich eine Umstellung rechtfertigt.
+Im Kapitel \label{fig:vmwareCosts} wurde aufgezeigt, dass es kostspielig sein kann, auf eine VDI-Lösung umzustellen. Es müssen deshalb konkrete Bedürfnisse vorhanden sein, damit sich eine Umstellung rechtfertigt.
 
-Bei der Berechnung der Kosten wird oft der Fehler gemacht, dass nur die Hard- und Software Kosten bei on-premis berücksichtigt werden, und die monatlichen Kosten bei der Cloud-Lösung.
+Bei der Berechnung der Kosten wird oft der Fehler gemacht, dass nur die Hard- und Software Kosten bei on-premis und VDI berücksichtigt werden, und die monatlichen Kosten bei DaaS.
 Dass ist jedoch das selbe, wie wenn ein Buch nur nach dessen Deckblatt bewertet wird.
 Es gibt diverse andere Kosten die es zu beachten gilt.
 
 \subsubsection{Elektrizität}
-Kosten welche oft nicht berücksichtig werden sind jene für die Elektrizität. Diese können unterteilt werden in die für den Stromverbrauch der Geräten, sowie in die Stromkosten welche durch die Kühlung anfallen. 
+Kosten welche oft nicht berücksichtigt werden sind jene für die Elektrizität. 
+% von hier...
+Diese können unterteilt werden in die für den Stromverbrauch der Geräten, sowie in die Stromkosten welche durch die Kühlung anfallen. 
+% ... bis hier evt löschen?
+
+Je grösser die Firma wird, desto grösser wird dementsprechend auch der Stromverbrauch. Dies wird noch verstärkt oder abgeschwächt nach dem Arbeitsgebiet auf dem das Geschäft operiert. Bei einem Service-orientiertem Angebot ist der Konsum deutlich höher. 
 
 Unter den gesamten Ausgaben für die Elektrizität sind die Kosten für die Server oft schwer raus zu lesen, wenn keine Messwerkzeuge installiert sind. Der Vorteil von einem externen Anbieter besteht darin, dass diese Umtriebe bereits in den monatlichen Umtrieben enthalten sind. 
 
-Je grösser die Firma wird, desto grösser wird dementsprechend auch der Stormverbrauch. Dies wird noch verstärkt oder abgeschwächt nach dem Arbeitsgebiet auf dem das Geschäft operiert. Bei einem service-orientiertem Angebot ist der Konsum deutlich höher. 
+Im Vergleich von on-premis und VDI hat sich in der Erfahrung gezeigt, dass die Stromkosten sich nicht merklich unterscheiden. Bei VDI konsumieren die Server mehr Strom. Da die Mitarbeiter jedoch nur noch leistungsschwache Rechner benötigen, die sich auf die Desktops auf den Servern verbinden, benötigen diese weniger Strom. Dies hebt sich gegenseitig auf.
 
-Um die effektivität des Stromverbrauches eines Datacenters zu messen gibt es das \Gls{pueLabel} Verhältnis. Dazu wird der gesamte Verbrauch einer Firma geteilt durch Stromkosten der IT gerechnet.
+Um die Effektivität des Stromverbrauches eines Datencenters zu messen gibt es das \Gls{pueLabel} Verhältnis. Dazu wird der gesamte Verbrauch einer Firma geteilt durch Stromkosten der IT gerechnet.
 \[PUE = \frac{Total\: Stromkosten}{Stromkosten\: der\: IT}\]
 Je näher der Wert bei 1 liegt, desto besser ist er. Microsoft gibt an, einen \Gls{pueLabel} Wert zwischen 1.13 bis 1.2 zu besitzen und Google arbeitet mit 1.14.
 
 Den \Gls{pueLabel} Wert auf ein erträgliches Mass zu reduzieren kann zum Teil schwierig oder kostspielig sein, wenn man seine ganze Infrastruktur umstellen muss. Eine Cloud-Lösung stellt ein geeignetes Mittel dazu dar.
 
 \subsubsection{Datenraten}
-Ein weiterer Kostenpunkt sind die Datenraten und Netzwerkkosten. Bei einer Cloud-Lösung können beträchtliche Datenraten anfallen, wenn Datein, Programme und weiteres ausser Haus gespeichert werden. Wenn jedoch nur der Bildschirm übertragen werden halten sich die Kosten in Grenzen. 
+Ein weiterer Kostenpunkt sind die Datenraten und Netzwerkkosten. Bei einer DaaS können beträchtliche Datenraten anfallen, wenn Dateien, Programme und weiteres ausser Haus gespeichert werden. Wenn jedoch nur der Bildschirm übertragen wird halten sich die Kosten in Grenzen. Bei dem Betreiben der Server in-house fallen zwar keine Internet kosten an, jedoch wird das eigene Netzwerk stark belastet. 
 
-Für das Betreiben der Server in-house fallen zwar keine Internet kosten an, jedoch wird das eigene Netzwerk stark belastet. 
-
-Für eine neue Firma ist es günstiger in der Cloud zu arbeiten da keine grossen Netzwerkosten anfallen.
+Für eine neue Firma ist es meist günstiger von Anfang weg in der Cloud zu arbeiten da keine Kosten für das aufziehen eines Netzwerkes anfallen.
 Hat man hingegen bereits ein bestehendes, gut ausgebautes Netzwerk kann dies eine Hürde darstellen beim Umstieg in die Cloud.
 
 Zur Berechnung der benötigten Datenraten gibt es Berechnungssoftware oder auch online Services zu finden. Ein Beispiel ist die Seite \url{<http://bandwidthpool.com/>}.
 
 Ein versteckter Kostenpunkt bei gewiesen Clouddiensten sind die auswärts Datenraten. Man kann gratis und so viele Daten man möchte auf einen Server laden, diese anschliessend ab zugreifen kostet.
-Auch diese Kosten sind für DaaS Lösungen nicht sehr hoch, müssen jedoch trotzdem eingerechnet werden.
+Auch diese Kosten sind für DaaS Lösungen nicht sehr hoch, müssen jedoch mit eingerechnet werden.
 
-\subsection{5-Jahre-Regel}
-Im Durchschnitt müssen Hardware-Komponenten alle fünf Jahre ausgetauscht werden. Zur Berechnung der Kosten muss dies berücksichtigt werden. Dabei handelt es sich um Richtwert weshalb der tatsächliche Wert schwer abzuschätzen ist. 
+\subsubsection{5-Jahre-Regel}
+Im Durchschnitt müssen Hardware-Komponenten alle fünf Jahre ausgetauscht werden. Dabei handelt es sich um einen Richtwert weshalb der tatsächliche Wert schwer abzuschätzen ist. 
 
-Hier liegt der Vorteil der Clouddiensten darin, dass die Kosten klar definiert und einberechnet werden können.
+Wird die 5-Jahre-Regel nicht berücksichtigt kann es dazu kommen, das nur die initialen Kosten sowie die Unterhaltskosten berücksichtigt werden. Wenn der Anschein trügt und die Kosten mit der verzerrten Rechnung günstiger sind als die einer Cloud-Lösung kann sich dass nach fünf Jahren ändern, wenn die Kosten zu steigen beginnen weil die alte Hardware auszufallen beginnt neue angeschafft werden muss.
 
-\subsection{Downtime Kosten}
+\begin{figure}[H]
+	\includegraphics[width=\textwidth]{images/five-year-rule}
+	\caption{5-Jahre-Regel \footcite{Comparing_cloud_vs_on-premise_Six_hidden_costs_people_always_forget_about_2014-12-16}}
+	\label{fig:fiveYearRuleImage}
+\end{figure}
+Die Graphik verdeutlicht, dass zwischen Jahr 4 und Jahr 5 der Preis ein Anstieg macht da zusätzliche Hardware gekauft werden muss
+
+Hier liegt der Vorteil von DaaS darin, dass die Kosten klar definiert und in das Jahresbudget mit eingerechnet werden kann.
+
+\subsubsection{Ausfallkosten}
+Bei on-premis und VDI ist es kostenintensiv und kompliziert, eine hohe Ausfallsicherheit zu erreichen. Zum Beispiel muss ein \gls{glos:loadBalancingLabel} eingerichtet werden sowie Daten- und Internetleitungen dupliziert werden. Um diese Strategien erfolgreich umzusetzen ist teures Expertenwissen nötig.
+
+Bei externem Hosting mit DaaS wird die Ausfallsicherheit extern für viele Benutzer verwaltet wodurch Synergien genutzt und Kosten reduziert werden.
+
+Für bestehende Firmen muss abgewogen werden, wie hoch die Kosten eines Ausfalles sind. Ist eine hohe Verfügbarkeit nötig rechnen sich die Umstellung in die Cloud schnell. Für eine einfache Berechnung der Ausfallkosten gibt es den Online-Rechner \url{<http://www.visionsolutions.com/Solutions/Disaster-Recovery-toolkit-downtime-calc.aspx>}. 
+
+Hingegen für Startup Firma, bei der eine hohe Verfügbarkeit nötig ist wird empfohlen, früh auf Clouddienste zu setzen.
+
+\subsubsection{Outsourcing}
+Das Outsourcing des Supports zieht zwar weitere Umstellungen für die Firma mit sich, es kann, wie im Kapitel \ref{fig:vmwareCosts} ausführlich Diskutiert, jedoch sehr viel Geld eingespart werden. Dies rechnet sich mehr, je grösser der Betrieb ist.
+
+Outsourcing kann für die Cloud genau so betrieben werden wie für on-premis Lösungen. Jedoch hat der Support in der Cloud und im spezielen bei DaaS viel mehr Möglichkeiten auf die Desktops Einfluss zu nehmen. Stehen die Server in-house wird es immer ein grösseres Team an IT-Spezialisten in der Firma geben.
+
+\subsubsection{Fazit}
+Die Kosten sind schwierig zu berechnen. Es spielen viele Faktoren eine Rolle und die Übersicht zu bewahren ist schwierig.
+
+Elektrizität-Kosten sind bei in-house Servern sehr hoch. Es sollte ein \Gls{pueLabel} Wert zwischen 1.1 und 1.2 angestrebt werden. Alternativ lohnt sich ein Wechsel auf DaaS um die kosten auf den Sevice-Anbieter abzuwählen.
+
+Datenraten spielen im allgemeinen in der Cloud eine grosse Rolle, wenn jedoch nur der Desktop übertragen wird halten sich die Datenvolumen in Grenzen. Hat man eine gut ausgebautes Netzwerk bietet es sich an, auf VDI zu setzen um die bestehende Infrastruktur weiter zu nutzen.
+
+Der grösste Kostenpunkt in der Rechnung der IT sind meist die Hardwarekosten. Deshalb ist es essenziell das man bei in-house Lösungen die 5-Jahre-Regel beachtet. Sind die Kosten mit Berücksichtigung der 5-Jahres-Regel günstiger als die einer DaaS-Lösung, so sollte ein in-house Hosting betrieben werden. Entweder mit on-premis oder VDI. Sonst sollte DaaS eingesetzt werden.
+
+Eine hohe Verfügbarkeit ist teuer wenn sie mit in-house System realisiert werden muss. Deshalb muss eine genaue Recherche betrieben werden wie teuer ein Ausfall wäre. Der Vorteil von DaaS liegt darin, dass man sich nicht um die Verfügbarkeit kümmern muss und stellt deshalb eine günstige Variante dar um das Ziel zu erreichen.
+
+Für grosse Firmen kann es luktrativ sein ein Teil der Arbeit zu Outsourcen. Verfügt man über VDI oder DaaS ist es ein leichtes Externen Kontrolle über die VDI oder DaaS Umgebung zur Verfügung zu stellen. Stehen die Server in-house ist jedoch immer noch ein Team vor Ort nötig.
+
+\subsection{Aufwände}
+
+
+% pilots einfach
+% incremental scaling
+% Ein image für alle benutzer
+% Updates einfacher. Eine Zentrale stelle für updates
+	% Evt muss für updates neue hardware angeschaft werden. Mehr ram etc.
+% Updates/Deployments sind lighning fast
+% Fehler auffinden einfacher, da nur in einem system gesucht werden muss
+% Backup an einer zentraler stelle
+
+% Go green. Thin clients brauchen weniger strom
+% Platform unabhängig. Egal ob windows, mac, linux
+% Work from abroad
+% Performance besser genutzt / Reductions in computing hardware needs. 
+% Improved workplace/user flexibility,
+
+Die Aufwände sind unterteilt in Initiale- und Wartungsaufwände.
+
+Die Initialen-Aufwände umfassen die Beschaffung und Einrichtung der Hardware sowie allfälliger Netzwerkerweiterungen. DaaS hat den Vorteil das man nur \glspl{glos:thinClientLabel} angeschafft werden müssen. Hingegen muss bei VDI leistungs-starke Server und zusätzlich die \glspl{glos:thinClientLabel} eingekauft werden.
+
+Im Unterhalt bieten die Cloud-Lösungen die meisten Vorteile, da sie sehr flexibel sind. Es kann sehr einfach skaliert werden. Bei Bedarf kann auf Knopfdruck 10 neue, komplett eingerichtete,  Desktops erstellt werden. Es können Templates generiert werden, so dass eine Führungsperson eine andere Konfiguration erhalten als eine Sekretärin.
+
+Updates und die Verteilung neuer Software können zentral verwaltet werden und innerhalb von Minuten auf alle Desktops verteilt werden. Es braucht keine klassischen Scripts mehr welche auf jedem Rechner einzeln ausgeführt werden müssen.
+
+\gls{glos:homeOfficeLabel}
+
 
 
 \subsection{Ressourcen (Hardware), Thin Client}
