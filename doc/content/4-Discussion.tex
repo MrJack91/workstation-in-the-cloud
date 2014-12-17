@@ -172,19 +172,32 @@ Auch die Arbeitsplatzverwaltung wird einfacher mit einer Cloud-Lösung, da sich 
 % vdi: zwei-faktor-authentication, https, dmz, load balancing, LDAP
 Die vorgestellten Lösungen von Amazon und VMware wurden beide hauptsächlich für \Gls{b2bLabel} entwickelt. In diesem Bereich ist Sicherheit wichtiges weshalb zu diesem Thema einige Vorkehrungen getroffen wurden. Beide unterstützen die Authentifizierung gegen das \gls{glos:ldapLabel} der Firma, automatisierte Backups, eine sichere Kommunikation über \gls{glos:httpsLabel} und eine Zwei-Faktor-Authentifizierung.
 
+\subsubsection{Speicherort der Daten}
 On-premis und \Gls{vdiLabel} heben sich gegenüber \Gls{daasLabel} dadurch ab, dass die Daten der Firma diese nicht verlassen.  
+% Analyse zum Thema DaaS nötig:
+% - Het AWS Two-Factor-Authentication? Das staht nöd im text oder? Wenn es unterstütz, chan mer das no ufne?
+% - Chan mer bi AWS sege i wellem Land d Date ghosted werdet?
+% - Chan mer bi AWS au en Teil vo de Date in-house hoste?
 
+\subsection{Geräteverlust}
+% Verschieben in 5.1.3 Sicherheit.
+% Wenn Daten nur in der Cloud, ist ein verlorenen Laptop (Daten mässig) nicht schlimm.
+Bei einer traditioneller on-premis Lösung kann grosser Schaden entstehen, wenn ein Gerät durch Verlust oder Diebstahl in falsche Hände gelangt.
+Als Gegenmassname gibt es zum Beispiel Remote-Wipe, womit der Inhalt der Festplatte ferngesteuert gelöscht werden kann. Dazu muss das Gerät im Internet sein oder über eine Telefon-SIM-Karte verfügen.
+Zusätzlich als Schutz, damit die Harddisk nicht ausgebaut und ausgelesen werden kann sollte diese verschlüsselt werden. Dies verlangsamt jedoch den Rechner und es ist nötig beim starten des Computers ein Passwort einzugeben.
+
+Wenn der Desktop hingegen in der Cloud liegt ist es nicht trivial möglich, an die Daten zu gelagen, da sich diese nicht auf dem Rechner befinden.
+Natürlich sollte bei der Cloud sichere Passwörter und eine Zwei-Faktor-Authentifizierung verwendet werden.
+% HDD verschlüsselung
+% Removte wipe
 
 \subsection{Ressourcen (Hardware), Thin Client}
-
-\subsection{Data Protection}
-% Wenn Daten nur in der Cloud, ist ein verlorenen Laptop (Daten mässig) nicht schlimm.
 
 \subsection{Einschränkungen für Benutzer}
 \subsection{Kein Offline-Access}
 \subsection{Zusammenspiel Soft-/Hardware}
 
-\section{VDI vs DaaS}
+\section{Deprecated: VDI vs DaaS}
 % technisches knowhow nötig
 % knowhow teuer
 % http://www.forbes.com/sites/benkepes/2013/11/06/death-to-vdi-or-daas-or-whatever-its-called-this-week/
