@@ -134,7 +134,7 @@ Eine hohe Verfügbarkeit ist teuer wenn sie mit in-house System realisiert werde
 
 Für grosse Firmen kann es luktrativ sein ein Teil der Arbeit zu Outsourcen. Verfügt man über VDI oder DaaS ist es ein leichtes Externen Kontrolle über die VDI oder DaaS Umgebung zur Verfügung zu stellen. Stehen die Server in-house ist jedoch immer noch ein Team vor Ort nötig.
 
-\subsection{Aufwände}
+\subsection{Aufwände \& Unterhalt}
 
 
 % pilots einfach
@@ -160,11 +160,19 @@ Im Unterhalt bieten die Cloud-Lösungen die meisten Vorteile, da sie sehr flexib
 
 Updates und die Verteilung neuer Software können zentral verwaltet und innerhalb von Minuten auf alle Desktops verteilt werden. Es braucht keine klassischen Scripts mehr welche auf jedem Rechner einzeln ausgeführt werden müssen.
 
-\gls{glos:homeOfficeLabel} wird mit der Cloud vereinfacht. Es muss nur an einer zentralen Zugangstelle der Zugriff von ausserhalb des eigenen Netzwerkes erlaubt werden. Sicherheitstechnisch macht es Sinn auf eine Zwei-Faktor-Authentifizierung umzustellen. Für die Mitarbeiter ändert sich von der Arbeitsweise nichts. Sie lediglich ihren Desktop von zuhause aus anstelle vom Büro. Bei einer on-premis Lösung muss eine \Gls{vpnLabel} Verbindung eingerichtet werden und einzelne Applikationen für die bearbeitung von zuhause aus eingerichtet werden.
+\gls{glos:homeOfficeLabel} wird mit der Cloud vereinfacht. Es muss nur an einer zentralen Zugangstelle der Zugriff von ausserhalb des eigenen Netzwerkes erlaubt werden. Sicherheitstechnisch macht es Sinn auf eine Zwei-Faktor-Authentifizierung umzustellen. Für die Mitarbeiter ändert sich von der Arbeitsweise nichts. Sie lediglich ihren Desktop von zuhause aus anstelle vom Büro. Bei einer on-premis Lösung muss eine \gls{glos:vpnLabel} Verbindung eingerichtet werden und einzelne Applikationen für die bearbeitung von zuhause aus eingerichtet werden.
 
 Bei \Gls{vdiLabel} und \Gls{daasLabel} kann es den Mitarbeiter verunmöglicht werden, Dateien auf dem lokalen \gls{glos:thinClientLabel} abzuspeichern. Damit sind alle Daten auf dem Server vorhanden und es kann ein zentrales Backup verwaltet werden. Bei on-premis ist dies problematischer da die Mitarbeiter auch berechtigt sind auf dem lokalen Rechner Daten zu sichern.
 
 Auch die Arbeitsplatzverwaltung wird einfacher mit einer Cloud-Lösung, da sich die Benutzer an irgend einem Platz auf ihren Desktop einloggen und arbeiten können.
+
+\subsection{Sicherheit}
+% On-Premis/VDI: Daten in-house
+% daas: AD, Ausfallsicherheit, Automtatisches Backup, SSL Verschlüsselt
+% vdi: zwei-faktor-authentication, https, dmz, load balancing, LDAP
+Die vorgestellten Lösungen von Amazon und VMware wurden beide hauptsächlich für \Gls{b2bLabel} entwickelt. In diesem Bereich ist Sicherheit wichtiges weshalb zu diesem Thema einige Vorkehrungen getroffen wurden. Beide unterstützen die Authentifizierung gegen das \gls{glos:ldapLabel} der Firma, automatisierte Backups, eine sichere Kommunikation über \gls{glos:httpsLabel} und eine Zwei-Faktor-Authentifizierung.
+
+On-premis und \Gls{vdiLabel} heben sich gegenüber \Gls{daasLabel} dadurch ab, dass die Daten der Firma diese nicht verlassen.  
 
 
 \subsection{Ressourcen (Hardware), Thin Client}
