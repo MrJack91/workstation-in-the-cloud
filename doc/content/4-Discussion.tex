@@ -124,7 +124,7 @@ Outsourcing kann für die Cloud genau so betrieben werden wie für on-premis Lö
 \subsubsection{Fazit}
 Die Kosten sind schwierig zu berechnen. Es spielen viele Faktoren eine Rolle und die Übersicht zu bewahren ist schwierig.
 
-Elektrizität-Kosten sind bei in-house Servern sehr hoch. Es sollte ein \Gls{pueLabel} Wert zwischen 1.1 und 1.2 angestrebt werden. Alternativ lohnt sich ein Wechsel auf DaaS um die kosten auf den Sevice-Anbieter abzuwählen.
+Elektrizität-Kosten sind bei in-house Servern sehr hoch. Es sollte ein \Gls{pueLabel}-Wert zwischen 1.1 und 1.2 angestrebt werden. Alternativ lohnt sich ein Wechsel auf DaaS um die kosten auf den Sevice-Anbieter abzuwählen.
 
 Datenraten spielen im allgemeinen in der Cloud eine grosse Rolle, wenn jedoch nur der Desktop übertragen wird halten sich die Datenvolumen in Grenzen. Hat man eine gut ausgebautes Netzwerk bietet es sich an, auf VDI zu setzen um die bestehende Infrastruktur weiter zu nutzen.
 
@@ -180,21 +180,21 @@ On-premis und \Gls{vdiLabel} heben sich gegenüber \Gls{daasLabel} dadurch ab, d
 % - Chan mer bi AWS au en Teil vo de Date in-house hoste?
 
 \subsection{Geräteverlust}l
-% Verschieben in 5.1.3 Sicherheit.
-% Wenn Daten nur in der Cloud, ist ein verlorenen Laptop (Daten mässig) nicht schlimm.
 Bei einer traditioneller on-premis Lösung kann grosser Schaden entstehen, wenn ein Gerät durch Verlust oder Diebstahl in falsche Hände gelangt.
 Als Gegenmassname gibt es zum Beispiel Remote-Wipe, womit der Inhalt der Festplatte ferngesteuert gelöscht werden kann. Dazu muss das Gerät jedoch im Internet sein oder über eine Telefon-SIM-Karte verfügen.
 Zusätzlich als Schutz, damit die Harddisk nicht ausgebaut und ausgelesen werden kann, sollte diese verschlüsselt werden. Dies verlangsamt jedoch den Rechner und es ist bei jedem starten des Computers nötig ein Passwort einzugeben.
 
 Wenn der Desktop hingegen in der Cloud liegt ist es nicht trivial möglich, an die Daten zu gelagen, da sich diese nicht auf dem Rechner befinden.
-Natürlich sollte bei der Cloud, wie bei einer on-premis Lösung auch, sichere Passwörter und eine Zwei-Faktor-Authentifizierung verwendet werden. Werden diese Vorkehrungen berücksichtigt biet die Cloud einen guten Schutz gegen den Verlust von Geräten
-% HDD verschlüsselung
-% Removte wipe
+Natürlich sollte bei der Cloud, wie bei einer on-premis Lösung auch, sichere Passwörter und eine Zwei-Faktor-Authentifizierung verwendet werden. Werden diese Vorkehrungen berücksichtigt biet die Cloud einen guten Schutz gegen den Verlust von Geräten.
+
+\subsection{Offline-Access}
+Ein zwingendes Kriterium für die Cloud ist es, dass man Zugang zu den Host-Servern hat. Sei dies über das Internet oder das firmen-interne Netz. Ist dies nicht möglich, da das Netzwerk ausgefallen ist oder kein Zugriff zum Internet besteht, so kann nicht gearbeitet werden.
+
+Bei on-premis kann auch ohne Netzwerk-Zugang stehts gearbeitet werden. Weiss man, dass man in nächster Zeit Daten aus dem Netz benötigt können diese vorab auf dem Computer runter geladen werden für eine spätere Bearbeitung.
 
 \subsection{Ressourcen (Hardware), Thin Client}
 
 \subsection{Einschränkungen für Benutzer}
-\subsection{Kein Offline-Access}
 \subsection{Zusammenspiel Soft-/Hardware}
 
 \section{Deprecated: VDI vs DaaS}
