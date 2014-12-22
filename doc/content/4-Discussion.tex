@@ -1,6 +1,6 @@
 
 \chapter{Diskussion}
-Im vorhergegangen Kapitel wurden die on-premis Lösung beschrieben, sowie das Auslagern der Workstations in die Cloud auf fremden (\Gls{iaasLabel}) und eigenen Servern (\Gls{vdiLabel}). In diesem Kapitel werden die verschiedenen Vorgehen gegeneinander verglichen. Das Kapitel soll helfen, sich für eine Lösung zu entscheiden.
+Im vorhergegangen Kapitel wurden die on-premis Lösung beschrieben, sowie das Auslagern der Workstations in die Cloud auf fremden (\Gls{daasLabel}) und eigenen Servern (\Gls{vdiLabel}). In diesem Kapitel werden die verschiedenen Vorgehen gegeneinander verglichen. Das Kapitel soll helfen, sich für eine Lösung zu entscheiden.
 
 % http://www.stratacore.com/blog/choosing-between-vdi-and-daas
 % DaaS vs VDI
@@ -34,7 +34,7 @@ Im vorhergegangen Kapitel wurden die on-premis Lösung beschrieben, sowie das Au
 % einfacher
 % günstiger
 
-Um on-premis, DaaS und VDI zu vergleichen müssen die Vor- und Nachteile analysiert werden.
+Um \gls{glos:onPremiseLabel}, \Gls{daasLabel} und \Gls{vdiLabel} zu vergleichen müssen die Vor- und Nachteile analysiert werden.
 Unterteilt wird die Diskussion in die Bereiche Kosten, Aufwand, Unterhalt und Sicherheit.
 
 \subsection{Kosten}
@@ -64,17 +64,17 @@ Bei der Berechnung der Kosten wird oft der Fehler gemacht, dass nur die Hard- un
 Dass ist jedoch das selbe, wie wenn ein Buch nur nach dessen Deckblatt bewertet wird.
 Es gibt diverse andere Kosten die es zu beachten gilt.
 
-\subsubsection{Elektrizität}
+\subsubsection{Strom}
 Kosten welche oft nicht berücksichtigt werden sind jene für die Elektrizität.
 % von hier...
-Diese können unterteilt werden in die für den Stromverbrauch der Geräten, sowie in die Stromkosten welche durch die Kühlung anfallen.
+Diese können unterteilt werden in die für den Stromverbrauch der Geräten, sowie in die Stromkosten, welche durch die Kühlung anfallen.
 % ... bis hier evt löschen?
 
 Je grösser die Firma wird, desto grösser wird dementsprechend auch der Stromverbrauch. Dies wird noch verstärkt oder abgeschwächt nach dem Arbeitsgebiet auf dem das Geschäft operiert. Bei einem Service-orientiertem Angebot ist der Konsum deutlich höher.
 
-Unter den gesamten Ausgaben für die Elektrizität sind die Kosten für die Server oft schwer raus zu lesen, wenn keine Messwerkzeuge installiert sind. Der Vorteil von einem externen Anbieter besteht darin, dass diese Umtriebe bereits in den monatlichen Umtrieben enthalten sind.
+Unter den gesamten Ausgaben für die Elektrizität sind die Kosten für die Server oft schwer raus zu lesen, wenn keine Messwerkzeuge installiert sind. Der Vorteil von einem externen Anbieter besteht darin, dass diese Kosten bereits in den monatlichen Umtrieben enthalten sind.
 
-Im Vergleich von on-premis und VDI hat sich in der Erfahrung gezeigt, dass die Stromkosten sich nicht merklich unterscheiden. Bei VDI konsumieren die Server mehr Strom. Da die Mitarbeiter jedoch nur noch leistungsschwache Rechner benötigen, die sich auf die Desktops auf den Servern verbinden, benötigen diese weniger Strom. Dies hebt sich gegenseitig auf.
+Im Vergleich von on-premis und \Gls{vdiLabel} hat sich in der Erfahrung gezeigt, dass die Stromkosten sich nicht merklich unterscheiden. Bei \Gls{vdiLabel} konsumieren die Server mehr Strom. Da die Mitarbeiter jedoch nur noch leistungsschwache Rechner benötigen, die sich auf die Desktops auf den Servern verbinden, benötigen diese weniger Strom. Dies hebt sich gegenseitig auf.
 
 Um die Effektivität des Stromverbrauches eines Datencenters zu messen gibt es das \Gls{pueLabel} Verhältnis. Dazu wird der gesamte Verbrauch einer Firma geteilt durch Stromkosten der IT gerechnet.
 \[PUE = \frac{Total\: Stromkosten}{Stromkosten\: der\: IT}\]
@@ -83,20 +83,21 @@ Je näher der Wert bei 1 liegt, desto besser ist er. Microsoft gibt an, einen \G
 Den \Gls{pueLabel} Wert auf ein erträgliches Mass zu reduzieren kann zum Teil schwierig oder kostspielig sein, wenn man seine ganze Infrastruktur umstellen muss. Eine Cloud-Lösung stellt ein geeignetes Mittel dazu dar.
 
 \subsubsection{Datenraten}
-Ein weiterer Kostenpunkt sind die Datenraten und Netzwerkkosten. Bei einer DaaS können beträchtliche Datenraten anfallen, wenn Dateien, Programme und weiteres ausser Haus gespeichert werden. Wenn jedoch nur der Bildschirm übertragen wird halten sich die Kosten in Grenzen. Bei dem Betreiben der Server in-house fallen zwar keine Internet kosten an, jedoch wird das eigene Netzwerk stark belastet.
+Ein weiterer Kostenpunkt sind die Datenraten und Netzwerkkosten. Bei einer \Gls{daasLabel} können beträchtliche Datenraten anfallen, wenn Dateien, Programme und weiteres ausser Haus gespeichert werden. Wenn jedoch nur der Bildschirm übertragen wird halten sich die Kosten in Grenzen. Bei dem Betreiben der Server in-house fallen zwar keine Internet kosten an, jedoch wird das eigene Netzwerk stark belastet.
 
-Für eine neue Firma ist es meist günstiger von Anfang weg in der Cloud zu arbeiten da keine Kosten für das aufziehen eines Netzwerkes anfallen.
-Hat man hingegen bereits ein bestehendes, gut ausgebautes Netzwerk kann dies eine Hürde darstellen beim Umstieg in die Cloud.
+Für eine neue Firma ist es meist günstiger von Anfang an, in der Cloud zu arbeiten, da keine Kosten für das Aufziehen eines Netzwerkes anfallen.
+Hat man hingegen bereits ein bestehendes, gut ausgebautes Netzwerk, kann dies eine Hürde darstellen beim Umstieg in die Cloud.
 
-Zur Berechnung der benötigten Datenraten gibt es Berechnungssoftware oder auch online Services zu finden. Ein Beispiel ist die Seite \url{<http://bandwidthpool.com/>}.
+Zur Berechnung der benötigten Datenraten gibt es Berechnungssoftware oder auch online Services zu finden. Ein Beispiel ist Bandwidth Pool \footcite{What_is_Bandwidth_Pool_Bandwidth_Pool_2014-12-22}.
 
 Ein versteckter Kostenpunkt bei gewiesen Clouddiensten sind die auswärts Datenraten. Man kann gratis und so viele Daten man möchte auf einen Server laden, diese anschliessend ab zugreifen kostet.
-Auch diese Kosten sind für DaaS Lösungen nicht sehr hoch, müssen jedoch mit eingerechnet werden.
+Auch diese Kosten sind für \Gls{daasLabel} Lösungen nicht sehr hoch, müssen jedoch mit eingerechnet werden.
 
 \subsubsection{5-Jahre-Regel}
-Im Durchschnitt müssen Hardware-Komponenten alle fünf Jahre ausgetauscht werden. Dabei handelt es sich um einen Richtwert weshalb der tatsächliche Wert schwer abzuschätzen ist.
+Im Durchschnitt müssen Hardware-Komponenten alle fünf Jahre ausgetauscht werden. Dabei handelt es sich um einen Richtwert, weshalb der tatsächliche Wert schwer abzuschätzen ist.
 
-Wird die 5-Jahre-Regel nicht berücksichtigt kann es dazu kommen, das nur die initialen Kosten sowie die Unterhaltskosten berücksichtigt werden. Wenn der Anschein trügt und die Kosten mit der verzerrten Rechnung günstiger sind als die einer Cloud-Lösung kann sich dass nach fünf Jahren ändern, wenn die Kosten zu steigen beginnen weil die alte Hardware auszufallen beginnt neue angeschafft werden muss.
+Wird die 5-Jahre-Regel nicht berücksichtigt, kann es dazu kommen, dass nur die initialen Kosten, sowie die Unterhaltskosten berücksichtigt werden.
+Wenn der Anschein trügt und die Kosten mit der verzerrten Rechnung günstiger sind als die einer Cloud-Lösung, kann sich dass nach fünf Jahren ändern, wenn die Kosten zu steigen beginnen, weil die alte Hardware auszufallen beginnt, neue angeschafft werden muss.
 
 \begin{figure}[H]
 	\includegraphics[width=\textwidth]{images/five-year-rule}
