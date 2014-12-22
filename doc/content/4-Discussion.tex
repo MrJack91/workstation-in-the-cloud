@@ -58,9 +58,9 @@ Unterteilt wird die Diskussion in die Bereiche Kosten, Aufwand, Unterhalt und Si
 		% Downtime cost calculator: http://www.visionsolutions.com/Solutions/Disaster-Recovery-toolkit-downtime-calc.aspx
 		% Accross USA & EU, each year  $26.5 Billion USD is lost because of IT downtime
 
-Im \cref{sec:vmwareCosts} wurde aufgezeigt, dass es kostspielig sein kann, auf eine VDI-Lösung umzustellen. Es müssen deshalb konkrete Bedürfnisse vorhanden sein, damit sich eine Umstellung rechtfertigt.
+Im \cref{sec:vmwareCosts} wurde aufgezeigt, dass es kostspielig sein kann, auf eine \Gls{vdiLabel}-Lösung umzustellen. Es müssen deshalb konkrete Bedürfnisse vorhanden sein, damit sich eine Umstellung rechtfertigt.
 
-Bei der Berechnung der Kosten wird oft der Fehler gemacht, dass nur die Hard- und Software Kosten bei on-premis und VDI berücksichtigt werden, und die monatlichen Kosten bei DaaS.
+Bei der Berechnung der Kosten wird oft der Fehler gemacht, dass nur die Hard- und Software Kosten bei on-premis und \Gls{vdiLabel} berücksichtigt werden, und die monatlichen Kosten bei \Gls{daasLabel}.
 Dass ist jedoch das selbe, wie wenn ein Buch nur nach dessen Deckblatt bewertet wird.
 Es gibt diverse andere Kosten die es zu beachten gilt.
 
@@ -97,43 +97,43 @@ Auch diese Kosten sind für \Gls{daasLabel} Lösungen nicht sehr hoch, müssen j
 Im Durchschnitt müssen Hardware-Komponenten alle fünf Jahre ausgetauscht werden. Dabei handelt es sich um einen Richtwert, weshalb der tatsächliche Wert schwer abzuschätzen ist.
 
 Wird die 5-Jahre-Regel nicht berücksichtigt, kann es dazu kommen, dass nur die initialen Kosten, sowie die Unterhaltskosten berücksichtigt werden.
-Wenn der Anschein trügt und die Kosten mit der verzerrten Rechnung günstiger sind als die einer Cloud-Lösung, kann sich dass nach fünf Jahren ändern, wenn die Kosten zu steigen beginnen, weil die alte Hardware auszufallen beginnt, neue angeschafft werden muss.
+Wenn der Anschein trügt und die Kosten mit der verzerrten Rechnung günstiger sind als die einer Cloud-Lösung, kann sich dass nach fünf Jahren ändern, denn dann werden die Kosten steigen, weil alte Hardware ersetzt werden muss.
 
 \begin{figure}[H]
-	\includegraphics[width=\textwidth]{images/five-year-rule}
+	\includegraphics[width=0.8\textwidth]{images/five-year-rule}
 	\caption{5-Jahre-Regel \footcite{Comparing_cloud_vs_on-premise_Six_hidden_costs_people_always_forget_about_2014-12-16}}
 	\label{fig:fiveYearRuleImage}
 \end{figure}
-Die Graphik verdeutlicht, dass zwischen Jahr 4 und Jahr 5 der Preis ein Anstieg macht da zusätzliche Hardware gekauft werden muss
+Die Graphik verdeutlicht, dass zwischen Jahr 4 und Jahr 5 der Preis ein Anstieg macht, da zusätzliche Hardware gekauft werden muss
 
-Hier liegt der Vorteil von DaaS darin, dass die Kosten klar definiert und in das Jahresbudget mit eingerechnet werden kann.
+Hier liegt der Vorteil von \Gls{daasLabel} darin, dass die Kosten klar definiert und in das Jahresbudget mit eingerechnet werden können.
 
 \subsubsection{Ausfallkosten}
-Bei on-premis und VDI ist es kostenintensiv und kompliziert, eine hohe Ausfallsicherheit zu erreichen. Zum Beispiel muss ein \gls{glos:loadBalancingLabel} eingerichtet werden sowie Daten- und Internetleitungen dupliziert werden. Um diese Strategien erfolgreich umzusetzen ist teures Expertenwissen nötig.
+Bei on-premis und \Gls{vdiLabel} ist es kostenintensiv und kompliziert, eine hohe Ausfallsicherheit zu erreichen. Zum Beispiel muss ein \gls{glos:loadBalancingLabel} eingerichtet werden, sowie Daten- und Internetleitungen müssen redundant angelegt werden. Um diese Strategien erfolgreich umzusetzen, ist teures Expertenwissen nötig.
 
-Bei externem Hosting mit DaaS wird die Ausfallsicherheit extern für viele Benutzer verwaltet wodurch Synergien genutzt und Kosten reduziert werden.
+Bei externem Hosting mit \Gls{daasLabel} wird die Ausfallsicherheit extern für viele Benutzer verwaltet, wodurch Synergien genutzt und Kosten reduziert werden.
 
-Für bestehende Firmen muss abgewogen werden, wie hoch die Kosten eines Ausfalles sind. Ist eine hohe Verfügbarkeit nötig rechnen sich die Umstellung in die Cloud schnell. Für eine einfache Berechnung der Ausfallkosten gibt es den Online-Rechner \url{<http://www.visionsolutions.com/Solutions/Disaster-Recovery-toolkit-downtime-calc.aspx>}.
+Für bestehende Firmen muss abgewogen werden, wie hoch die Kosten eines Ausfalles sind. Ist eine hohe Verfügbarkeit nötig, rechnet sich die Umstellung in die Cloud schnell. Für eine einfache Berechnung der Ausfallkosten gibt es den Online-Rechner von VisionSolutions.\footcite{Disaster_Recovery_Resouce_Center_-_Vision_Solutions_2014-12-22}
 
 Hingegen für Startup Firma, bei der eine hohe Verfügbarkeit nötig ist wird empfohlen, früh auf Clouddienste zu setzen.
 
 \subsubsection{Outsourcing}
 Das Outsourcing des Supports zieht zwar weitere Umstellungen für die Firma mit sich, es kann, wie im Kapitel \cref{sec:vmwareCosts} ausführlich Diskutiert, jedoch sehr viel Geld eingespart werden. Dies rechnet sich mehr, je grösser der Betrieb ist.
 
-Outsourcing kann für die Cloud genau so betrieben werden wie für on-premis Lösungen. Jedoch hat der Support in der Cloud und im spezielen bei DaaS viel mehr Möglichkeiten auf die Desktops Einfluss zu nehmen. Stehen die Server in-house wird es immer ein grösseres Team an IT-Spezialisten in der Firma geben.
+Outsourcing kann für die Cloud genau so betrieben werden wie für on-premis Lösungen. Jedoch hat der Support in der Cloud und im spezielen bei \Gls{daasLabel} viel mehr Möglichkeiten auf die Desktops Einfluss zu nehmen. Stehen die Server in-house wird es immer ein grösseres Team an IT-Spezialisten in der Firma geben.
 
 \subsubsection{Fazit}
 Die Kosten sind schwierig zu berechnen. Es spielen viele Faktoren eine Rolle und die Übersicht zu bewahren ist schwierig.
 
-Elektrizität-Kosten sind bei in-house Servern sehr hoch. Es sollte ein \Gls{pueLabel}-Wert zwischen 1.1 und 1.2 angestrebt werden. Alternativ lohnt sich ein Wechsel auf DaaS um die kosten auf den Sevice-Anbieter abzuwählen.
+Elektrizität-Kosten sind bei in-house Servern sehr hoch. Es sollte ein \Gls{pueLabel}-Wert zwischen 1.1 und 1.2 angestrebt werden. Alternativ lohnt sich ein Wechsel auf \Gls{daasLabel} um die Kosten auf den Sevice-Anbieter abzuwählen.
 
-Datenraten spielen im allgemeinen in der Cloud eine grosse Rolle, wenn jedoch nur der Desktop übertragen wird halten sich die Datenvolumen in Grenzen. Hat man eine gut ausgebautes Netzwerk bietet es sich an, auf VDI zu setzen um die bestehende Infrastruktur weiter zu nutzen.
+Datenraten spielen im Allgemeinen in der Cloud eine grosse Rolle, wenn jedoch nur der Desktop übertragen wird halten sich die Datenvolumen in Grenzen. Hat man eine gut ausgebautes Netzwerk bietet es sich an, auf \Gls{vdiLabel} zu setzen um die bestehende Infrastruktur weiter zu nutzen.
 
-Der grösste Kostenpunkt in der Rechnung der IT sind meist die Hardwarekosten. Deshalb ist es essenziell das man bei in-house Lösungen die 5-Jahre-Regel beachtet. Sind die Kosten mit Berücksichtigung der 5-Jahres-Regel günstiger als die einer DaaS-Lösung, so sollte ein in-house Hosting betrieben werden. Entweder mit on-premis oder VDI. Sonst sollte DaaS eingesetzt werden.
+Der grösste Kostenpunkt in der Rechnung der IT sind meist die Hardwarekosten. Deshalb ist es essenziell das man bei in-house Lösungen die 5-Jahre-Regel beachtet. Sind die Kosten mit Berücksichtigung der 5-Jahres-Regel günstiger als die einer \Gls{daasLabel}-Lösung, so sollte ein in-house Hosting betrieben werden. Entweder mit on-premis oder \Gls{vdiLabel}. Sonst sollte \Gls{daasLabel} eingesetzt werden.
 
-Eine hohe Verfügbarkeit ist teuer wenn sie mit in-house System realisiert werden muss. Deshalb muss eine genaue Recherche betrieben werden wie teuer ein Ausfall wäre. Der Vorteil von DaaS liegt darin, dass man sich nicht um die Verfügbarkeit kümmern muss und stellt deshalb eine günstige Variante dar um das Ziel zu erreichen.
+Eine hohe Verfügbarkeit ist teuer wenn sie mit in-house System realisiert werden muss. Deshalb muss eine genaue Recherche betrieben werden wie teuer ein Ausfall wäre. Der Vorteil von \Gls{daasLabel} liegt darin, dass man sich nicht um die Verfügbarkeit kümmern muss und stellt deshalb eine günstige Variante dar um das Ziel zu erreichen.
 
-Für grosse Firmen kann es luktrativ sein ein Teil der Arbeit zu Outsourcen. Verfügt man über VDI oder DaaS ist es ein leichtes Externen Kontrolle über die VDI oder DaaS Umgebung zur Verfügung zu stellen. Stehen die Server in-house ist jedoch immer noch ein Team vor Ort nötig.
+Für grosse Firmen kann es luktrativ sein ein Teil der Arbeit zu Outsourcen. Verfügt man über \Gls{vdiLabel} oder DaaS ist es ein leichtes Externen Kontrolle über die \Gls{vdiLabel} oder \Gls{daasLabel} Umgebung zur Verfügung zu stellen. Stehen die Server in-house ist jedoch immer noch ein Team vor Ort nötig.
 
 \subsection{Aufwände \& Unterhalt}
 
@@ -155,7 +155,7 @@ Für grosse Firmen kann es luktrativ sein ein Teil der Arbeit zu Outsourcen. Ver
 
 Die Aufwände sind unterteilt in Initiale- und Wartungsaufwände.
 
-Die Initialen-Aufwände umfassen die Beschaffung und Einrichtung der Hardware sowie allfälliger Netzwerkerweiterungen. DaaS hat den Vorteil das man nur \glspl{glos:thinClientLabel} angeschafft werden müssen. Hingegen muss bei VDI leistungs-starke Server und zusätzlich die \glspl{glos:thinClientLabel} eingekauft werden.
+Die Initialen-Aufwände umfassen die Beschaffung und Einrichtung der Hardware sowie allfälliger Netzwerkerweiterungen. \Gls{daasLabel} hat den Vorteil das man nur \glspl{glos:thinClientLabel} angeschafft werden müssen. Hingegen muss bei VDI leistungs-starke Server und zusätzlich die \glspl{glos:thinClientLabel} eingekauft werden.
 
 Im Unterhalt bieten die Cloud-Lösungen die meisten Vorteile, da sie sehr flexibel sind. Es kann sehr einfach skaliert werden. Bei Bedarf kann auf Knopfdruck 10 neue, komplett eingerichtete,  Desktops erstellt werden. Es können Templates generiert werden, so dass eine Führungsperson eine andere Konfiguration erhalten als eine Sekretärin.
 
