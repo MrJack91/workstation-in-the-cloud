@@ -46,6 +46,14 @@
   PUE = \frac{Total\: Stromkosten}{Stromkosten\: der\: IT}
   \end{gather*}}
 }
+\newglossaryentry{glos:failureSafetyLabel}{name=Ausfallsicherheit,
+	description={Mit der Ausfallsicherheit wird die minimale zeitliche Erreichbarkeit (resp. maximale Ausfallzeit) eines Systems angegeben. Ist diese Ausfallzeit sehr gering spricht man von einer Hochverfügbarkeit (High Availability), dazu ist mindestens eine Verfügbarkeit von 99.9 \% nötig.
+	Die Verfügbarkeit berechnet man wie folgt:
+	\begin{gather*}
+		Verfügbarkeit = (1- \frac{Ausfallzeit}{Periode}) * 100\\
+		Ausfallzeit = (1 - \frac{Verfügbarkeit}{100}) * Periode
+	\end{gather*}}
+}
 \newglossaryentry{glos:loadBalancingLabel}{name=Load Balancing,
   description={Load Balancing verteilt die Arbeitsbelastung auf verschiedene Systeme. Damit kann die Antwortzeit reduziert werden. Wenn ein System ausfällt hat es immer noch weitere die funktionieren. Dies steigert die Ausfallsicherheit des Gesamtsystems.}
 }
