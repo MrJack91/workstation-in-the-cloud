@@ -2,7 +2,7 @@
 % Eigener Beitrag: Beschreibung, Begründung, Aufzeigung, Methode, Fazit
 
 \chapter{Analyse}
-\label{fig:analyse}
+\label{sec:analyse}
 
 % ...
 \section{Allgemein}
@@ -19,11 +19,11 @@ Folgend werden verschiedene Möglichkeiten von IT Infrastrukturen vorgestellt.
 Besonders auf zwei cloudbasierte Lösungen wird genauer eingegangen. Dazu wird je ein Vertreter aus der Marktwirtschaft analysiert.
 
 \section{Typen}
-Grundsätzlich kann ein Arbeitsplatz via virtuellen Computern in der Cloud oder klassisch, on-premise umgesetzt werden.
+Grundsätzlich kann ein Arbeitsplatz via virtuellen Computern in der Cloud oder klassisch, \gls{glos:onPremiseLabel} umgesetzt werden.
 Um die Arbeitsplätze einer Firma in die Cloud zu heben, muss entschieden werden, ob man eine Lösung im eigenen Rechenzentrum oder bei einer externen Firma warten will.
 Die Lösung im eigenen Rechenzentrum heisst im Fachjargon \Gls{vdiLabel} und beim Hosting bei einer externen Firma spricht man von \Gls{daasLabel}
 
-Beide Vorgehensweisen beinhalten Vorteile und Tücken. Allgemeine Vorteile welche beide Arten mit sich bringen, sind bereits unter dem Kapitel \ref{sec:Vorteile} Vorteile beschrieben.
+Beide Vorgehensweisen beinhalten Vorteile und Tücken. Allgemeine Vorteile welche beide Arten mit sich bringen, sind bereits im \cref{sec:Vorteile} Vorteile beschrieben.
 
 Wird das Hosting ausgelagert, hat man eine monatliche oder jährliche Abrechnung. Dadurch werden die Kosten kalkulierbar. Auch fallen grosse initiale Anschaffungskosten weg.
 
@@ -37,7 +37,7 @@ Folgend wird auf Amazon WorkSpaces, als Vertreter der ausgelagerten Lösung, sow
 \section{Klassischer Ansatz, "`on-premise"'}
 Beim klassischen Ansatz, wird jeder Client lokal auf eigener Hardware aufgesetzt. Wird öfters eine genau gleiche Umgebung eingerichtet, so kann mit einem Image eine vollständige Einrichtung eines Computers vorgenommen werden.
 
-Eine IT Infrastruktur die auf on-premise Geräten basiert, kommt ohne Cloud aus. Es ergibt sich eine dezentrale Sammlung von Daten (jeweils auf dem Gerät des jeweiligen Benutzers). Selbstverständlich könne Daten auf Servern gesammelt und auch wieder automatisch verteilt werden, trotzdem müssen die Daten schlussendlich über die Hardware des Clients geholt und verarbeitet werden.
+Eine IT Infrastruktur die auf \gls{glos:onPremiseLabel} Geräten basiert, kommt ohne Cloud aus. Es ergibt sich eine dezentrale Sammlung von Daten (jeweils auf dem Gerät des jeweiligen Benutzers). Selbstverständlich könne Daten auf Servern gesammelt und auch wieder automatisch verteilt werden, trotzdem müssen die Daten schlussendlich über die Hardware des Clients geholt und verarbeitet werden.
 
 Die Ressourcen pro Arbeitsplatz sind auf dessen Hardware beschränkt.
 
@@ -64,7 +64,7 @@ Zur Auswahl stehen zwei Typen: \textit{Standard} und \textit{Leistung}.
 
 \begin{table}[H]
 	\centering
-	\small\renewcommand{\arraystretch}{1.4}  
+	\small\renewcommand{\arraystretch}{1.4}
 	\rowcolors{1}{tablerowcolor}{tablebodycolor}
 	%
 	\captionabove[Amazon WorkSpace-Angebote]{Amazon WorkSpaces Angebots-Übersicht}
@@ -119,7 +119,7 @@ Die Kosten einer VDI variieren je nach \Gls{awsLabel}-Region.\footcite{AWS_Amazo
 
 \begin{table}[H]
 	\centering
-	\small\renewcommand{\arraystretch}{1.4}  
+	\small\renewcommand{\arraystretch}{1.4}
 	\rowcolors{1}{tablerowcolor}{tablebodycolor}
 	%
 	\captionabove[Amazon WorkSpaces Preise]{Amazon WorkSpaces Preis-Übersicht nach Region}
@@ -168,7 +168,7 @@ Durch die Komprimierung ist eine hohe Auflösung der Bildschirminhalte möglich.
 \newpage
 \section{VMware VDM}
 % sl
-% Quellen: 
+% Quellen:
 % - http://www.vmware.com/pdf/vdm20_intro.pdf
 % - https://www.vmware.com/files/pdf/analysts/Forrester_Report_Total_Economic_Impact_of_VMware_Virtual_Desktop_Infrastructure_in_Financial_Services.pdf
 VMware ist eine amerikanische Firma mit Sitz im Palo Alto, Californien. Gegründet wurde die Organisation 1998 und ging 2007 an die Börse.
@@ -194,12 +194,12 @@ Die folgende Illustration\footcite{Introduction_to_Virtual_Desktop_Manager} zeig
 
 %cite: http://www.vmware.com/pdf/vdm20_intro.pdf
 
-Zu Beginn werden die verschiedenen Terminals aufgelistet, mit welchen man sich auf den persönlichen Desktop verbinden kann. 
+Zu Beginn werden die verschiedenen Terminals aufgelistet, mit welchen man sich auf den persönlichen Desktop verbinden kann.
 
 Unter der Netzwerk Wolke ist die Server Infrastruktur aufgezeigt.
-Näher interessant für diese Arbeit sind die "ESX Server hosts" in der unteren Mitte. Dabei handelt es sich um virtualisierte Server welche jeder Zeit rauf- oder runter-skalliert werden können. 
+Näher interessant für diese Arbeit sind die "ESX Server hosts" in der unteren Mitte. Dabei handelt es sich um virtualisierte Server welche jeder Zeit rauf- oder runter-skalliert werden können.
 
-Auf den ESX Hosts werden je mehrere virtuelle Desktops ausgeführt. 
+Auf den ESX Hosts werden je mehrere virtuelle Desktops ausgeführt.
 Auf den Desktops kann grundsätzlich jedes Betriebsystem ausgeführt werden, für welches WMware ein VDM Agent zur Verfügung stellt.
 
 %    Windows XP Professional with SP2 (English, Japanese, German)
@@ -209,7 +209,7 @@ Auf den Desktops kann grundsätzlich jedes Betriebsystem ausgeführt werden, fü
 
 
 \subsection{Kosten}
-\label{fig:vmwareCosts}
+\label{sec:vmwareCosts}
 Die Berechnung der Kosten gestaltet sich schwierig, da es diverse Einflussfaktoren gibt.
 VMware veröffentlichte in 2008 ein 26 seitiges Dokument mit dem Titel "`Total Economic Impact Of VMware Virtual Desktop Infrastructure – Financial Services Industry\footcite{Forrester_Report}"' veröffentlicht. Darin ist ein vier Jahres Plan aufgestellt mit einer möglichen Berechnung der Kosten.
 
@@ -219,11 +219,11 @@ Als zweites werden die Initialen kosten Analysiert. Darin enthalten sind Lizenzk
 
 Zuletzt sind die Laufzeitkosten aufgeführt.
 
-Im Totalen, gemäss Dokument, sind die Kosten mit \$3,648,355 beziffert. 
+Im Totalen, gemäss Dokument, sind die Kosten mit \$3,648,355 beziffert.
 
 \begin{table}[H]
 	\centering
-	\small\renewcommand{\arraystretch}{1.4}  
+	\small\renewcommand{\arraystretch}{1.4}
 	\rowcolors{1}{tablerowcolor}{tablebodycolor}
 	%
 	\captionabove[VMware VDI Preise]{VMware VDI Preise}
@@ -254,7 +254,7 @@ Das Paper beinhaltet auch die erwarteten Einsparungen.
 
 \begin{table}[H]
 	\centering
-	\small\renewcommand{\arraystretch}{1.4}  
+	\small\renewcommand{\arraystretch}{1.4}
 	\rowcolors{1}{tablerowcolor}{tablebodycolor}
 	%
 	\captionabove[VMware VDI Einsparungen]{VMware VDI Einsparungen}
@@ -297,7 +297,7 @@ VMware integriert verschiedene Sicherheitsmassnahmen\footcite{Introduction_to_Vi
 \end{itemize}
 
 \subsubsection{Zwei-Faktor-Authentifizierung}
-\Gls{vdmLabel} unterstützt eine Zwei-Faktor-Authentifizierung mit RSA Secure ID. Beim Login muss der User Benutzername, Passwort und ein RSA Token eingeben. Dieser Vorgang ist bekannt von E-Banking Plattformen. 
+\Gls{vdmLabel} unterstützt eine Zwei-Faktor-Authentifizierung mit RSA Secure ID. Beim Login muss der User Benutzername, Passwort und ein RSA Token eingeben. Dieser Vorgang ist bekannt von E-Banking Plattformen.
 
 Die Sicherheit besteht darin, dass wenn das Passwort in die falschen Hände gerät, sich der Angreifer nicht einloggen kann, da ihm das stetig ändernde RSA Token fehlt.
 
@@ -306,7 +306,7 @@ Der Zugang von den Clients auf die \Gls{vdmLabel} Infrastruktur, sowie die Kommu
 
 \begin{minipage}{\textwidth}
 \subsubsection{\Gls{dmzLabel} \& Load balancing}
-Um den Zugriff auf die \Gls{vdiLabel} Umgebung aus dem Internet zu gewährleisten kann eine \Gls{dmzLabel} eingerichtet werden\footcite{Introduction_to_Virtual_Desktop_Manager}. 
+Um den Zugriff auf die \Gls{vdiLabel} Umgebung aus dem Internet zu gewährleisten kann eine \Gls{dmzLabel} eingerichtet werden\footcite{Introduction_to_Virtual_Desktop_Manager}.
 
 \begin{figure}[H]
 	\includegraphics[width=\textwidth]{images/vmware-vdm-dmz2}
@@ -320,7 +320,7 @@ Die \Gls{dmzLabel} ist ein Bereich, der vom Internet her zugänglich ist und des
 \Gls{vdmLabel} ermöglicht es, verschieden Security Servers einzurichten. Dabei können welche in der \Gls{dmzLabel} stehen und andere ausserhalb.
 
 \subsubsection{Load balancing}
-Um die Ausfallwahrscheinlichkeit zu minimieren, kann vor die Security Severs ein Load balancing eingeschaltet werden. Siehe Abbildung \ref{fig:vdmSetupDmz}. Dieses verteilt unter Last die Anfragen an die Server. Fällt einer aus, so merken die User, ausser eventueller Leistungseinbrüchen, nichts. 
+Um die Ausfallwahrscheinlichkeit zu minimieren, kann vor die Security Severs ein Load balancing eingeschaltet werden. Siehe Abbildung \ref{fig:vdmSetupDmz}. Dieses verteilt unter Last die Anfragen an die Server. Fällt einer aus, so merken die User, ausser eventueller Leistungseinbrüchen, nichts.
 
 \subsubsection{\Gls{ldapLabel}}
 Die Authentifizierung kann in das \Gls{ldapLabel} der Firma integriert werden.
@@ -334,7 +334,7 @@ VMware integriert viele Sicherheit-Aspekte in ihre \Gls{vdiLabel} Lösung.
 
 Korrekt Umgesetzt kann damit eine sichere Infrastruktur aufgebaut werden, welche robust gegenüber Ausfällen und Häckerattacken ist. Ein zusätzlicher Vorteil ist, dass die Daten in der Firma gehosted sind und die Sicherheitszone niemals verlassen.
 
-Alles steht und fällt mit jedoch mit der Integration in die eigene Infrastruktur. Die Mechanismen müssen korrekt und durchgehen eingehalten werden damit sie effektiv sind. 
+Alles steht und fällt mit jedoch mit der Integration in die eigene Infrastruktur. Die Mechanismen müssen korrekt und durchgehen eingehalten werden damit sie effektiv sind.
 
 Der Zugriff über HTTP sollte durchgängig deaktiviert werden, wenn er nicht ausdrücklich benötigt wird. Sowie sollte eine sichere Firewall nach aussen hin eingerichtet sein.
 
@@ -384,8 +384,3 @@ Aus den Abbildungen \ref{fig:vdmPerformanceNormal} und \ref{fig:vdmPerformanceIo
 Mit genug starker Hardware kann jede gewünschte Antwortzeit erreicht werden. Bei VMwares \Gls{vdmLabel} Lösung sind das durchschnittlich 101 Benutzer pro Node mit einer Toleranz von einer beziehungsweise sechs Sekunden.
 
 Das spannendste ist jedoch die lineare Entwicklung mit zunehmender Nodeanzahl. Damit ist das System für kleinere Firmen gleich gut geeignet wie für grosse.
-
-
-
-
-
