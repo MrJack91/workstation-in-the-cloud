@@ -195,27 +195,28 @@ Bei on-premis kann auch ohne Netzwerk-Zugang stehts gearbeitet werden. Weiss man
 
 \subsection{Ressourcen (Hardware), Thin Client}
 % mh Abgehandelt in den Kosten?
-Wie bereits erwähnt, kann Client seitig einen \gls{glos:thinClientLabel} verwendet werden. Dafür muss der Server die Ressourcen zur Verfügung stellen.
+Wie bereits erwähnt, kann clientseitig ein \gls{glos:thinClientLabel} verwendet werden. Dabei muss auf der anderen Seite, der Server die Ressourcen zur Verfügung stellen.
 Bei der Nutzung von \glspl{glos:thinClientLabel} befindet sich die leistungsstarche und teure Hardware zentral auf dem Server.
 
-Nebst den daraus resultierenden Vorteilen im Management, profitiert man von der optimalen Verteilung der verfügbaren Ressourcen.
+Nebst den daraus resultierenden Vorteilen im Hardware Management, profitiert man von der optimalen Verteilung der verfügbaren Ressourcen.
 Die Kosten, welche für die Hardware des Anwenders ausgegeben werden müssen, verringern sich.
-Also wird der Schaden der ein Nutzer an seiner Hardware auslösen kann, reduziert. Dagegen steigen die Kosten für die Server-Hardware, die jedoch deutlich beschränkter den Menschen ausgesetzt ist.
+Also wird der potentielle Schaden der ein Nutzer an seiner Hardware auslösen kann, reduziert.
+Dagegen steigen die Kosten für die Server-Hardware, die jedoch deutlich beschränkter dem Einfluss der Menschen ausgesetzt ist.
 
 \subsection{Einschränkungen für den Nutzer}
 % mh
-Generell, umso mehr verschieden lokalisierte Hardware in eine Lösung inbegriffen ist, desto grösser ist die Wahrscheinlichkeit, dass ein Teil ausfällt oder dass die Kommunkation dazwischen nicht optimal gestaltet oder kompatibel ist.
+Generell gilt, umso mehr verschieden lokalisierte Hardware in eine Lösung inbegriffen ist, desto grösser ist die Wahrscheinlichkeit, dass ein Teil ausfällt oder dass die Kommunkation dazwischen nicht optimal gestaltet oder kompatibel ist.
 Dies kann sich auf gewöhnliche \glspl{glos:ioDevice}, wie auch auf das Netzwerk auswirken.
 Fehlt die Verbindung zum Server, ist das Arbeiten meist nicht mehr möglich.
-Ist die Verbindung langsam, fühlt sich das Arbeiten trotz verfügbaren Hardware-Ressourcen träge an.
+Ist die Verbindung langsam, fühlt sich das Arbeiten, trotz verfügbaren Hardware-Ressourcen, träge an.
 
-Grundsätzlich wird dem Nutzer Verwantwortung entzogen. Dadurch hat er weniger Einflussmöglichkeiten, sprich er kann weniger Zerstören, hat aber im Fehlerfall auch rascher gar keine Arbeitsmöglichkeit via Computer mehr.
+Grundsätzlich wird dem Nutzer Verwantwortung entzogen. Dadurch hat er weniger Einflussmöglichkeiten, sprich er kann weniger zerstören, hat aber im Fehlerfall auch rascher gar keine Arbeitsmöglichkeit via Computer mehr.
 
 \subsection{Zusammenspiel Soft-/Hardware}
 % mh
 Dadurch, dass eine Trennung von \glspl{glos:ioDevice} und der effektiven Hardware erfolgt, ergeben sich auch Nachteile.
-Oft wird ein Computer als gesamtes Produkt von Soft- und Hardware verkauft.
-Basis-Funktionen, wie das Standby beim Schliessen eines Notebooks, oder integrierte \glspl{glos:ioDevice}, wie Trackpad, Function-Keys für Audio, Bildschirmeinstellungen (Helligkeit, externer Monitor) usw., funktionieren oft nicht mehr.
+Oft wird ein Computer als Gesamtlösung mit Soft- und Hardware verkauft.
+Basis-Funktionen, wie das Standby beim Schliessen eines Notebooks, oder integrierte \glspl{glos:ioDevice}, wie Trackpad, Function-Keys für Audio, Bildschirmeinstellungen (Helligkeit, externer Monitor) usw., funktionieren oft nicht mehr wie gewünscht.
 Dies weil der dazwischen liegende Layer, via den der Zugriff auf die virtuelle Maschine ermöglicht wird,  nicht die ganze Vielfalt von Hardware-Schnittstellen abdecken kann.
 
 % \section{Deprecated: VDI vs DaaS}
@@ -246,11 +247,55 @@ Dies weil der dazwischen liegende Layer, via den der Zugriff auf die virtuelle M
 % mh evt. raus
 
 
-\section{Mobile Alternativen}
-In dieses Kapitel soll auf bisher nicht erwähnte, weitere Möglichkeiten grob eingehen. Sie eignen sich nicht wirklich für Firmen im klassischen Sinne, sind aber durchaus berechtigt in Betracht gezogen zu werden für beispielsweise Ausbildungsinstitute etc..
+\section{Alternativen}
+In diesem Kapitel werden weitere Möglichkeiten für moderne Workstation-Lösungen grob erläutert.
+Folgende Alternativen eignen sich nicht wirklich für Firmen im klassischen Sinne, sind aber durchaus berechtigt in Betracht gezogen zu werden. Beispielsweise für Ausbildungsinstitute oder redaktionelle Arbeitsfelder.
 
 \subsection{VHD auf externem Medium}
+Für eine virtuelle Maschine, wird ein konsistenter Speicher benötigt, auf dem Daten und Konfigurationen abgelegt werden können.
+Meist wird dieser der Umgebung als virtuelle Festplatte simuliert. Die Daten werden in einer grossen Datei abgelegt. Der physikalische Ort dieser Datei spielt keine Rolle.
+Folglich kann dieser Speicher auch via ein simples, externes Medium zur Verfügung gestellt werden.
 
+Der Nutzer muss jediglich sein Speichermedium mit der virtuellen Festplatte an den Arbeitsplatz anhängen, und kann auf diesem seinen virtuellen Computer benutzen.
+Dabei werden alle Daten auf seinem Medium abgelegt.
+
+Der Nutzer hat bei dieser dezentralen Lösung mehr Freiheiten. Dafür sind sicherheitsrelavente Probleme wie Backup, Verschlüsselung und generelles Management nicht geregelt.
+
+Besonders für technische Schule empfiehlt sich eine solche Lösung, weil der Nutzer seine Maschine wie gewünscht selbst einrichten und nutzen kann.
 
 \subsection{Chromebooks}
+Seit 2011 gibt es die Chromebooks von Google.\footcite{Chromebooks_bersicht_2014-12-27}
+Sie wurden für alltägliche Arbeiten via Internet entwickelt und starten sehr schnell.
 
+Sie setzen ganz auf die Cloud Philosophie. Jegliche Daten werden online abgelegt und mit einem Google-Account verknüpft.
+
+Für Ausbildungsinstitute gibt es günstige Mietoptionen, ab 15 Euro pro Monat pro Gerät.\footcite{Chromebook_Wikipedia_2014-12-27}
+
+Google stellt einen Einsparungsrechner zur Verfügung.\footcite{Chromebooks_und_Chromeboxes_for_Education_2014-12-27}
+Hier als Beispiel eine Lösung mit 20 Chromebooks, anstatt PC's.
+
+\begin{table}[hb]
+	\centering
+	\small\renewcommand{\arraystretch}{1.4}
+	\rowcolors{1}{tablerowcolor}{tablebodycolor}
+	\captionabove[Chromebooks Einsparungen]{Einsparung gemäss Google für 20 Geräte, inkl. Support durch Google. Alle Währungen in Euro. (Stand: 27. Dezember 2014)}
+	
+	\begin{tabular}{lrr}
+		\hline
+		\rowcolor{tableheadcolor}
+		 & PC & Chrome \\
+		\hline
+		Kaufpreis & 10'000 & 6'180\\
+		Hardwarewartung & 2'000 & 1'208\\
+		IT-Software und -Infrastruktur & 9'600 & 460\\
+		Verwaltung und Verwaltungsaufwand & 56'100 & 3'600\\
+		Endnutzerkosten & 23'700 & 2'000\\
+		3 Jahre Gesamtbetriebskosten & 101'400 & 13'448\\
+		\hline
+	\end{tabular}
+\end{table}
+
+Um das Gerät auch offline zu verwenden, bieten diverse Apps eine Offline Modus an. Die Daten werden beim nächsten Internet Zugriff wieder synchronisiert.
+
+Viel Software gibt es via den Google Web Store, will man allerdings bestimmte Software die nicht im Google Web Store zu finden ist, wird es schwierig.
+Grundsätzlich kann andere Software nur via Web-Zugriff verwendet werden.
