@@ -88,7 +88,7 @@ Ein weiterer Kostenpunkt sind die Datenraten und Netzwerkkosten. Bei einer \Gls{
 Für eine neue Firma ist es meist günstiger von Anfang an, in der Cloud zu arbeiten, da keine Kosten für das Aufziehen eines Netzwerkes anfallen.
 Hat man hingegen bereits ein bestehendes, gut ausgebautes Netzwerk, kann dies eine Hürde darstellen beim Umstieg in die Cloud.
 
-Zur Berechnung der benötigten Datenraten gibt es Berechnungssoftware oder auch online Services zu finden. Ein Beispiel ist Bandwidth Pool \footcite{What_is_Bandwidth_Pool_Bandwidth_Pool_2014-12-22}.
+Zur Berechnung der benötigten Datenraten gibt es Berechnungssoftware oder auch online Services zu finden. Ein Beispiel ist Bandwidth Pool \footcite{What_is_Bandwidth_Pool_Bandwidth_Pool}.
 
 Ein versteckter Kostenpunkt bei gewiesen Clouddiensten sind die auswärts Datenraten. Man kann gratis und so viele Daten man möchte auf einen Server laden, diese anschliessend ab zugreifen kostet.
 Auch diese Kosten sind für \Gls{daasLabel} Lösungen nicht sehr hoch, müssen jedoch mit eingerechnet werden.
@@ -113,7 +113,7 @@ Bei on-premis und \Gls{vdiLabel} ist es kostenintensiv und kompliziert, eine hoh
 
 Bei externem Hosting mit \Gls{daasLabel} wird die Ausfallsicherheit extern für viele Benutzer verwaltet, wodurch Synergien genutzt und Kosten reduziert werden.
 
-Für bestehende Firmen muss abgewogen werden, wie hoch die Kosten eines Ausfalles sind. Ist eine hohe Verfügbarkeit nötig, rechnet sich die Umstellung in die Cloud schnell. Für eine einfache Berechnung der Ausfallkosten gibt es den Online-Rechner von VisionSolutions.\footcite{Disaster_Recovery_Resouce_Center_-_Vision_Solutions_2014-12-22}
+Für bestehende Firmen muss abgewogen werden, wie hoch die Kosten eines Ausfalles sind. Ist eine hohe Verfügbarkeit nötig, rechnet sich die Umstellung in die Cloud schnell. Für eine einfache Berechnung der Ausfallkosten gibt es den Online-Rechner von VisionSolutions.\footcite{Disaster_Recovery_Resouce_Center_-_Vision_Solutions}
 
 Hingegen für Startup Firma, bei der eine hohe Verfügbarkeit nötig ist wird empfohlen, früh auf Clouddienste zu setzen.
 
@@ -180,13 +180,13 @@ On-premis und \Gls{vdiLabel} heben sich gegenüber \Gls{daasLabel} dadurch ab, d
 % - Chan mer bi AWS sege i wellem Land d Date ghosted werdet?
 % - Chan mer bi AWS au en Teil vo de Date in-house hoste?
 
-\subsection{Geräteverlust}l
+\subsection{Geräteverlust}
 Bei einer traditioneller on-premis Lösung kann grosser Schaden entstehen, wenn ein Gerät durch Verlust oder Diebstahl in falsche Hände gelangt.
 Als Gegenmassname gibt es zum Beispiel Remote-Wipe, womit der Inhalt der Festplatte ferngesteuert gelöscht werden kann. Dazu muss das Gerät jedoch im Internet sein oder über eine Telefon-SIM-Karte verfügen.
 Zusätzlich als Schutz, damit die Harddisk nicht ausgebaut und ausgelesen werden kann, sollte diese verschlüsselt werden. Dies verlangsamt jedoch den Rechner und es ist bei jedem starten des Computers nötig ein Passwort einzugeben.
 
 Wenn der Desktop hingegen in der Cloud liegt ist es nicht trivial möglich, an die Daten zu gelagen, da sich diese nicht auf dem Rechner befinden.
-Natürlich sollte bei der Cloud, wie bei einer on-premis Lösung auch, sichere Passwörter und eine Zwei-Faktor-Authentifizierung verwendet werden. Werden diese Vorkehrungen berücksichtigt biet die Cloud einen guten Schutz gegen den Verlust von Geräten.
+Natürlich sollte bei der Cloud, wie bei einer on-premis Lösung auch, sichere Passwörter und eine Zwei-Faktor-Authentifizierung verwendet werden. Werden diese Vorkehrungen berücksichtigt bietet die Cloud einen guten Schutz gegen den Verlust von Geräten.
 
 \subsection{Offline-Access}
 Ein zwingendes Kriterium für die Cloud ist es, dass man Zugang zu den Host-Servern hat. Sei dies über das Internet oder das firmen-interne Netz. Ist dies nicht möglich, da das Netzwerk ausgefallen ist oder kein Zugriff zum Internet besteht, so kann nicht gearbeitet werden.
@@ -194,13 +194,29 @@ Ein zwingendes Kriterium für die Cloud ist es, dass man Zugang zu den Host-Serv
 Bei on-premis kann auch ohne Netzwerk-Zugang stehts gearbeitet werden. Weiss man, dass man in nächster Zeit Daten aus dem Netz benötigt können diese vorab auf dem Computer runter geladen werden für eine spätere Bearbeitung.
 
 \subsection{Ressourcen (Hardware), Thin Client}
-% Abgehandelt in den Kosten?
+% mh Abgehandelt in den Kosten?
+Wie bereits erwähnt, kann Client seitig einen \gls{glos:thinClientLabel} verwendet werden. Dafür muss der Server die Ressourcen zur Verfügung stellen.
+Bei der Nutzung von \glspl{glos:thinClientLabel} befindet sich die leistungsstarche und teure Hardware zentral auf dem Server.
 
-\subsection{Einschränkungen für Benutzer}
-% mh Was kommt hier hin?
+Nebst den daraus resultierenden Vorteilen im Management, profitiert man von der optimalen Verteilung der verfügbaren Ressourcen.
+Die Kosten, welche für die Hardware des Anwenders ausgegeben werden müssen, verringern sich.
+Also wird der Schaden der ein Nutzer an seiner Hardware auslösen kann, reduziert. Dagegen steigen die Kosten für die Server-Hardware, die jedoch deutlich beschränkter den Menschen ausgesetzt ist.
+
+\subsection{Einschränkungen für den Nutzer}
+% mh
+Generell, umso mehr verschieden lokalisierte Hardware in eine Lösung inbegriffen ist, desto grösser ist die Wahrscheinlichkeit, dass ein Teil ausfällt oder dass die Kommunkation dazwischen nicht optimal gestaltet oder kompatibel ist.
+Dies kann sich auf gewöhnliche \glspl{glos:ioDevice}, wie auch auf das Netzwerk auswirken.
+Fehlt die Verbindung zum Server, ist das Arbeiten meist nicht mehr möglich.
+Ist die Verbindung langsam, fühlt sich das Arbeiten trotz verfügbaren Hardware-Ressourcen träge an.
+
+Grundsätzlich wird dem Nutzer Verwantwortung entzogen. Dadurch hat er weniger Einflussmöglichkeiten, sprich er kann weniger Zerstören, hat aber im Fehlerfall auch rascher gar keine Arbeitsmöglichkeit via Computer mehr.
 
 \subsection{Zusammenspiel Soft-/Hardware}
-% mh Was kommt hier hin?
+% mh
+Dadurch, dass eine Trennung von \glspl{glos:ioDevice} und der effektiven Hardware erfolgt, ergeben sich auch Nachteile.
+Oft wird ein Computer als gesamtes Produkt von Soft- und Hardware verkauft.
+Basis-Funktionen, wie das Standby beim Schliessen eines Notebooks, oder integrierte \glspl{glos:ioDevice}, wie Trackpad, Function-Keys für Audio, Bildschirmeinstellungen (Helligkeit, externer Monitor) usw., funktionieren oft nicht mehr.
+Dies weil der dazwischen liegende Layer, via den der Zugriff auf die virtuelle Maschine ermöglicht wird,  nicht die ganze Vielfalt von Hardware-Schnittstellen abdecken kann.
 
 % \section{Deprecated: VDI vs DaaS}
 % technisches knowhow nötig
@@ -226,13 +242,15 @@ Bei on-premis kann auch ohne Netzwerk-Zugang stehts gearbeitet werden. Weiss man
 % DaaS Provider pay less for hardware und real-estate and electirizity to power and cool
 
 
-\section{Bereitstellung: Arbeitsplatzes in der Cloud}
+% \section{Bereitstellung: Arbeitsplatzes in der Cloud}
 % mh evt. raus
 
 
 \section{Mobile Alternativen}
-% mh
+In dieses Kapitel soll auf bisher nicht erwähnte, weitere Möglichkeiten grob eingehen. Sie eignen sich nicht wirklich für Firmen im klassischen Sinne, sind aber durchaus berechtigt in Betracht gezogen zu werden für beispielsweise Ausbildungsinstitute etc..
 
 \subsection{VHD auf externem Medium}
 
+
 \subsection{Chromebooks}
+
