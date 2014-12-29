@@ -25,7 +25,7 @@
 \DefineCodeSection[true]{StylePdf}
 \DefineCodeSection[true]{StyleFixProblems}
 %% <--------------------------------
- 
+
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 % Colors
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -64,7 +64,7 @@
 % Execute color definition defined by Target->Web
 \UseDefinition{Target}{Web}
 
-% table colors 
+% table colors
 \colorlet{tablebodycolor}{white!100}
 \colorlet{tablerowcolor}{gray!10}
 \colorlet{tablesubheadcolor}{gray!30}
@@ -118,7 +118,7 @@
 
 \EndCodeSection{StyleDiagrams}
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-% text related 
+% text related
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \BeginCodeSection{StyleText}
 
@@ -153,7 +153,7 @@
 \renewcommand*{\multfootsep}{,\nobreakspace}
 
 % removed because of warning - requires more documentation
-%\KOMAoptions{%   
+%\KOMAoptions{%
 %   footnotes=multiple% nomultiple
 %}
 
@@ -176,9 +176,9 @@
 % Limit space of footnotes to 10 lines
 \setlength{\dimen\footins}{10\baselineskip}
 
-% prevent continuation of footnotes 
+% prevent continuation of footnotes
 % at facing page
-\interfootnotelinepenalty=10000 
+\interfootnotelinepenalty=10000
 
 \EndCodeSection{StyleFootnote}
 
@@ -229,8 +229,8 @@
 }
 
 \IfPackageLoaded{wrapfig} {
-%\setlength{\wrapoverhang}{\marginparwidth} 
-%\addtolength{\wrapoverhang}{\marginparsep} 
+%\setlength{\wrapoverhang}{\marginparwidth}
+%\addtolength{\wrapoverhang}{\marginparsep}
 \setlength{\intextsep}{0.5\baselineskip} % space above and below the image
 % \intextsep ignored with draft ???
 %\setlength{\columnsep}{1em} % separation to the text
@@ -337,7 +337,7 @@
 % layout:  Paragraph
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \BeginCodeSection{StyleParagraph}
-%\nonfrenchspacing     % provides extra space after sentence endings 
+%\nonfrenchspacing     % provides extra space after sentence endings
                        % Must be switched of for german and english text!
 
 %% Paragraph Separation =================================
@@ -380,7 +380,7 @@
 
 
 %%% === Page Layout Options ===
-\KOMAoptions{% 
+\KOMAoptions{%
    %
    headlines=2.1,%
    % headheight=2em,%
@@ -394,26 +394,26 @@
      % Koma Script text area layout
      \KOMAoptions{%
         DIV=12,% (Size of Text Body, higher values = greater textbody)
-        % DIV=calc % (also areaset/classic/current/default/last) 
-        % -> after setting of spacing necessary!   
+        % DIV=calc % (also areaset/classic/current/default/last)
+        % -> after setting of spacing necessary!
         BCOR=10mm% (binding correction)
      }%
- 
+
      \KOMAoptions{% (most options are for package typearea)
        twoside=true, % two side layout (alternating margins, standard in books)
-       % twoside=false, % single side layout 
+       twoside=false, % single side layout 
        % twoside=semi,  % two side layout (non alternating margins!)
        %
        twocolumn=false, % (true)
        %
        headinclude=false,%
        footinclude=false,%
-       mpinclude=false,%    
+       mpinclude=false,%
        headsepline=true,%
        footsepline=false,%
      }%
-     % reloading of typearea, necessary if setting of spacing changed 
-     \typearea[current]{last}      
+     % reloading of typearea, necessary if setting of spacing changed
+     \typearea[current]{last}
 %
 % BCOR
 %    current  % Recalculate type-area with the currently valid BCOR value.
@@ -473,7 +473,7 @@
    % headings=normal % Medium Font Size, medium spacing above and below
    % headings=big % Big Font Size, large spacing above and below
    %
-%%% Add/Dont/Auto Dot behind section numbers 
+%%% Add/Dont/Auto Dot behind section numbers
 %%% (see DUDEN as reference)
    % ,numbers=autoenddot
    % ,numbers=enddot
@@ -488,12 +488,12 @@
       % ,headings=chapterprefix    % inverse of 'nochapterprefix'
       % ,headings=openany   % Chapters start at any side
       % ,headings=openleft  % Chapters start at left side
-      ,headings=openright % Chapters start at right side      
+      ,headings=openright % Chapters start at right side
    }%
 }%
 
 % headings left aligned and ragged
-\renewcommand*{\raggedsection}{\raggedright} 
+\renewcommand*{\raggedsection}{\raggedright}
 
 \EndCodeSection{StyleHeadings}
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -513,7 +513,7 @@
 %\setkomafont{section}{\usekomafont{sectioning}}
 %\setkomafont{subsection}{\usekomafont{sectioning}}
 %\setkomafont{subsubsection}{\usekomafont{sectioning}}
-\setkomafont{paragraph}{\rmfamily\itshape} 
+\setkomafont{paragraph}{\rmfamily\itshape}
 \setkomafont{subparagraph}{\rmfamily}
 
 \setkomafont{descriptionlabel}{\itshape}
@@ -551,7 +551,7 @@
 
 \EndCodeSection{StyleHeadingsFonts}
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-% layout of headings 
+% layout of headings
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \BeginCodeSection{StyleHeadingsLayout}
 %%% Remove Space above Chapter.
@@ -566,7 +566,7 @@
 
 \EndCodeSection{StyleHeadingsLayout}
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-% settings and layout of TOC, LOF 
+% settings and layout of TOC, LOF
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \BeginCodeSection{StyleLayoutTOC}
 %%% === Table of Contents ==============================
@@ -577,7 +577,7 @@
    %%% Setting of 'Style' and 'Content' of TOC
    % toc=left, %
    toc=indented,%
-}%  
+}%
 
 % setup of package titletoc
 \input{preamble/style-titletoc.tex}
@@ -585,22 +585,22 @@
 % Setup using tocstyle
 \IfPackageLoaded{tocstyle}{
 % predefined styles
-% \usetocstyle{standard} % A style similar to the standard classes. 
+% \usetocstyle{standard} % A style similar to the standard classes.
 %                        % \setkomafont has no effect!
-\usetocstyle{KOMAlike} % A style similar to the KOMA-Script classes.  
-%%            % This is almost the same like standard, but instead 
-%%            % of bold face \usekomafont { disposition } will be used if 
+\usetocstyle{KOMAlike} % A style similar to the KOMA-Script classes.
+%%            % This is almost the same like standard, but instead
+%%            % of bold face \usekomafont { disposition } will be used if
 %%            % \usekomafont was defined and sans serif, bold face
 %%            % (\sffamily\bfseries) if not.
 %%            %
-%\usetocstyle{classic}  % Like KOMAlike but all page numbers are set 
+%\usetocstyle{classic}  % Like KOMAlike but all page numbers are set
 %%                      % using normal font.
-%\usetocstyle{allwithdot}  % Like classic but dots between entry text 
+%\usetocstyle{allwithdot}  % Like classic but dots between entry text
 %%                         % and page numbers are used at all depths.
-%\usetocstyle{noonewithdot} % Like classic but not dots between entry 
+%\usetocstyle{noonewithdot} % Like classic but not dots between entry
 %%                          % text and page numbers are used.
-%\usetocstyle{nopagecolumn} % Like noonewithdot but also the gap between 
-%                           % text and page numbersis omited.  
+%\usetocstyle{nopagecolumn} % Like noonewithdot but also the gap between
+%                           % text and page numbersis omited.
 }
 
 % \newcommand{\fontTOC}{\sffamily}
@@ -623,7 +623,7 @@
 
 %%% === Appereance of Lists of figures, tables etc.  ===
 \KOMAoptions{%
-   %%% Setting of 'Style' and 'Content' of Lists 
+   %%% Setting of 'Style' and 'Content' of Lists
    %%% (figures, tables etc)
    % --- General List Style ---
    % listof=left, % tabular styles
@@ -639,15 +639,15 @@
    % bibliography=nottotoc, % Bibliography is not part of the TOC
    % bibliography=totocnumbered, % add Bibliography to TOC with number
    bibliography=totoc % add Bibliography to TOC without number
-}%  
+}%
 
 %\IfDefined{chapter}{%
 % \KOMAoptions{%
 %   % --- chapter highlighting ---
 %   % listof=chapterentry, % ??? Chapter starts are marked in figure/table
-%   % listof=chaptergapline, % New chapter starts are marked by a gap 
+%   % listof=chaptergapline, % New chapter starts are marked by a gap
 %                            % of a single line
-%   listof=chaptergapsmall, % New chapter starts are marked by a gap 
+%   listof=chaptergapsmall, % New chapter starts are marked by a gap
 %                            % of a smallsingle line
 %   % listof=nochaptergap, % No Gap between chapters
 %   %
@@ -671,7 +671,7 @@
 \IfPackageLoaded{bookmark}{
    \bookmarksetup{%
    %%% Action options
-      ,page=1    % 
+      ,page=1    %
       %,view     %
       ,open=true %
       ,openlevel=2 % level to which bookmarks are open
@@ -721,11 +721,11 @@
 }{}
 \makeatother
 
-% fix Problem with onlyamsmath active $ char 
+% fix Problem with onlyamsmath active $ char
 % together with the tabu package
 \input{preamble/fix-tabu-onlyamsmath.tex}
 
-% fix Problem with onlyamsmath active $ char 
+% fix Problem with onlyamsmath active $ char
 % together with the tikz package
 \input{preamble/fix-tikz-onlyamsmath.tex}
 
