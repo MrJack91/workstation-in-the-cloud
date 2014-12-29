@@ -1,6 +1,6 @@
 
 \chapter{Diskussion}
-Im vorhergegangen Kapitel wurden die on-premis Lösung beschrieben, sowie das Auslagern der Workstations in die Cloud auf fremden (\Gls{daasLabel}) und eigenen Servern (\Gls{vdiLabel}). In diesem Kapitel werden die verschiedenen Vorgehen gegeneinander verglichen. Das Kapitel soll helfen, sich für eine Lösung zu entscheiden.
+Im vorhergegangen Kapitel wurden die on-premis Lösung beschrieben, sowie das Auslagern der Workstations in die \Gls{glos:cloudLabel} auf fremden (\Gls{daasLabel}) und eigenen Servern (\Gls{vdiLabel}). In diesem Kapitel werden die verschiedenen Vorgehen gegeneinander verglichen. Das Kapitel soll helfen, sich für eine Lösung zu entscheiden.
 
 % http://www.stratacore.com/blog/choosing-between-vdi-and-daas
 % DaaS vs VDI
@@ -80,13 +80,13 @@ Um die Effektivität des Stromverbrauches eines Datencenters zu messen gibt es d
 \[\text{PUE} = \frac{\text{Total Stromkosten}}{\text{Stromkosten der IT}}\]
 Je näher der Wert bei 1 liegt, desto besser ist er. Microsoft gibt an, einen \Gls{pueLabel} Wert zwischen 1.13 bis 1.2 zu besitzen und Google arbeitet mit 1.14.
 
-Den \Gls{pueLabel} Wert auf ein erträgliches Mass zu reduzieren kann zum Teil schwierig oder kostspielig sein, wenn man seine ganze Infrastruktur umstellen muss. Eine Cloud-Lösung stellt ein geeignetes Mittel dazu dar.
+Den \Gls{pueLabel} Wert auf ein erträgliches Mass zu reduzieren kann zum Teil schwierig oder kostspielig sein, wenn man seine ganze Infrastruktur umstellen muss. Eine \Gls{glos:cloudLabel}-Lösung stellt ein geeignetes Mittel dazu dar.
 
 \subsubsection{Datenraten}
 Ein weiterer Kostenpunkt sind die Datenraten und Netzwerkkosten. Bei einer \Gls{daasLabel} können beträchtliche Datenraten anfallen, wenn Dateien, Programme und weiteres ausser Haus gespeichert werden. Wenn jedoch nur der Bildschirm übertragen wird halten sich die Kosten in Grenzen. Bei dem Betreiben der Server in-house fallen zwar keine Internet kosten an, jedoch wird das eigene Netzwerk stark belastet.
 
-Für eine neue Firma ist es meist günstiger von Anfang an, in der Cloud zu arbeiten, da keine Kosten für das Aufziehen eines Netzwerkes anfallen.
-Hat man hingegen bereits ein bestehendes, gut ausgebautes Netzwerk, kann dies eine Hürde darstellen beim Umstieg in die Cloud.
+Für eine neue Firma ist es meist günstiger von Anfang an, in der \Gls{glos:cloudLabel} zu arbeiten, da keine Kosten für das Aufziehen eines Netzwerkes anfallen.
+Hat man hingegen bereits ein bestehendes, gut ausgebautes Netzwerk, kann dies eine Hürde darstellen beim Umstieg in die \Gls{glos:cloudLabel}.
 
 Zur Berechnung der benötigten Datenraten gibt es Berechnungssoftware oder auch online Services zu finden. Ein Beispiel ist Bandwidth Pool \footcite{What_is_Bandwidth_Pool_Bandwidth_Pool}.
 
@@ -97,7 +97,7 @@ Auch diese Kosten sind für \Gls{daasLabel} Lösungen nicht sehr hoch, müssen j
 Im Durchschnitt müssen Hardware-Komponenten alle fünf Jahre ausgetauscht werden. Dabei handelt es sich um einen Richtwert, weshalb der tatsächliche Wert schwer abzuschätzen ist.
 
 Wird die 5-Jahre-Regel nicht berücksichtigt, kann es dazu kommen, dass nur die initialen Kosten, sowie die Unterhaltskosten berücksichtigt werden.
-Wenn der Anschein trügt und die Kosten mit der verzerrten Rechnung günstiger sind als die einer Cloud-Lösung, kann sich dass nach fünf Jahren ändern, denn dann werden die Kosten steigen, weil alte Hardware ersetzt werden muss.
+Wenn der Anschein trügt und die Kosten mit der verzerrten Rechnung günstiger sind als die einer \Gls{glos:cloudLabel}-Lösung, kann sich dass nach fünf Jahren ändern, denn dann werden die Kosten steigen, weil alte Hardware ersetzt werden muss.
 
 \begin{figure}[H]
 	\includegraphics[width=0.8\textwidth]{images/five-year-rule}
@@ -113,21 +113,21 @@ Bei on-premis und \Gls{vdiLabel} ist es kostenintensiv und kompliziert, eine hoh
 
 Bei externem Hosting mit \Gls{daasLabel} wird die Ausfallsicherheit extern für viele Benutzer verwaltet, wodurch Synergien genutzt und Kosten reduziert werden.
 
-Für bestehende Firmen muss abgewogen werden, wie hoch die Kosten eines Ausfalles sind. Ist eine hohe Verfügbarkeit nötig, rechnet sich die Umstellung in die Cloud schnell. Für eine einfache Berechnung der Ausfallkosten gibt es den Online-Rechner von VisionSolutions.\footcite{Disaster_Recovery_Resouce_Center_-_Vision_Solutions}
+Für bestehende Firmen muss abgewogen werden, wie hoch die Kosten eines Ausfalles sind. Ist eine hohe Verfügbarkeit nötig, rechnet sich die Umstellung in die \Gls{glos:cloudLabel} schnell. Für eine einfache Berechnung der Ausfallkosten gibt es den Online-Rechner von VisionSolutions.\footcite{Disaster_Recovery_Resouce_Center_-_Vision_Solutions}
 
 Hingegen für Startup Firma, bei der eine hohe Verfügbarkeit nötig ist wird empfohlen, früh auf Clouddienste zu setzen.
 
 \subsubsection{Outsourcing}
 Das Outsourcing des Supports zieht zwar weitere Umstellungen für die Firma mit sich, es kann, wie im Kapitel \cref{sec:vmwareCosts} ausführlich Diskutiert, jedoch sehr viel Geld eingespart werden. Dies rechnet sich mehr, je grösser der Betrieb ist.
 
-Outsourcing kann für die Cloud genau so betrieben werden wie für on-premis Lösungen. Jedoch hat der Support in der Cloud und im spezielen bei \Gls{daasLabel} viel mehr Möglichkeiten auf die Desktops Einfluss zu nehmen. Stehen die Server in-house wird es immer ein grösseres Team an IT-Spezialisten in der Firma geben.
+Outsourcing kann für die \Gls{glos:cloudLabel} genau so betrieben werden wie für on-premis Lösungen. Jedoch hat der Support in der \Gls{glos:cloudLabel} und im spezielen bei \Gls{daasLabel} viel mehr Möglichkeiten auf die Desktops Einfluss zu nehmen. Stehen die Server in-house wird es immer ein grösseres Team an IT-Spezialisten in der Firma geben.
 
 \subsubsection{Fazit}
 Die Kosten sind schwierig zu berechnen. Es spielen viele Faktoren eine Rolle und die Übersicht zu bewahren ist schwierig.
 
 Elektrizität-Kosten sind bei in-house Servern sehr hoch. Es sollte ein \Gls{pueLabel}-Wert zwischen 1.1 und 1.2 angestrebt werden. Alternativ lohnt sich ein Wechsel auf \Gls{daasLabel} um die Kosten auf den Sevice-Anbieter abzuwählen.
 
-Datenraten spielen im Allgemeinen in der Cloud eine grosse Rolle, wenn jedoch nur der Desktop übertragen wird halten sich die Datenvolumen in Grenzen. Hat man eine gut ausgebautes Netzwerk bietet es sich an, auf \Gls{vdiLabel} zu setzen um die bestehende Infrastruktur weiter zu nutzen.
+Datenraten spielen im Allgemeinen in der \Gls{glos:cloudLabel} eine grosse Rolle, wenn jedoch nur der Desktop übertragen wird halten sich die Datenvolumen in Grenzen. Hat man eine gut ausgebautes Netzwerk bietet es sich an, auf \Gls{vdiLabel} zu setzen um die bestehende Infrastruktur weiter zu nutzen.
 
 Der grösste Kostenpunkt in der Rechnung der IT sind meist die Hardwarekosten. Deshalb ist es essenziell das man bei in-house Lösungen die 5-Jahre-Regel beachtet. Sind die Kosten mit Berücksichtigung der 5-Jahres-Regel günstiger als die einer \Gls{daasLabel}-Lösung, so sollte ein in-house Hosting betrieben werden. Entweder mit on-premis oder \Gls{vdiLabel}. Sonst sollte \Gls{daasLabel} eingesetzt werden.
 
@@ -157,15 +157,15 @@ Die Aufwände sind unterteilt in Initiale- und Wartungsaufwände.
 
 Die Initialen-Aufwände umfassen die Beschaffung und Einrichtung der Hardware sowie allfälliger Netzwerkerweiterungen. \Gls{daasLabel} hat den Vorteil das man nur \glspl{glos:thinClientLabel} angeschafft werden müssen. Hingegen muss bei VDI leistungs-starke Server und zusätzlich die \glspl{glos:thinClientLabel} eingekauft werden.
 
-Im Unterhalt bieten die Cloud-Lösungen die meisten Vorteile, da sie sehr flexibel sind. Es kann sehr einfach skaliert werden. Bei Bedarf kann auf Knopfdruck 10 neue, komplett eingerichtete,  Desktops erstellt werden. Es können Templates generiert werden, so dass eine Führungsperson eine andere Konfiguration erhalten als eine Sekretärin.
+Im Unterhalt bieten die \Gls{glos:cloudLabel}-Lösungen die meisten Vorteile, da sie sehr flexibel sind. Es kann sehr einfach skaliert werden. Bei Bedarf kann auf Knopfdruck 10 neue, komplett eingerichtete,  Desktops erstellt werden. Es können Templates generiert werden, so dass eine Führungsperson eine andere Konfiguration erhalten als eine Sekretärin.
 
 Updates und die Verteilung neuer Software können zentral verwaltet und innerhalb von Minuten auf alle Desktops verteilt werden. Es braucht keine klassischen Scripts mehr welche auf jedem Rechner einzeln ausgeführt werden müssen.
 
-\gls{glos:homeOfficeLabel} wird mit der Cloud vereinfacht. Es muss nur an einer zentralen Zugangstelle der Zugriff von ausserhalb des eigenen Netzwerkes erlaubt werden. Sicherheitstechnisch macht es Sinn auf eine Zwei-Faktor-Authentifizierung umzustellen. Für die Mitarbeiter ändert sich von der Arbeitsweise nichts. Sie lediglich ihren Desktop von zuhause aus anstelle vom Büro. Bei einer on-premis Lösung muss eine \gls{glos:vpnLabel} Verbindung eingerichtet werden und einzelne Applikationen für die bearbeitung von zuhause aus eingerichtet werden.
+\gls{glos:homeOfficeLabel} wird mit der \Gls{glos:cloudLabel} vereinfacht. Es muss nur an einer zentralen Zugangstelle der Zugriff von ausserhalb des eigenen Netzwerkes erlaubt werden. Sicherheitstechnisch macht es Sinn auf eine Zwei-Faktor-Authentifizierung umzustellen. Für die Mitarbeiter ändert sich von der Arbeitsweise nichts. Sie lediglich ihren Desktop von zuhause aus anstelle vom Büro. Bei einer on-premis Lösung muss eine \gls{glos:vpnLabel} Verbindung eingerichtet werden und einzelne Applikationen für die bearbeitung von zuhause aus eingerichtet werden.
 
 Bei \Gls{vdiLabel} und \Gls{daasLabel} kann es den Mitarbeiter verunmöglicht werden, Dateien auf dem lokalen \gls{glos:thinClientLabel} abzuspeichern. Damit sind alle Daten auf dem Server vorhanden und es kann ein zentrales Backup verwaltet werden. Bei on-premis ist dies problematischer da die Mitarbeiter auch berechtigt sind auf dem lokalen Rechner Daten zu sichern.
 
-Auch die Arbeitsplatzverwaltung wird einfacher mit einer Cloud-Lösung, da sich die Benutzer an irgend einem Platz auf ihren Desktop einloggen und arbeiten können.
+Auch die Arbeitsplatzverwaltung wird einfacher mit einer \Gls{glos:cloudLabel}-Lösung, da sich die Benutzer an irgend einem Platz auf ihren Desktop einloggen und arbeiten können.
 
 \subsection{Sicherheit}
 % On-Premis/VDI: Daten in-house
@@ -185,11 +185,11 @@ Bei einer traditioneller on-premis Lösung kann grosser Schaden entstehen, wenn 
 Als Gegenmassname gibt es zum Beispiel Remote-Wipe, womit der Inhalt der Festplatte ferngesteuert gelöscht werden kann. Dazu muss das Gerät jedoch im Internet sein oder über eine Telefon-SIM-Karte verfügen.
 Zusätzlich als Schutz, damit die Harddisk nicht ausgebaut und ausgelesen werden kann, sollte diese verschlüsselt werden. Dies verlangsamt jedoch den Rechner und es ist bei jedem starten des Computers nötig ein Passwort einzugeben.
 
-Wenn der Desktop hingegen in der Cloud liegt ist es nicht trivial möglich, an die Daten zu gelagen, da sich diese nicht auf dem Rechner befinden.
-Natürlich sollte bei der Cloud, wie bei einer on-premis Lösung auch, sichere Passwörter und eine Zwei-Faktor-Authentifizierung verwendet werden. Werden diese Vorkehrungen berücksichtigt bietet die Cloud einen guten Schutz gegen den Verlust von Geräten.
+Wenn der Desktop hingegen in der \Gls{glos:cloudLabel} liegt ist es nicht trivial möglich, an die Daten zu gelagen, da sich diese nicht auf dem Rechner befinden.
+Natürlich sollte bei der \Gls{glos:cloudLabel}, wie bei einer on-premis Lösung auch, sichere Passwörter und eine Zwei-Faktor-Authentifizierung verwendet werden. Werden diese Vorkehrungen berücksichtigt bietet die \Gls{glos:cloudLabel} einen guten Schutz gegen den Verlust von Geräten.
 
 \subsection{Offline-Access}
-Ein zwingendes Kriterium für die Cloud ist es, dass man Zugang zu den Host-Servern hat. Sei dies über das Internet oder das firmen-interne Netz. Ist dies nicht möglich, da das Netzwerk ausgefallen ist oder kein Zugriff zum Internet besteht, so kann nicht gearbeitet werden.
+Ein zwingendes Kriterium für die \Gls{glos:cloudLabel} ist es, dass man Zugang zu den Host-Servern hat. Sei dies über das Internet oder das firmen-interne Netz. Ist dies nicht möglich, da das Netzwerk ausgefallen ist oder kein Zugriff zum Internet besteht, so kann nicht gearbeitet werden.
 
 Bei on-premis kann auch ohne Netzwerk-Zugang stehts gearbeitet werden. Weiss man, dass man in nächster Zeit Daten aus dem Netz benötigt können diese vorab auf dem Computer runter geladen werden für eine spätere Bearbeitung.
 
@@ -206,7 +206,7 @@ Dagegen steigen die Kosten für die Server-Hardware, die jedoch deutlich beschr�
 \subsection{Einschränkungen für den Nutzer}
 % mh
 Generell gilt, umso mehr verschieden lokalisierte Hardware in eine Lösung inbegriffen ist, desto grösser ist die Wahrscheinlichkeit, dass ein Teil ausfällt oder dass die Kommunkation dazwischen nicht optimal gestaltet oder kompatibel ist.
-Dies kann sich auf gewöhnliche \glspl{glos:ioDevice}, wie auch auf das Netzwerk auswirken.
+Dies kann sich auf gewöhnliche \glspl{glos:ioDeviceLabel}, wie auch auf das Netzwerk auswirken.
 Fehlt die Verbindung zum Server, ist das Arbeiten meist nicht mehr möglich.
 Ist die Verbindung langsam, fühlt sich das Arbeiten, trotz verfügbaren Hardware-Ressourcen, träge an.
 
@@ -214,9 +214,9 @@ Grundsätzlich wird dem Nutzer Verwantwortung entzogen. Dadurch hat er weniger E
 
 \subsection{Zusammenspiel Soft-/Hardware}
 % mh
-Dadurch, dass eine Trennung von \glspl{glos:ioDevice} und der effektiven Hardware erfolgt, ergeben sich auch Nachteile.
+Dadurch, dass eine Trennung von \glspl{glos:ioDeviceLabel} und der effektiven Hardware erfolgt, ergeben sich auch Nachteile.
 Oft wird ein Computer als Gesamtlösung mit Soft- und Hardware verkauft.
-Basis-Funktionen, wie das Standby beim Schliessen eines Notebooks, oder integrierte \glspl{glos:ioDevice}, wie Trackpad, Function-Keys für Audio, Bildschirmeinstellungen (Helligkeit, externer Monitor) usw., funktionieren oft nicht mehr wie gewünscht.
+Basis-Funktionen, wie das Standby beim Schliessen eines Notebooks, oder integrierte \glspl{glos:ioDeviceLabel}, wie Trackpad, Function-Keys für Audio, Bildschirmeinstellungen (Helligkeit, externer Monitor) usw., funktionieren oft nicht mehr wie gewünscht.
 Dies weil der dazwischen liegende Layer, via den der Zugriff auf die virtuelle Maschine ermöglicht wird,  nicht die ganze Vielfalt von Hardware-Schnittstellen abdecken kann.
 
 % \section{Deprecated: VDI vs DaaS}
@@ -267,7 +267,7 @@ Besonders für technische Schule empfiehlt sich eine solche Lösung, weil der Nu
 Seit 2011 gibt es die Chromebooks von Google.\footcite{Chromebooks_bersicht_2014-12-27}
 Sie wurden für alltägliche Arbeiten via Internet entwickelt und starten sehr schnell.
 
-Sie setzen ganz auf die Cloud Philosophie. Jegliche Daten werden online abgelegt und mit einem Google-Account verknüpft.
+Sie setzen ganz auf die \Gls{glos:cloudLabel} Philosophie. Jegliche Daten werden online abgelegt und mit einem Google-Account verknüpft.
 
 Für Ausbildungsinstitute gibt es günstige Mietoptionen, ab 15 Euro pro Monat pro Gerät.\footcite{Chromebook_Wikipedia_2014-12-27}
 
@@ -279,7 +279,7 @@ Hier als Beispiel eine Lösung mit 20 Chromebooks, anstatt PC's.
 	\small\renewcommand{\arraystretch}{1.4}
 	\rowcolors{1}{tablerowcolor}{tablebodycolor}
 	\captionabove[Chromebooks Einsparungen]{Einsparung gemäss Google für 20 Geräte, inkl. Support durch Google. Alle Währungen in Euro. (Stand: 27. Dezember 2014)}
-	
+
 	\begin{tabular}{lrr}
 		\hline
 		\rowcolor{tableheadcolor}
