@@ -74,7 +74,7 @@ Je grösser die Firma wird, desto grösser wird dementsprechend auch der Stromve
 
 Unter den gesamten Ausgaben für die Elektrizität sind die Kosten für die Server oft schwer raus zu lesen, wenn keine Messwerkzeuge installiert sind. Der Vorteil von einem externen Anbieter besteht darin, dass diese Kosten bereits in den monatlichen Umtrieben enthalten sind.
 
-Im Vergleich von on-premis und \Gls{vdiLabel} hat sich in der Erfahrung gezeigt, dass die Stromkosten sich nicht merklich unterscheiden. Bei \Gls{vdiLabel} konsumieren die Server mehr Strom. Da die Mitarbeiter jedoch nur noch leistungsschwache Rechner benötigen, die sich auf die Desktops auf den Servern verbinden, benötigen diese weniger Strom. Dies hebt sich gegenseitig auf.
+Im Vergleich von \gls{glos:onPremiseLabel} und \Gls{vdiLabel} hat sich in der Erfahrung gezeigt, dass die Stromkosten sich nicht merklich unterscheiden. Bei \Gls{vdiLabel} konsumieren die Server mehr Strom. Da die Mitarbeiter jedoch nur noch leistungsschwache Rechner benötigen, die sich auf die Desktops auf den Servern verbinden, benötigen diese weniger Strom. Dies hebt sich gegenseitig auf.
 
 Um die Effektivität des Stromverbrauches eines Datencenters zu messen gibt es das \Gls{pueLabel} Verhältnis. Dazu wird der gesamte Verbrauch einer Firma geteilt durch Stromkosten der IT gerechnet.
 \[\text{PUE} = \frac{\text{Total Stromkosten}}{\text{Stromkosten der IT}}\]
@@ -120,7 +120,7 @@ Hingegen für Startup Firma, bei der eine hohe Verfügbarkeit nötig ist wird em
 \subsubsection{Outsourcing}
 Das Outsourcing des Supports zieht zwar weitere Umstellungen für die Firma mit sich, es kann, wie im Kapitel \cref{sec:vmwareCosts} ausführlich Diskutiert, jedoch sehr viel Geld eingespart werden. Dies rechnet sich mehr, je grösser der Betrieb ist.
 
-Outsourcing kann für die \Gls{glos:cloudLabel} genau so betrieben werden wie für on-premis Lösungen. Jedoch hat der Support in der \Gls{glos:cloudLabel} und im spezielen bei \Gls{daasLabel} viel mehr Möglichkeiten auf die Desktops Einfluss zu nehmen. Stehen die Server in-house wird es immer ein grösseres Team an IT-Spezialisten in der Firma geben.
+Outsourcing kann für die \Gls{glos:cloudLabel} genau so betrieben werden wie für \gls{glos:onPremiseLabel} Lösungen. Jedoch hat der Support in der \Gls{glos:cloudLabel} und im spezielen bei \Gls{daasLabel} viel mehr Möglichkeiten auf die Desktops Einfluss zu nehmen. Stehen die Server in-house wird es immer ein grösseres Team an IT-Spezialisten in der Firma geben.
 
 \subsubsection{Fazit}
 Die Kosten sind schwierig zu berechnen. Es spielen viele Faktoren eine Rolle und die Übersicht zu bewahren ist schwierig.
@@ -161,7 +161,7 @@ Im Unterhalt bieten die \Gls{glos:cloudLabel}-Lösungen die meisten Vorteile, da
 
 Updates und die Verteilung neuer Software können zentral verwaltet und innerhalb von Minuten auf alle Desktops verteilt werden. Es braucht keine klassischen Scripts mehr welche auf jedem Rechner einzeln ausgeführt werden müssen.
 
-\gls{glos:homeOfficeLabel} wird mit der \Gls{glos:cloudLabel} vereinfacht. Es muss nur an einer zentralen Zugangstelle der Zugriff von ausserhalb des eigenen Netzwerkes erlaubt werden. Sicherheitstechnisch macht es Sinn auf eine Zwei-Faktor-Authentifizierung umzustellen. Für die Mitarbeiter ändert sich von der Arbeitsweise nichts. Sie lediglich ihren Desktop von zuhause aus anstelle vom Büro. Bei einer on-premis Lösung muss eine \gls{glos:vpnLabel} Verbindung eingerichtet werden und einzelne Applikationen für die bearbeitung von zuhause aus eingerichtet werden.
+\gls{glos:homeOfficeLabel} wird mit der \Gls{glos:cloudLabel} vereinfacht. Es muss nur an einer zentralen Zugangstelle der Zugriff von ausserhalb des eigenen Netzwerkes erlaubt werden. Sicherheitstechnisch macht es Sinn auf eine Zwei-Faktor-Authentifizierung umzustellen. Für die Mitarbeiter ändert sich von der Arbeitsweise nichts. Sie lediglich ihren Desktop von zuhause aus anstelle vom Büro. Bei einer \gls{glos:onPremiseLabel} Lösung muss eine \gls{glos:vpnLabel} Verbindung eingerichtet werden und einzelne Applikationen für die bearbeitung von zuhause aus eingerichtet werden.
 
 Bei \Gls{vdiLabel} und \Gls{daasLabel} kann es den Mitarbeiter verunmöglicht werden, Dateien auf dem lokalen \gls{glos:thinClientLabel} abzuspeichern. Damit sind alle Daten auf dem Server vorhanden und es kann ein zentrales Backup verwaltet werden. Bei \gls{glos:onPremiseLabel} ist dies problematischer da die Mitarbeiter auch berechtigt sind auf dem lokalen Rechner Daten zu sichern.
 
@@ -181,7 +181,7 @@ Die vorgestellten Lösungen von Amazon und VMware wurden beide hauptsächlich f�
 % - Chan mer bi AWS au en Teil vo de Date in-house hoste?
 
 \subsection{Geräteverlust}
-Bei einer traditioneller on-premis Lösung kann grosser Schaden entstehen, wenn ein Gerät durch Verlust oder Diebstahl in falsche Hände gelangt.
+Bei einer traditioneller \gls{glos:onPremiseLabel} Lösung kann grosser Schaden entstehen, wenn ein Gerät durch Verlust oder Diebstahl in falsche Hände gelangt.
 Als Gegenmassname gibt es zum Beispiel Remote-Wipe, womit der Inhalt der Festplatte ferngesteuert gelöscht werden kann. Dazu muss das Gerät jedoch im Internet sein oder über eine Telefon-SIM-Karte verfügen.
 Zusätzlich als Schutz, damit die Harddisk nicht ausgebaut und ausgelesen werden kann, sollte diese verschlüsselt werden. Dies verlangsamt jedoch den Rechner und es ist bei jedem starten des Computers nötig ein Passwort einzugeben.
 
@@ -191,7 +191,7 @@ Natürlich sollte bei der \Gls{glos:cloudLabel}, wie bei einer \gls{glos:onPremi
 \subsection{Offline-Access}
 Ein zwingendes Kriterium für die \Gls{glos:cloudLabel} ist es, dass man Zugang zu den Host-Servern hat. Sei dies über das Internet oder das firmen-interne Netz. Ist dies nicht möglich, da das Netzwerk ausgefallen ist oder kein Zugriff zum Internet besteht, so kann nicht gearbeitet werden.
 
-Bei on-premis kann auch ohne Netzwerk-Zugang stehts gearbeitet werden. Weiss man, dass man in nächster Zeit Daten aus dem Netz benötigt können diese vorab auf dem Computer runter geladen werden für eine spätere Bearbeitung.
+Bei \gls{glos:onPremiseLabel} kann auch ohne Netzwerk-Zugang stehts gearbeitet werden. Weiss man, dass man in nächster Zeit Daten aus dem Netz benötigt können diese vorab auf dem Computer runter geladen werden für eine spätere Bearbeitung.
 
 \subsection{Ressourcen (Hardware), Thin Client}
 % mh Abgehandelt in den Kosten?
