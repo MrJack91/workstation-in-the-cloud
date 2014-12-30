@@ -1,6 +1,6 @@
 
 \chapter{Diskussion}
-Im vorhergegangen Kapitel wurden die on-premis Lösung beschrieben, sowie das Auslagern der Workstations in die \Gls{glos:cloudLabel} auf fremden (\Gls{daasLabel}) und eigenen Servern (\Gls{vdiLabel}). In diesem Kapitel werden die verschiedenen Vorgehen gegeneinander verglichen. Das Kapitel soll helfen, sich für eine Lösung zu entscheiden.
+Im vorhergegangen Kapitel wurden die \gls{glos:onPremiseLabel} Lösung beschrieben, sowie das Auslagern der Workstations in die \Gls{glos:cloudLabel} auf fremden (\Gls{daasLabel}) und eigenen Servern (\Gls{vdiLabel}). In diesem Kapitel werden die verschiedenen Vorgehen gegeneinander verglichen. Das Kapitel soll helfen, sich für eine Lösung zu entscheiden.
 
 % http://www.stratacore.com/blog/choosing-between-vdi-and-daas
 % DaaS vs VDI
@@ -60,7 +60,7 @@ Unterteilt wird die Diskussion in die Bereiche Kosten, Aufwand, Unterhalt und Si
 
 Im \cref{sec:vmwareCosts} wurde aufgezeigt, dass es kostspielig sein kann, auf eine \Gls{vdiLabel}-Lösung umzustellen. Es müssen deshalb konkrete Bedürfnisse vorhanden sein, damit sich eine Umstellung rechtfertigt.
 
-Bei der Berechnung der Kosten wird oft der Fehler gemacht, dass nur die Hard- und Software Kosten bei on-premis und \Gls{vdiLabel} berücksichtigt werden, und die monatlichen Kosten bei \Gls{daasLabel}.
+Bei der Berechnung der Kosten wird oft der Fehler gemacht, dass nur die Hard- und Software Kosten bei \gls{glos:onPremiseLabel} und \Gls{vdiLabel} berücksichtigt werden, und die monatlichen Kosten bei \Gls{daasLabel}.
 Dass ist jedoch das selbe, wie wenn ein Buch nur nach dessen Deckblatt bewertet wird.
 Es gibt diverse andere Kosten die es zu beachten gilt.
 
@@ -109,7 +109,7 @@ Die Graphik verdeutlicht, dass zwischen Jahr 4 und Jahr 5 der Preis ein Anstieg 
 Hier liegt der Vorteil von \Gls{daasLabel} darin, dass die Kosten klar definiert und in das Jahresbudget mit eingerechnet werden können.
 
 \subsubsection{Ausfallkosten}
-Bei on-premis und \Gls{vdiLabel} ist es kostenintensiv und kompliziert, eine hohe Ausfallsicherheit zu erreichen. Zum Beispiel muss ein \gls{glos:loadBalancingLabel} eingerichtet werden, sowie Daten- und Internetleitungen müssen redundant angelegt werden. Um diese Strategien erfolgreich umzusetzen, ist teures Expertenwissen nötig.
+Bei \gls{glos:onPremiseLabel} und \Gls{vdiLabel} ist es kostenintensiv und kompliziert, eine hohe Ausfallsicherheit zu erreichen. Zum Beispiel muss ein \gls{glos:loadBalancingLabel} eingerichtet werden, sowie Daten- und Internetleitungen müssen redundant angelegt werden. Um diese Strategien erfolgreich umzusetzen, ist teures Expertenwissen nötig.
 
 Bei externem Hosting mit \Gls{daasLabel} wird die Ausfallsicherheit extern für viele Benutzer verwaltet, wodurch Synergien genutzt und Kosten reduziert werden.
 
@@ -129,7 +129,7 @@ Elektrizität-Kosten sind bei in-house Servern sehr hoch. Es sollte ein \Gls{pue
 
 Datenraten spielen im Allgemeinen in der \Gls{glos:cloudLabel} eine grosse Rolle, wenn jedoch nur der Desktop übertragen wird halten sich die Datenvolumen in Grenzen. Hat man eine gut ausgebautes Netzwerk bietet es sich an, auf \Gls{vdiLabel} zu setzen um die bestehende Infrastruktur weiter zu nutzen.
 
-Der grösste Kostenpunkt in der Rechnung der IT sind meist die Hardwarekosten. Deshalb ist es essenziell das man bei in-house Lösungen die 5-Jahre-Regel beachtet. Sind die Kosten mit Berücksichtigung der 5-Jahres-Regel günstiger als die einer \Gls{daasLabel}-Lösung, so sollte ein in-house Hosting betrieben werden. Entweder mit on-premis oder \Gls{vdiLabel}. Sonst sollte \Gls{daasLabel} eingesetzt werden.
+Der grösste Kostenpunkt in der Rechnung der IT sind meist die Hardwarekosten. Deshalb ist es essenziell das man bei in-house Lösungen die 5-Jahre-Regel beachtet. Sind die Kosten mit Berücksichtigung der 5-Jahres-Regel günstiger als die einer \Gls{daasLabel}-Lösung, so sollte ein in-house Hosting betrieben werden. Entweder mit \gls{glos:onPremiseLabel} oder \Gls{vdiLabel}. Sonst sollte \Gls{daasLabel} eingesetzt werden.
 
 Eine hohe Verfügbarkeit ist teuer wenn sie mit in-house System realisiert werden muss. Deshalb muss eine genaue Recherche betrieben werden wie teuer ein Ausfall wäre. Der Vorteil von \Gls{daasLabel} liegt darin, dass man sich nicht um die Verfügbarkeit kümmern muss und stellt deshalb eine günstige Variante dar um das Ziel zu erreichen.
 
@@ -163,7 +163,7 @@ Updates und die Verteilung neuer Software können zentral verwaltet und innerhal
 
 \gls{glos:homeOfficeLabel} wird mit der \Gls{glos:cloudLabel} vereinfacht. Es muss nur an einer zentralen Zugangstelle der Zugriff von ausserhalb des eigenen Netzwerkes erlaubt werden. Sicherheitstechnisch macht es Sinn auf eine Zwei-Faktor-Authentifizierung umzustellen. Für die Mitarbeiter ändert sich von der Arbeitsweise nichts. Sie lediglich ihren Desktop von zuhause aus anstelle vom Büro. Bei einer on-premis Lösung muss eine \gls{glos:vpnLabel} Verbindung eingerichtet werden und einzelne Applikationen für die bearbeitung von zuhause aus eingerichtet werden.
 
-Bei \Gls{vdiLabel} und \Gls{daasLabel} kann es den Mitarbeiter verunmöglicht werden, Dateien auf dem lokalen \gls{glos:thinClientLabel} abzuspeichern. Damit sind alle Daten auf dem Server vorhanden und es kann ein zentrales Backup verwaltet werden. Bei on-premis ist dies problematischer da die Mitarbeiter auch berechtigt sind auf dem lokalen Rechner Daten zu sichern.
+Bei \Gls{vdiLabel} und \Gls{daasLabel} kann es den Mitarbeiter verunmöglicht werden, Dateien auf dem lokalen \gls{glos:thinClientLabel} abzuspeichern. Damit sind alle Daten auf dem Server vorhanden und es kann ein zentrales Backup verwaltet werden. Bei \gls{glos:onPremiseLabel} ist dies problematischer da die Mitarbeiter auch berechtigt sind auf dem lokalen Rechner Daten zu sichern.
 
 Auch die Arbeitsplatzverwaltung wird einfacher mit einer \Gls{glos:cloudLabel}-Lösung, da sich die Benutzer an irgend einem Platz auf ihren Desktop einloggen und arbeiten können.
 
@@ -174,7 +174,7 @@ Auch die Arbeitsplatzverwaltung wird einfacher mit einer \Gls{glos:cloudLabel}-L
 Die vorgestellten Lösungen von Amazon und VMware wurden beide hauptsächlich für \Gls{b2bLabel} entwickelt. In diesem Bereich ist Sicherheit wichtiges weshalb zu diesem Thema einige Vorkehrungen getroffen wurden. Beide unterstützen die Authentifizierung gegen das \gls{glos:ldapLabel} der Firma, automatisierte Backups, eine sichere Kommunikation über \gls{glos:httpsLabel} und eine Zwei-Faktor-Authentifizierung.
 
 \subsubsection{Speicherort der Daten}
-On-premis und \Gls{vdiLabel} heben sich gegenüber \Gls{daasLabel} dadurch ab, dass die Daten der Firma diese nicht verlassen.
+\Gls{glos:onPremiseLabel} und \Gls{vdiLabel} heben sich gegenüber \Gls{daasLabel} dadurch ab, dass die Daten der Firma diese nicht verlassen.
 % Analyse zum Thema DaaS nötig:
 % - Het AWS Two-Factor-Authentication? Das staht nöd im text oder? Wenn es unterstütz, chan mer das no ufne?
 % - Chan mer bi AWS sege i wellem Land d Date ghosted werdet?
@@ -186,7 +186,7 @@ Als Gegenmassname gibt es zum Beispiel Remote-Wipe, womit der Inhalt der Festpla
 Zusätzlich als Schutz, damit die Harddisk nicht ausgebaut und ausgelesen werden kann, sollte diese verschlüsselt werden. Dies verlangsamt jedoch den Rechner und es ist bei jedem starten des Computers nötig ein Passwort einzugeben.
 
 Wenn der Desktop hingegen in der \Gls{glos:cloudLabel} liegt ist es nicht trivial möglich, an die Daten zu gelagen, da sich diese nicht auf dem Rechner befinden.
-Natürlich sollte bei der \Gls{glos:cloudLabel}, wie bei einer on-premis Lösung auch, sichere Passwörter und eine Zwei-Faktor-Authentifizierung verwendet werden. Werden diese Vorkehrungen berücksichtigt bietet die \Gls{glos:cloudLabel} einen guten Schutz gegen den Verlust von Geräten.
+Natürlich sollte bei der \Gls{glos:cloudLabel}, wie bei einer \gls{glos:onPremiseLabel} Lösung auch, sichere Passwörter und eine Zwei-Faktor-Authentifizierung verwendet werden. Werden diese Vorkehrungen berücksichtigt bietet die \Gls{glos:cloudLabel} einen guten Schutz gegen den Verlust von Geräten.
 
 \subsection{Offline-Access}
 Ein zwingendes Kriterium für die \Gls{glos:cloudLabel} ist es, dass man Zugang zu den Host-Servern hat. Sei dies über das Internet oder das firmen-interne Netz. Ist dies nicht möglich, da das Netzwerk ausgefallen ist oder kein Zugriff zum Internet besteht, so kann nicht gearbeitet werden.
