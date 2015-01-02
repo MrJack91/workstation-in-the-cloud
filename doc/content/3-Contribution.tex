@@ -15,34 +15,34 @@
 	% Microsoft Azure
 	% Microsoft HyperV: http://www.microsoft.com/en-us/server-cloud/solutions/virtualization.aspx
 
-Folgend werden verschiedene Möglichkeiten von IT Infrastrukturen vorgestellt.
+Folgend werden verschiedene Möglichkeiten von IT-Infrastrukturen vorgestellt.
 Besonders auf zwei cloudbasierte Lösungen wird genauer eingegangen. Dazu wird je ein Vertreter aus der Marktwirtschaft analysiert.
 
 \section{Typen}
 Grundsätzlich kann ein Arbeitsplatz via virtuellen Computern in der \Gls{glos:cloudLabel} oder klassisch, \gls{glos:onPremiseLabel} umgesetzt werden.
+
+\section{Klassischer Ansatz, "`on-premise"'}
+Beim klassischen Ansatz, wird jeder Client lokal auf eigener Hardware aufgesetzt. Wird öfters eine genau gleiche Umgebung eingerichtet, so kann mit einem Image eine vollständige Einrichtung eines Computers vorgenommen werden.
+
+Eine IT-Infrastruktur die auf \gls{glos:onPremiseLabel} Geräten basiert, kommt ohne \Gls{glos:cloudLabel} aus. Es ergibt sich eine dezentrale Sammlung von Daten (jeweils auf dem Gerät des jeweiligen Benutzers). Selbstverständlich könne Daten auf Servern gesammelt und auch wieder automatisch verteilt werden, trotzdem müssen die Daten schlussendlich über die Hardware des Clients verarbeitet werden.
+
+Die Ressourcen pro Arbeitsplatz sind auf dessen Hardware beschränkt.
+Eine Änderung der Hardware erfolgt durch eine manuell, mechanische Anpassungen des Gerätes.
+Daraus folgt, dass umfassenden Hardware-Anpassungen an mehreren Geräten sehr aufwändig und somit auch kostspielig sind.
+
+\subsection{Cloud-Lösung}
 Um die Arbeitsplätze einer Firma in die \Gls{glos:cloudLabel} zu heben, muss entschieden werden, ob man eine Lösung im eigenen Rechenzentrum oder bei einer externen Firma warten will.
 Die Lösung im eigenen Rechenzentrum heisst im Fachjargon \Gls{vdiLabel} und beim Hosting bei einer externen Firma spricht man von \Gls{daasLabel}
 
-Beide Vorgehensweisen beinhalten Vorteile und Tücken. Allgemeine Vorteile welche beide Arten mit sich bringen, sind bereits im \cref{sec:Vorteile} Vorteile beschrieben.
+Beide Vorgehensweisen beinhalten Vorteile und Tücken. Allgemeine Vorteile, welche beide Arten mit sich bringen, sind bereits im \cref{sec:Vorteile} beschrieben.
 
 Wird das Hosting ausgelagert, hat man eine monatliche oder jährliche Abrechnung. Dadurch werden die Kosten kalkulierbar. Auch fallen grosse initiale Anschaffungskosten weg.
 
 Bei Firmen mit gesetzlichen Auflagen wie Versicherungen, Banken, etc. kann es dabei Probleme mit dem Datenschutz geben.
 Dabei spielt die effektive Lagerung der Daten (Lokalität) und die Sicherheit (konsequente Verschlüsselung) von Übertragung, sowie Speicherung eine zentrale Rolle.
-
 Deswegen bietet sich ein eigenes Hosting an. Die Anschaffungskosten sind massiv höher und die Betriebskosten können volatil sein, man hat jedoch die volle Kontrolle über Lokalität und Sicherheit.
 
 Folgend wird auf Amazon WorkSpaces, als Vertreter der ausgelagerten Lösung, sowie VMware Virtual Desktop Manager, für eine eigenständige Lösung eingegangen.
-
-\section{Klassischer Ansatz, "`on-premise"'}
-Beim klassischen Ansatz, wird jeder Client lokal auf eigener Hardware aufgesetzt. Wird öfters eine genau gleiche Umgebung eingerichtet, so kann mit einem Image eine vollständige Einrichtung eines Computers vorgenommen werden.
-
-Eine IT Infrastruktur die auf \gls{glos:onPremiseLabel} Geräten basiert, kommt ohne \Gls{glos:cloudLabel} aus. Es ergibt sich eine dezentrale Sammlung von Daten (jeweils auf dem Gerät des jeweiligen Benutzers). Selbstverständlich könne Daten auf Servern gesammelt und auch wieder automatisch verteilt werden, trotzdem müssen die Daten schlussendlich über die Hardware des Clients geholt und verarbeitet werden.
-
-Die Ressourcen pro Arbeitsplatz sind auf dessen Hardware beschränkt.
-
-Eine Änderung der Hardware erfolgt durch eine manuell, mechanische Anpassungen des Gerätes.
-Daraus folgt, dass umfassenden Hardware-Anpassungen an mehreren Geräten sehr aufwändig und somit auch kostenspielig wird.
 
 \newpage
 \section{Amazon WorkSpaces}
@@ -50,16 +50,17 @@ Daraus folgt, dass umfassenden Hardware-Anpassungen an mehreren Geräten sehr au
 % http://en.wikipedia.org/wiki/Amazon.com
 % http://aws.typepad.com/aws/2013/11/tco-comparison-amazon-workspaces-and-traditional-virtual-desktop-infrastructure-vdi.html
 
-Amazon startete als einfache Bücherverkaufsplatform, fügte jedoch bald weitere Artikel wie CDs, MP3s, Software etc. hinzu, wie auch eigene Produkte wie Tablets und E-Books.
+Amazon startete als einfache Bücherverkaufsplatform, fügte jedoch bald weitere Artikel wie CDs, MP3s, Software etc. hinzu, wie auch eigene Produkte, wie Tablets und E-Books.
 Zudem wird einem eine breite Platform verschiedener \Gls{glos:cloudLabel} Computing Services, \Gls{awsLabel} genannt, angeboten.\footcite{Amazon.com_-_Wikipedia_the_free_encyclopedia_2014-11-15}
 
 Die Lösung für Workstations in der \Gls{glos:cloudLabel} heisst \textit{Amazon WorkSpaces}\footcite{AWS_Amazon_WorkSpaces_2014-11-03}.
-Mit Amazon WorkSpaces wird einem eine vollständige \Gls{vdiLabel} angeboten.
+Mit Amazon WorkSpaces wird eine vollständige \Gls{daasLabel}-Lösung angeboten.
 
 Leider können WorkSpaces nicht gratis getestet werden. Aus diesem Grund gibt es hier keine Tests und Erfahrungsberichten.
 
 \subsection{Angebot}
-Ab 35 USD pro Monat wird eine \Gls{vdiLabel} angeboten. Auf diese kann per iPad, Android, Kindle Fire, PC und Mac zugegriffen werden.\\
+Eine Workspace kann ab 35 USD pro Monat genutzt werden.
+Auf diese kann per iPad, Android, Kindle Fire, PC und Mac zugegriffen werden.\\
 Zur Auswahl stehen zwei Typen: \textit{Standard} und \textit{Leistung}.
 
 \begin{table}[H]
@@ -109,13 +110,13 @@ Als Standord der Hostingcentern kann zwischen folgenden fünf \Gls{awsLabel}-Reg
 
 
 \subsection{Aufwand}
-Der Initial- und Wartungsaufwand (zeitlicher Aufwand, wie auch das Vorhanden sein des technisches Verständnisses) sind deutlich geringer, als wenn auf andere Weise eine gleichwertige Lösung angeboten werden soll.\footnote{Auf Vor- und Nachteile bezüglich \textit{Bring your own Device} wird in diesem Dokument nicht eingegangen.}
+Der Initial- und Wartungsaufwand (zeitlicher Aufwand, wie auch das Vorhandensein des technisches Verständnisses) sind deutlich geringer, als wenn auf andere Weise eine gleichwertige Lösung angeboten werden soll.\footnote{Auf Vor- und Nachteile bezüglich \textit{Bring your own Device} wird in diesem Dokument nicht eingegangen.}
 Es muss lediglich eine Internetverbindung angeboten werden.
-Das Management der \Gls{vdiLabel} ist deutlich einfacher, da keine Anforderungen an Server Hardware, internes Netzwerk, Backup Lösung und Server Umgebung gestellt werden.
+Das Management der Workspace ist deutlich einfacher, da keine Anforderungen an Server Hardware, internes Netzwerk, Backup Lösung und Server Umgebung gestellt werden.
 
 
 \subsection{Kosten}
-Die Kosten einer \Gls{vdiLabel} variieren je nach \Gls{awsLabel}-Region.\footcite{AWS_Amazon_WorkSpaces_Preise_2014-11-15}
+Die Kosten einer Workspace variieren je nach \Gls{awsLabel}-Region.\footcite{AWS_Amazon_WorkSpaces_Preise_2014-11-15}
 
 \begin{table}[H]
 	\centering
@@ -133,17 +134,17 @@ Die Kosten einer \Gls{vdiLabel} variieren je nach \Gls{awsLabel}-Region.\footcit
 		\textbf{Leistung} & 60 & 60 & \textbf{64} & 75 & 78\\
 		\hline
 		\multicolumn{6}{r}{
-			Bemerkungen: alle Preise in USD, besucht am 17. 11. 2014
+			Bemerkungen: alle Preise in USD, Stand: 17. 11. 2014
 		}
 	\end{tabularx}
 \end{table}
 
 Wie bereits erwähnt, kann das Software Paket "`Plus"' für zusätzliche 15 USD pro Monat beansprucht werden.
 
-Um eine Kosteneinsparung gegenüber einer eigener \Gls{vdiLabel} auszurechnen, bietet Amazon eine Excel-Vorlage.\footcite{TCO_Comparison_Amazon_WorkSpaces_and_Traditional_Virtual_Desktop_Infrastructure_VDI_2014-11-15}
+Um eine Kosteneinsparung gegenüber einer internen \Gls{vdiLabel}-Lösung auszurechnen, bietet Amazon eine Excel-Vorlage.\footcite{TCO_Comparison_Amazon_WorkSpaces_and_Traditional_Virtual_Desktop_Infrastructure_VDI_2014-11-15}
 
 \subsection{Sicherheit und Geschwindigkeit}
-Beim Thema Sicherheit ist einiges machbar.
+Sicherheitsaspekte werden gut und weitgehend abgedeckt.
 Es können Richtlinien aus dem \Gls{adLabel} übernommen werden.
 Auf dem Client selbst werden keine Daten gespeichert.
 Amazone bietet eine \Gls{glos:failureSafetyLabel} von 99,999999999 \% an. (Dies entspricht einer maximaler Ausfallzeit von 0.31536 Millisekunden/Jahr.)
@@ -151,18 +152,18 @@ Ein automatisches Backup der Benutzerdaten erfolgt alle 12 Stunden.
 
 Für die Bildschirmübertragung (betrifft nur die effektiven Pixeln) werden die Daten komprimiert und verschlüsselt.
 Nebst den Bildschirmdaten verlassen keinerlei Daten die \Gls{awsLabel} Server Infrastruktur.
-Durch die Komprimierung ist eine hohe Auflösung der Bildschirminhalte möglich. Selbst bei einer langsamer Internetverbindung genügt das Bild noch zum Arbeiten.
+Durch die Komprimierung ist eine hohe Auflösung der Bildschirminhalte möglich. Selbst bei einer langsamer Internetverbindung genügt das Bild zum Arbeiten.
 
 \subsection{weitere Features}
 \begin{itemize}
 	\item Das Interface ist für mobile Nutzung optimiert.
-	\item Bei Bereitstellung eines \Gls{vdiLabel} kann automatisch ein Mail mit den nötigen Schritten an den Enduser generiert werden.
+	\item Bei Bereitstellung einer Workspace kann automatisch ein Mail, mit den nötigen Schritten, an den Enduser generiert werden.
 	\item Für die Authentifizierung kann eine Multi-Factor Methode verwendet werden.
 	\item Amazon selbst stellt den \textit{Amazon Zocalo Sync} zur Verfügung (entspricht der ähnlichen Funktion wie der Dropbox-Service\footcite{Dropbox_2014-11-15}).
 	\item Die Verwendungen von lokalen Druckern ist möglich.
 %	\item Der Client ist momentan nur in englischer Sprache verfügbar.
 %	\item Zahlung erfolgt pro Monat und kann monatlich angepasst werden. Man muss grundsätzlich nicht für etwas zahlen, dass gar nicht verwendet wird.
-	\item Gerade für temporäre Arbeitnehmer können sehr einfach Maschinen für die Dauer gemietet werden und anschliessend kann der Zugriff wieder entfernt werden.
+	\item Für temporäre Arbeitnehmer kann sehr einfach eine Maschine für die Dauer der Anstellung gemietet werden, anschliessend kann der Zugriff wieder einfach und sicher entfernt werden.
 \end{itemize}
 
 \newpage
