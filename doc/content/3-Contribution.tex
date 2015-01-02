@@ -172,11 +172,11 @@ Durch die Komprimierung ist eine hohe Auflösung der Bildschirminhalte möglich.
 % Quellen:
 % - http://www.vmware.com/pdf/vdm20_intro.pdf
 % - https://www.vmware.com/files/pdf/analysts/Forrester_Report_Total_Economic_Impact_of_VMware_Virtual_Desktop_Infrastructure_in_Financial_Services.pdf
-VMware ist eine amerikanische Firma mit Sitz im Palo Alto, Californien. Gegründet wurde die Organisation 1998 und ging 2007 an die Börse.
-Als Hauptproduct bietet VMware Virtualisierungssoftware für Server-Infrastrukturen an. Einem Teil davon, welches sich dieses Kapitel widmet, ist die on-premis \Gls{vdiLabel} Lösung \Gls{vdmLabel}, welche auf dem Kern von VMware, der VMware Infrastructure 3 aufbaut.
+VMware ist eine amerikanische Firma mit Sitz im Palo Alto, Californien. Gegründet wurde die Organisation 1998 und ist seit 2007 an der Börse.
+Als Hauptprodukt bietet VMware Virtualisierungssoftware für Server-Infrastrukturen an. Einem Teil davon, welchem sich dieses Kapitel widmet, ist die \Gls{vdiLabel}-Lösung \Gls{vdmLabel}, welche auf dem Kern von VMware, der \textit{VMware Infrastructure 3} aufbaut.
 
 \subsection{Aufwand}
-Der Initialaufwand für die Verwendung von \Gls{vdmLabel} ist relativ hoch, da zuvor die ganze Server Infrastruktur mit VMware Produkten aufgesetzt werden muss.
+Der Initialaufwand für die Verwendung von \Gls{vdmLabel} ist relativ hoch, da die ganze Server Infrastruktur mit VMware Produkten aufgesetzt werden muss.
 Im Gegenzug gibt es einige Vorteile daraus:
 \begin{itemize}
 	\item Kontrolle und Management der Desktops aus einer Applikation heraus.
@@ -185,23 +185,24 @@ Im Gegenzug gibt es einige Vorteile daraus:
 	\item Geringere Kosten als eine \gls{glos:onPremiseLabel} Lösung.
 \end{itemize}
 
-Die folgende Illustration\footcite{Introduction_to_Virtual_Desktop_Manager} zeigt das Setup, welches für den Betrieb von \Gls{vdmLabel} benötigt wird.
+\clearpage
 
+Die folgende Illustration zeigt das Setup, welches für den Betrieb von \Gls{vdmLabel} benötigt wird.
 \begin{figure}[H]
 	\includegraphics[width=\textwidth]{images/vmware-vdm-setup}
-	\caption{\Gls{vdmLabel} Setup}
+	\caption[\Gls{vdmLabel} Setup]{\Gls{vdmLabel} Setup \protect\footcite{Introduction_to_Virtual_Desktop_Manager}}
 	\label{fig:vdmSetup}
 \end{figure}
 
 %cite: http://www.vmware.com/pdf/vdm20_intro.pdf
 
-Zu Beginn werden die verschiedenen Terminals aufgelistet, mit welchen man sich auf den persönlichen Desktop verbinden kann.
+Zu Beginn werden die verschiedenen Terminals aufgelistet, mit denen man sich auf den persönlichen Desktop verbinden kann.
 
 Unter der Netzwerk Wolke ist die Server Infrastruktur aufgezeigt.
-Näher interessant für diese Arbeit sind die "`ESX Server hosts"' in der unteren Mitte. Dabei handelt es sich um virtualisierte Server welche jeder Zeit rauf- oder runter-skalliert werden können.
+Näher interessant für diese Arbeit sind die \textit{ESX Server hosts} in der unteren Mitte. Dabei handelt es sich um virtualisierte Server, welche jeder Zeit herauf- oder runterskaliert werden können.
 
 Auf den ESX Hosts werden je mehrere virtuelle Desktops ausgeführt.
-Auf den Desktops kann grundsätzlich jedes Betriebsystem ausgeführt werden, für welches VMware ein VDM Agent zur Verfügung stellt.
+Auf den Desktops kann grundsätzlich jedes Betriebsystem ausgeführt werden, für welches VMware ein \Gls{vdmLabel}-Agent zur Verfügung stellt.
 
 %    Windows XP Professional with SP2 (English, Japanese, German)
 %    Windows XP Professional with SP3 (English only)
@@ -212,15 +213,15 @@ Auf den Desktops kann grundsätzlich jedes Betriebsystem ausgeführt werden, fü
 \subsection{Kosten}
 \label{sec:vmwareCosts}
 Die Berechnung der Kosten gestaltet sich schwierig, da es diverse Einflussfaktoren gibt.
-VMware veröffentlichte in 2008 ein 26 seitiges Dokument mit dem Titel "`Total Economic Impact Of VMware Virtual Desktop Infrastructure – Financial Services Industry\footcite{Forrester_Report}"' veröffentlicht. Darin ist ein vier Jahres Plan aufgestellt mit einer möglichen Berechnung der Kosten.
+VMware veröffentlichte in 2008 ein 26-seitiges Dokument mit dem Titel "`Total Economic Impact Of VMware Virtual Desktop Infrastructure – Financial Services Industry"'\footcite{Forrester_Report}. Darin ist ein Vierjahresplan aufgestellt mit einer möglichen Berechnung der Kosten.
 
-Im Dokument werden zuerst Kennzahlen, wie die Löhne und die Anzahl an Servern spezifiziert.
+Im Dokument werden zuerst Kennzahlen, wie die Löhne und die Anzahl Server spezifiziert.
 
-Als zweites werden die Initialen kosten Analysiert. Darin enthalten sind Lizenzkosten, Anzahl Arbeitsstunden sowie die Hardware welche angeschafft werden muss.
+Als zweites werden die initialen Kosten analysiert. Darin enthalten sind Lizenzkosten, Anzahl Arbeitsstunden, sowie die Hardware die benötigt wird.
 
 Zuletzt sind die Laufzeitkosten aufgeführt.
 
-Im Totalen, gemäss Dokument, sind die Kosten mit \$3,648,355 beziffert.
+Total sind die Kosten mit \$3,648,355 beziffert.
 
 \begin{table}[H]
 	\centering
@@ -237,8 +238,8 @@ Im Totalen, gemäss Dokument, sind die Kosten mit \$3,648,355 beziffert.
 		Initiale Implementierungskosten & \$37,438 & \$27,038 &  &  &  & \textbf{\$64,476} \\
 		Software Lizenzen und \linebreak
 		Maintanance & \$9,000 & \$52,425 & \$57,188 & \$55,2425 & \$65,550 & \textbf{\$239,588} \\
-		Hardware Kosten & \$365,000 & \$1,095,000 & \$680,00 & \$315,000 & \$315,000 & \textbf{\$2,770,000} \\
-		Laufende Ktextbfosten für \linebreak
+		Hardwarekosten & \$365,000 & \$1,095,000 & \$680,00 & \$315,000 & \$315,000 & \textbf{\$2,770,000} \\
+		Laufende Kosten für \linebreak
 		Implementation und Support &  & \$137,271 & \$141,389 & \$145,631 & \$150,000 & \textbf{\$574,292} \\
 		\hline
 		\rowcolor{tableheadcolor}
@@ -247,8 +248,8 @@ Im Totalen, gemäss Dokument, sind die Kosten mit \$3,648,355 beziffert.
 \end{table}
 %Horizontale Linien sind zu lang... WIESOOO???!!!???
 
-Mit ~76\% machen die Hardware Kosten den grössten Anteil an den totalen Kosten aus.
-Das Szenario beinhaltet zu Beginn 60 Virtuelle Desktops, und wächst über die vier Jahre auf 1'000 an. Dies entspricht einer grossen Firma für welche dreieinhalb Millionen eine tragbare Investition darstellt. Für kleinere Firmen muss entsprechend runterskalliert werden.
+Mit \textasciitilde76\% machen die Hardwarekosten den grössten Anteil an den totalen Kosten aus.
+Das Szenario beinhaltet zu Beginn 60 \Glspl{vdiLabel} und wächst über die vier Jahre auf 1'000 \Glspl{vdiLabel} an. Dies entspricht einer grossen Firma, für welche dreieinhalb Millionen eine tragbare Investition darstellt. Für kleinere Firmen muss entsprechend runterskalliert werden.
 
 \subsubsection{Einsparungen}
 Das Paper beinhaltet auch die erwarteten Einsparungen.
