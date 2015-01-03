@@ -278,14 +278,14 @@ Das Paper beinhaltet auch die erwarteten Einsparungen.
 	\end{tabularx}
 \end{table}
 
-Die mit Abstand grösste Einsparung liegt mit ~82\% beim Outsourcing.
+Die mit Abstand grösste Einsparung liegt mit \textasciitilde82\% beim Outsourcing.
 
 \subsubsection{Fazit}
-Die genannten Zahlen sind mit einer Priese Salz zu geniessen. Als erstes wurden sie für den US Amerikanischen Markt erhoben. Zweitens sind sie sicherlich sehr optimistisch berechnet, da sie aus dem Haus von VMware selbst stammen.
+Die genannten Zahlen sind mit einer Priese Salz zu geniessen. Als Erstes wurden sie für den US Amerikanischen Markt erhoben. Zweitens sind sie sicherlich sehr optimistisch berechnet, da sie aus dem Haus von VMware selbst stammen.
 
 Dennoch stellen die Zahlen gut dar, dass es eine grosse Investition bedeutet für die es einen guten Grund geben muss.
 
-Aus der Einsparung-Tabelle kann man schlussfolgern, dass sich der Umschwung auf \Gls{vdiLabel} erst richtig Lohnt, wenn man auch plant Outsourcing zu betreiben. Denn ~82\% der Einsparungen beruhen auf diesem Punkt. Natürlich sind damit noch weitere Kosten verbunden die hier nicht aufgeführt sind.
+Aus der Einsparungs-Tabelle kann man schlussfolgern, dass sich der Umschwung auf \Gls{vdiLabel} erst richtig lohnt, wenn man auch plant Outsourcing zu betreiben. Denn \textasciitilde82\% der Einsparungen beruhen auf diesem Punkt. Natürlich sind damit noch weitere Kosten verbunden die hier nicht aufgeführt sind.
 
 \subsection{Sicherheit}
 VMware integriert verschiedene Sicherheitsmassnahmen\footcite{Introduction_to_Virtual_Desktop_Manager} in \Gls{vdmLabel}.
@@ -304,11 +304,11 @@ VMware integriert verschiedene Sicherheitsmassnahmen\footcite{Introduction_to_Vi
 Die Sicherheit besteht darin, dass wenn das Passwort in die falschen Hände gerät, sich der Angreifer nicht einloggen kann, da ihm das stetig ändernde RSA Token fehlt.
 
 \subsubsection{HTTPS Zugang}
-Der Zugang von den Clients auf die \Gls{vdmLabel} Infrastruktur, sowie die Kommunikation zwischen den \Gls{vdmLabel} Servern selber kann gänzlich auf \Gls{httpsLabel} umgestellt werden.
+Der Zugang von den Clients auf die \Gls{vdmLabel} Infrastruktur sowie die Kommunikation zwischen den \Gls{vdmLabel} Servern selber kann gänzlich auf \Gls{httpsLabel} umgestellt werden.
 
 \begin{minipage}{\textwidth}
 \subsubsection{DMZ \& Load balancing}
-Um den Zugriff auf die \Gls{vdiLabel} Umgebung aus dem Internet zu gewährleisten kann eine \Gls{dmzLabel} eingerichtet werden\footcite{Introduction_to_Virtual_Desktop_Manager}.
+Um den Zugriff auf die \Gls{vdiLabel} Umgebung aus dem Internet zu gewährleisten, kann eine \Gls{dmzLabel} eingerichtet werden\footcite{Introduction_to_Virtual_Desktop_Manager}.
 
 \begin{figure}[H]
 	\includegraphics[width=\textwidth]{images/vmware-vdm-dmz2}
@@ -319,29 +319,27 @@ Um den Zugriff auf die \Gls{vdiLabel} Umgebung aus dem Internet zu gewährleiste
 
 Die \Gls{dmzLabel} ist ein Bereich, der vom Internet her zugänglich ist und dessen Server nicht gänzlich als vertrauenswürdig eingestuft werden können.
 
-\Gls{vdmLabel} ermöglicht es, verschieden Security Servers einzurichten. Dabei können welche in der \Gls{dmzLabel} stehen und andere ausserhalb.
+\Gls{vdmLabel} ermöglicht es verschiedene Security Server einzurichten. Dabei können welche in der \Gls{dmzLabel} stehen und andere ausserhalb.
 
 \subsubsection{Load balancing}
-Um die Ausfallwahrscheinlichkeit zu minimieren, kann vor die Security Severs ein Load balancing eingeschaltet werden. Siehe Abbildung \ref{fig:vdmSetupDmz}. Dieses verteilt unter Last die Anfragen an die Server. Fällt einer aus, so merken die User, ausser eventueller Leistungseinbrüchen, nichts.
+Um die Ausfallwahrscheinlichkeit zu minimieren, kann vor die Security Servers ein Load balancing eingeschaltet werden. Siehe Abbildung \ref{fig:vdmSetupDmz}. Dieses verteilt unter Last die Anfragen an die Server. Fällt einer aus, merken die User, ausser eventueller Leistungseinbrüchen, nichts davon.
 
 \subsubsection{\Gls{ldapLabel}}
-Die Authentifizierung kann in das \Gls{ldapLabel} der Firma integriert werden.
-
-Dadurch wird die Benutzung vereinfacht, da die Benutzer sich mit den gewohnten Login-Daten anmelden können.
+Die Authentifizierung kann in das \Gls{ldapLabel} der Firma integriert werden. Die Benutzung wird dadurch vereinfacht, da die Benutzer sich mit den gewohnten Login-Daten anmelden können.
 
 Auch die Sicherheit wird erhöht, da bei Neueintritten, internen Wechseln und Austritten die Rechte der Benutzer berücksichtigt werden.
 
 \subsubsection{Fazit}
-VMware integriert viele Sicherheit-Aspekte in ihre \Gls{vdiLabel} Lösung.
+VMware integriert viele Sicherheitsaspekte in ihre \Gls{vdiLabel} Lösung.
 
 Korrekt Umgesetzt kann damit eine sichere Infrastruktur aufgebaut werden, welche robust gegenüber Ausfällen und Häckerattacken ist. Ein zusätzlicher Vorteil ist, dass die Daten in der Firma gehosted sind und die Sicherheitszone niemals verlassen.
 
-Alles steht und fällt mit jedoch mit der Integration in die eigene Infrastruktur. Die Mechanismen müssen korrekt und durchgehen eingehalten werden damit sie effektiv sind.
+Alles steht und fällt jedoch mit der Integration in die eigene Infrastruktur. Die Mechanismen müssen korrekt und durchgehen eingehalten werden damit sie effektiv sind.
 
-Der Zugriff über HTTP sollte durchgängig deaktiviert werden, wenn er nicht ausdrücklich benötigt wird. Sowie sollte eine sichere Firewall nach aussen hin eingerichtet sein.
+Der Zugriff über HTTP sollte durchgängig deaktiviert werden, wenn er nicht ausdrücklich benötigt wird. Ebenfalls sollte eine sichere Firewall nach aussen hin eingerichtet sein.
 
 \subsection{Geschwindigkeit}
-Gemessen werden kann die Geschwindigkeit an der Latenz zwischen der Eingabe am \Gls{vdiLabel} Client bis zum Zeitpunkt wenn die Antwort auf dem Bildschirm erscheint. Als Richtwert für eine genügende Geschwindigkeit wird für eine normale Benutzung eine Sekunde vorausgesetzt, und für Ein-/Ausgabe lastige Prozesse sechs Sekunden.
+Gemessen werden kann die Geschwindigkeit an der Latenz zwischen der Eingabe am \Gls{vdiLabel} Client bis zum Zeitpunkt, wenn die Antwort auf dem Bildschirm erscheint. Als Richtwert für eine genügende Geschwindigkeit wird für eine normale Benutzung eine Sekunde vorausgesetzt und für ein- und ausgabelastige Prozesse sechs Sekunden.
 
 VMware führte im März 2014 ein Lasttest durch, auf dessen Resultate sich dieser Abschnitt bezieht\footcite{VDI_Performance}.
 
@@ -349,14 +347,14 @@ VMware führte im März 2014 ein Lasttest durch, auf dessen Resultate sich diese
 Das Testsetup beinhaltet zwei Rechner. Der erste Rechner ist ein HP ProLiant BL460 mit einem 8-core Xeon E5540 (2.53 GHz) Prozessor und 96GB Ram. Als zweiter Rechner wurde ein Dell PowerEdge R720xd mit einem 16-core Intel Xeon E5-2690 (2.9 GHz) mit 256GB Ram verwendet.
 Beide verfügen über eine \Gls{ssdLabel} mit 200GB und sechs 300GB 15k RPM SAS Festplatten.
 
-Auf den Rechnern können beliebig viele Nodes hochgefahren werden, welche sich die Last die durch die Clients auftritt teilen.
+Auf den Rechnern können beliebig viele Nodes hochgefahren werden, die sich die Last, die durch die Clients auftritt teilen.
 
-Die Benutzer welche die Clients bedienen sind automatisiert und produzieren eine hohe Last, welche \Gls{cpuLabel} und Ein-/Ausgabe lastig ist.
+Die Benutzer, die die Clients bedienen, sind automatisiert und produzieren eine hohe Last, welche \Gls{cpuLabel} und Ein-/Ausgabe lastig ist.
 
 Die Tests werden jeweils mit 3, 5, 8 und 16 Nodes durchgeführt. Dadurch soll ersichtlich werden, ob das System mit zunehmender Nodes- und Benutzeranzahl gut skaliert.
 
 \subsubsection{Resultate}
-Der erste Tests skalierte die Anzahl an Nodes von den definierten 3 bis zu 16 hoch und analysierte, wie viele Benutzer gleichzeitig, unter den definierten Bedinungen arbeiten konnten.
+Der erste Test skalierte die Anzahl an Nodes von den definierten 3 bis zu 16 hoch und analysierte, wie viele Benutzer gleichzeitig unter den definierten Bedienungen arbeiten konnten.
 
 \begin{figure}[H]
 	\includegraphics[width=\textwidth]{images/vmware-vdm-scale}
@@ -364,7 +362,7 @@ Der erste Tests skalierte die Anzahl an Nodes von den definierten 3 bis zu 16 ho
 	\label{fig:vdmPerformanceScale}
 \end{figure}
 
-Die Grafik zeigt, dass 305 Clients flüssig auf 3 Nodes arbeiten konnten. Bei 16 Nodes waren es 1615 Benutzer. Zusätzlich ist ein linearer Anstieg ersichtlich. Das heisst das System skaliert mit den Anzahl an Nodes mit.
+Die Grafik zeigt, dass 305 Clients flüssig auf 3 Nodes arbeiten konnten. Bei 16 Nodes waren es 1615 Benutzer. Zusätzlich ist ein linearer Anstieg ersichtlich. Das heisst, das System skaliert mit den Anzahl an Nodes.
 
 Die zweite Grafik zeigt die Latenz für eine normale Benutzung mit der Anzahl an Benutzer aus der Abbildung \ref{fig:vdmPerformanceScale}.
 \begin{figure}[H]
@@ -383,6 +381,6 @@ Auf der letzten Grafik wird die Antwortzeit für Ein-/Ausgabe lastige Bedienung 
 Aus den Abbildungen \ref{fig:vdmPerformanceNormal} und \ref{fig:vdmPerformanceIo} bestätigt sich, dass sich das System gleich verhaltet, wenn die Anzahl an Nodes und damit die Anzahl an Clients erhöht wird.
 
 \subsubsection{Fazit}
-Mit genug starker Hardware kann jede gewünschte Antwortzeit erreicht werden. Bei VMwares \Gls{vdmLabel} Lösung sind das durchschnittlich 101 Benutzer pro Node mit einer Toleranz von einer beziehungsweise sechs Sekunden.
+Mit genug starker Hardware kann jede gewünschte Antwortzeit erreicht werden. Bei VMwares \Gls{vdmLabel} Lösung sind das durchschnittlich 101 Benutzer pro Node, mit einer Toleranz von einer, beziehungsweise sechs, Sekunden.
 
 Das spannendste ist jedoch die lineare Entwicklung mit zunehmender Nodeanzahl. Damit ist das System für kleinere Firmen gleich gut geeignet wie für grosse.
