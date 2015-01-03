@@ -24,25 +24,25 @@ Grundsätzlich kann ein Arbeitsplatz via virtuellen Computern in der \Gls{glos:c
 \section{Klassischer Ansatz, "`on-premise"'}
 Beim klassischen Ansatz, wird jeder Client lokal auf eigener Hardware aufgesetzt. Wird öfters eine genau gleiche Umgebung eingerichtet, so kann mit einem Image eine vollständige Einrichtung eines Computers vorgenommen werden.
 
-Eine IT-Infrastruktur die auf \gls{glos:onPremiseLabel} Geräten basiert, kommt ohne \Gls{glos:cloudLabel} aus. Es ergibt sich eine dezentrale Sammlung von Daten (jeweils auf dem Gerät des jeweiligen Benutzers). Selbstverständlich könne Daten auf Servern gesammelt und auch wieder automatisch verteilt werden, trotzdem müssen die Daten schlussendlich über die Hardware des Clients verarbeitet werden.
+Eine IT-Infrastruktur, die auf \gls{glos:onPremiseLabel} Geräten basiert, kommt ohne \Gls{glos:cloudLabel} aus. Es ergibt sich eine dezentrale Sammlung von Daten (jeweils auf dem Gerät des jeweiligen Benutzers). Selbstverständlich können Daten auf Servern gesammelt und auch wieder automatisch verteilt werden, trotzdem müssen die Daten schlussendlich über die Hardware des Clients verarbeitet werden.
 
 Die Ressourcen pro Arbeitsplatz sind auf dessen Hardware beschränkt.
 Eine Änderung der Hardware erfolgt durch eine manuell, mechanische Anpassungen des Gerätes.
-Daraus folgt, dass umfassenden Hardware-Anpassungen an mehreren Geräten sehr aufwändig und somit auch kostspielig sind.
+Daraus folgt, dass umfassende Hardware-Anpassungen an mehreren Geräten sehr aufwändig und somit auch kostspielig sind.
 
 \subsection{Cloud-Lösung}
 Um die Arbeitsplätze einer Firma in die \Gls{glos:cloudLabel} zu heben, muss entschieden werden, ob man eine Lösung im eigenen Rechenzentrum oder bei einer externen Firma warten will.
-Die Lösung im eigenen Rechenzentrum heisst im Fachjargon \Gls{vdiLabel} und beim Hosting bei einer externen Firma spricht man von \Gls{daasLabel}
+Die Lösung im eigenen Rechenzentrum heisst im Fachjargon \Gls{vdiLabel} und beim Hosting bei einer externen Firma spricht man von \Gls{daasLabel}.
 
 Beide Vorgehensweisen beinhalten Vorteile und Tücken. Allgemeine Vorteile, welche beide Arten mit sich bringen, sind bereits im \cref{sec:Vorteile} beschrieben.
 
 Wird das Hosting ausgelagert, hat man eine monatliche oder jährliche Abrechnung. Dadurch werden die Kosten kalkulierbar. Auch fallen grosse initiale Anschaffungskosten weg.
 
 Bei Firmen mit gesetzlichen Auflagen wie Versicherungen, Banken, etc. kann es dabei Probleme mit dem Datenschutz geben.
-Dabei spielt die effektive Lagerung der Daten (Lokalität) und die Sicherheit (konsequente Verschlüsselung) von Übertragung, sowie Speicherung eine zentrale Rolle.
-Deswegen bietet sich ein eigenes Hosting an. Die Anschaffungskosten sind massiv höher und die Betriebskosten können volatil sein, man hat jedoch die volle Kontrolle über Lokalität und Sicherheit.
+Dabei spielt die effektive Lagerung der Daten (Lokalität) und die Sicherheit (konsequente Verschlüsselung) deren Übertragung, sowie deren Speicherung eine zentrale Rolle.
+Deswegen bietet sich ein eigenes Hosting an. Die Anschaffungskosten sind massiv höher und die Betriebskosten können volatil sein, man hat jedoch die volle Kontrolle über die Lokalität und Sicherheit.
 
-Folgend wird auf Amazon WorkSpaces, als Vertreter der ausgelagerten Lösung, sowie VMware Virtual Desktop Manager, für eine eigenständige Lösung eingegangen.
+Im Folgenden wird auf Amazon WorkSpaces, als Vertreter der ausgelagerten Lösung, sowie VMware Virtual Desktop Manager, für eine eigenständige Lösung eingegangen.
 
 \newpage
 \section{Amazon WorkSpaces}
@@ -51,12 +51,12 @@ Folgend wird auf Amazon WorkSpaces, als Vertreter der ausgelagerten Lösung, sow
 % http://aws.typepad.com/aws/2013/11/tco-comparison-amazon-workspaces-and-traditional-virtual-desktop-infrastructure-vdi.html
 
 Amazon startete als einfache Bücherverkaufsplatform, fügte jedoch bald weitere Artikel wie CDs, MP3s, Software etc. hinzu, wie auch eigene Produkte, wie Tablets und E-Books.
-Zudem wird einem eine breite Platform verschiedener \Gls{glos:cloudLabel} Computing Services, \Gls{awsLabel} genannt, angeboten.\footcite{Amazon.com_-_Wikipedia_the_free_encyclopedia_2014-11-15}
+Zudem wird eine breite Platform verschiedener \Gls{glos:cloudLabel} Computing Services, \Gls{awsLabel} genannt, angeboten.\footcite{Amazon.com_-_Wikipedia_the_free_encyclopedia_2014-11-15}
 
 Die Lösung für Workstations in der \Gls{glos:cloudLabel} heisst \textit{Amazon WorkSpaces}\footcite{AWS_Amazon_WorkSpaces_2014-11-03}.
 Mit Amazon WorkSpaces wird eine vollständige \Gls{daasLabel}-Lösung angeboten.
 
-Leider können WorkSpaces nicht gratis getestet werden. Aus diesem Grund gibt es hier keine Tests und Erfahrungsberichten.
+Leider können WorkSpaces nicht gratis getestet werden. Aus diesem Grund gibt es hier keine Tests und Erfahrungsberichte.
 
 \subsection{Angebot}
 Eine Workspace kann ab 35 USD pro Monat genutzt werden.
@@ -110,7 +110,7 @@ Als Standord der Hostingcentern kann zwischen folgenden fünf \Gls{awsLabel}-Reg
 
 
 \subsection{Aufwand}
-Der Initial- und Wartungsaufwand (zeitlicher Aufwand, wie auch das Vorhandensein des technisches Verständnisses) sind deutlich geringer, als wenn auf andere Weise eine gleichwertige Lösung angeboten werden soll.\footnote{Auf Vor- und Nachteile bezüglich \textit{Bring your own Device} wird in diesem Dokument nicht eingegangen.}
+Der Initial- und Wartungsaufwand (zeitlicher Aufwand, wie auch das Vorhandensein des technisches Verständnisses) sind deutlich geringer, als wenn auf andere Weise eine gleichwertige Lösung angeboten werden sollte.\footnote{Auf Vor- und Nachteile bezüglich \textit{Bring your own Device} wird in diesem Dokument nicht eingegangen.}
 Es muss lediglich eine Internetverbindung angeboten werden.
 Das Management der Workspace ist deutlich einfacher, da keine Anforderungen an Server Hardware, internes Netzwerk, Backup Lösung und Server Umgebung gestellt werden.
 
@@ -154,9 +154,9 @@ Für die Bildschirmübertragung (betrifft nur die effektiven Pixeln) werden die 
 Nebst den Bildschirmdaten verlassen keinerlei Daten die \Gls{awsLabel} Server Infrastruktur.
 Durch die Komprimierung ist eine hohe Auflösung der Bildschirminhalte möglich. Selbst bei einer langsamer Internetverbindung genügt das Bild zum Arbeiten.
 
-\subsection{weitere Features}
+\subsection{weitere Funktionen}
 \begin{itemize}
-	\item Das Interface ist für mobile Nutzung optimiert.
+	\item Das Interface ist für die mobile Nutzung optimiert.
 	\item Bei Bereitstellung einer Workspace kann automatisch ein Mail, mit den nötigen Schritten, an den Enduser generiert werden.
 	\item Für die Authentifizierung kann eine Multi-Factor Methode verwendet werden.
 	\item Amazon selbst stellt den \textit{Amazon Zocalo Sync} zur Verfügung (entspricht der ähnlichen Funktion wie der Dropbox-Service\footcite{Dropbox_2014-11-15}).
@@ -172,11 +172,11 @@ Durch die Komprimierung ist eine hohe Auflösung der Bildschirminhalte möglich.
 % Quellen:
 % - http://www.vmware.com/pdf/vdm20_intro.pdf
 % - https://www.vmware.com/files/pdf/analysts/Forrester_Report_Total_Economic_Impact_of_VMware_Virtual_Desktop_Infrastructure_in_Financial_Services.pdf
-VMware ist eine amerikanische Firma mit Sitz im Palo Alto, Californien. Gegründet wurde die Organisation 1998 und ist seit 2007 an der Börse.
-Als Hauptprodukt bietet VMware Virtualisierungssoftware für Server-Infrastrukturen an. Einem Teil davon, welchem sich dieses Kapitel widmet, ist die \Gls{vdiLabel}-Lösung \Gls{vdmLabel}, welche auf dem Kern von VMware, der \textit{VMware Infrastructure 3} aufbaut.
+VMware ist eine amerikanische Firma mit Sitz im Palo Alto, Californien. Gegründet wurde die Firma 1998 und ist seit 2007 an der Börse.
+Als Hauptprodukt bietet VMware Virtualisierungssoftware für Server-Infrastrukturen an. Ein Teil davon, welchem sich dieses Kapitel widmet, ist die \Gls{vdiLabel}-Lösung \Gls{vdmLabel}, welche auf dem Kern von VMware, der \textit{VMware Infrastructure 3} aufbaut.
 
 \subsection{Aufwand}
-Der Initialaufwand für die Verwendung von \Gls{vdmLabel} ist relativ hoch, da die ganze Server Infrastruktur mit VMware Produkten aufgesetzt werden muss.
+Der Initialaufwand für die Verwendung von \Gls{vdmLabel} ist relativ hoch, da die ganze Server-Infrastruktur mit VMware Produkten aufgesetzt werden muss.
 Im Gegenzug gibt es einige Vorteile daraus:
 \begin{itemize}
 	\item Kontrolle und Management der Desktops aus einer Applikation heraus.
@@ -201,7 +201,7 @@ Zu Beginn werden die verschiedenen Terminals aufgelistet, mit denen man sich auf
 Unter der Netzwerk Wolke ist die Server Infrastruktur aufgezeigt.
 Näher interessant für diese Arbeit sind die \textit{ESX Server hosts} in der unteren Mitte. Dabei handelt es sich um virtualisierte Server, welche jeder Zeit herauf- oder runterskaliert werden können.
 
-Auf den ESX Hosts werden je mehrere virtuelle Desktops ausgeführt.
+Auf jedem ESX Hosts werden je mehrere virtuelle Desktops ausgeführt.
 Auf den Desktops kann grundsätzlich jedes Betriebsystem ausgeführt werden, für welches VMware ein \Gls{vdmLabel}-Agent zur Verfügung stellt.
 
 %    Windows XP Professional with SP2 (English, Japanese, German)
@@ -221,7 +221,7 @@ Als zweites werden die initialen Kosten analysiert. Darin enthalten sind Lizenzk
 
 Zuletzt sind die Laufzeitkosten aufgeführt.
 
-Total sind die Kosten mit \$3,648,355 beziffert.
+Total sind die Kosten mit \$3'648'355 beziffert.
 
 \begin{table}[H]
 	\centering
@@ -235,15 +235,15 @@ Total sind die Kosten mit \$3,648,355 beziffert.
 		\rowcolor{tableheadcolor}
 		\textbf{Position} & \textbf{Initial} & \textbf{Jahr 1} & \textbf{Jahr 2} & \textbf{Jahr 3} & \textbf{Jahr 4} & \textbf{Total} \\
 		\hline
-		Initiale Implementierungskosten & \$37,438 & \$27,038 &  &  &  & \textbf{\$64,476} \\
+		Initiale Implementierungskosten & \$37'438 & \$27'038 &  &  &  & \textbf{\$64'476} \\
 		Software Lizenzen und \linebreak
-		Maintanance & \$9,000 & \$52,425 & \$57,188 & \$55,2425 & \$65,550 & \textbf{\$239,588} \\
-		Hardwarekosten & \$365,000 & \$1,095,000 & \$680,00 & \$315,000 & \$315,000 & \textbf{\$2,770,000} \\
+		Maintanance & \$9'000 & \$52'425 & \$57'188 & \$55'2425 & \$65'550 & \textbf{\$239'588} \\
+		Hardwarekosten & \$365'000 & \$1'095'000 & \$680'00 & \$315'000 & \$315'000 & \textbf{\$2'770'000} \\
 		Laufende Kosten für \linebreak
-		Implementation und Support &  & \$137,271 & \$141,389 & \$145,631 & \$150,000 & \textbf{\$574,292} \\
+		Implementation und Support &  & \$137'271 & \$141'389 & \$145'631 & \$150'000 & \textbf{\$574'292} \\
 		\hline
 		\rowcolor{tableheadcolor}
-		Total & \$411,438 & \$1,311,735 & \$878,577 & \$516,056 & \$530,550 & \textbf{\$3,648,355} \\
+		Total & \$411'438 & \$1'311'735 & \$878'577 & \$516'056 & \$530'550 & \textbf{\$3'648'355} \\
 	\end{tabularx}
 \end{table}
 %Horizontale Linien sind zu lang... WIESOOO???!!!???
